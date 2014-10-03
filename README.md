@@ -13,15 +13,14 @@ Getting Started
 ---------------
 
 Follow these steps to integrate the Dimelo chat in your application.
-Consider checking the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp)
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
 2) Configure a `Dimelo` instance with your API key, optional user identifier and
    other user-specific info. We recommend to keep this instance in an instance
-   variable in your app delegate. 
+   variable in your app delegate.
 
-3) Set `dimelo.developmentAPNS` = `YES` in your development builds to receive 
+3) Set `dimelo.developmentAPNS` = `YES` in your development builds to receive
    push notifications. Set it back to `NO` before submitting to AppStore.
 
 4) Specify a delegate for `Dimelo` instance (usually it is your app delegate) and
@@ -31,7 +30,7 @@ Consider checking the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleAp
 
 To display a chat, get its view controller using `-[Dimelo chatViewController]`
 and present it either modally, in popover or in a UITabBarController.
-See **Displaying Chat** section for more options.
+See **Displaying Chat** section below for more options.
 
 5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:`
    set `deviceToken` property on your `Dimelo` instance. This will allow your app
@@ -43,9 +42,11 @@ See **Displaying Chat** section for more options.
 These are minimal steps to make chat work in your app. Read on to learn how
 to customize the appearance and behaviour of the chat to fit perfectly in your app.
 
+See also **Sample Code** section in the end of this README or
+download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
 
-Displaying Chat
----------------
+Displaying the Chat
+-------------------
 
 Dimelo provides an opaque `UIViewController` instance that you can display how you want
 (created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`,
@@ -69,57 +70,89 @@ a chat view controller (`-[Dimelo chatViewController]`) to show the chat in some
 Authentication
 --------------
 
-With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)). This token contains user-specific info that you specify (userIdentifier, userName etc.) and a HMAC signature. User identifier allows Dimelo to separate messages from different users in the agent's backend. If user identifier is missing (nil), then unique installation identifier is used to identify the user (created automatically).
+With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).
+This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.)
+and a HMAC signature. User identifier allows Dimelo to separate messages from
+different users in the agent's backend. If user identifier is missing (`nil`),
+then unique installation identifier is used to identify the user (created automatically).
 
 We support two kinds of authentication modes: with server-side secret and a built-in secret.
 
-#### 1. Setup with a server-side secret
+#### 1. Setup with a built-in secret
 
-This is the recommended and secure mode. Dimelo will provide you with two keys: a public API key and a secret key. The public one will be used to configure `Dimelo` instance and identify your app. The secret key will be stored on your server and used to sign JWT token on your server.
+This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
-When you configure Dimelo with a public API key (`-initWithApiKey:hostname:delegate:`), you will have to set `jwt` property manually with a value received from your server. This way your server will prevent one user from impersonating another.
+You configure `Dimelo` instance with the *secret* key (`-initWithApiSecret:hostname:delegate:`)
+and it creates and signs JWT automatically when needed (as if it was provided by the server).
+You simply set necessary user-identifying information and JWT will be computed on the fly.
+You do not need any cooperation with your server in this setup.
+
+The security issue here is that built-in secret is rather easy to extract from the app's binary build.
+Anyone could then sign JWTs with arbitrary user identifying info to access other users'
+chats and impersonate them. To mitigate that risk make sure to use this mode
+only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
+
+#### 2. Setup with a server-side secret
+
+This is a more secure mode. Dimelo will provide you with two keys: a public API key and a secret key.
+The public one will be used to configure `Dimelo` instance and identify your app.
+The secret key will be stored on your server and used to sign JWT token on your server.
+
+When you configure Dimelo with a public API key (`-initWithApiKey:hostname:delegate:`),
+you will have to set `jwt` property manually with a value received from your server.
+This way your server will prevent one user from impersonating another.
 
 1. Set authentication-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
 2. Get a dictionary for JWT using `-[Dimelo jwtDictionary]`. This will also contain public API key, `installationIdentifier` etc.
 3. Send this dictionary to your server.
 4. Check the authenticity of the JWT dictionary on the server and compute a valid signed JWT token.
-   Use a corresponding secret API key to make a HMAC-SHA256 signature.
-   *Note:* use raw binary value of the secret key (decoded from hex) to make a 
-   signature. Using hex string as-is will yield incorrect signature.
+Use a corresponding secret API key to make a HMAC-SHA256 signature.
+*Note:* use raw binary value of the secret key (decoded from hex) to make a
+signature. Using hex string as-is will yield incorrect signature.
 5. Send the signed JWT string back to your app.
 6. In the app, set the `Dimelo.jwt` property with a received string.
 
-You have to do this authentication only once per user identifier, but before you try to use Dimelo chat. Your application should prevent user from opening a chat until you receive JWT token.
+You have to do this authentication only once per user identifier,
+but before you try to use Dimelo chat. Your application should prevent
+user from opening a chat until you receive a JWT token.
 
-
-#### 2. Setup with a built-in secret
-
-This is less secure mode, but it's more convenient for testing and secure enough when user identifiers are unpredictable.
-
-You configure `Dimelo` instance with the *secret* key (`-initWithApiSecret:hostname:delegate:`) and it creates and signs JWT automatically when needed (as if it was provided by the server). You simply set necessary user-identifying information and JWT will be computed on the fly. You do not need any cooperation with your server in this setup.
-
-The security issue here is that built-in secret is rather easy to extract from the app's binary build. Anyone could then sign JWTs with arbitrary user identifying info to access other users' chats and impersonate them. To mitigate that risk make sure to use this mode only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
 
 
 Push Notifications
 ------------------
 
-Dimelo chat can receive push notifications from Dimelo server. To make them work, three things must be done on your part:
+Dimelo chat can receive push notifications from Dimelo server.
+To make them work, three things must be done on your part:
 
-1. Your app should register for remote notifications using `UIApplication` APIs. This is not strictly necessary as the Dimelo chat will attempt to do that automatically when user sends the first message. But if you are interested in sending notifications even before user has used the chat (e.g. a "welcome" message), then your should register for remote notifications earlier in the app's lifecycle.
+1. Your app should register for remote notifications using `UIApplication` APIs.
+   This is not strictly necessary as the Dimelo chat will attempt to do that automatically
+   when user sends the first message. But if you are interested in sending notifications
+   even before user has used the chat (e.g. a "welcome" message),
+   then you should register for remote notifications earlier in the app's lifecycle.
 
 2. Set the `Dimelo.deviceToken` property when you receive the token in `-application:didRegisterForRemoteNotificationsWithDeviceToken:`.
 
-3. Set the `Dimelo.developmentAPNS` property to `YES` in your development builds in order to receive development push notifications. 
-   Do not forget to set this back to `NO` before submitting to AppStore.
+3. Set the `Dimelo.developmentAPNS` property to `YES` in your development builds
+   in order to receive development push notifications. Do not forget to set this
+   back to `NO` before submitting to AppStore.
 
-4. Let Dimelo consume the notification inside `-application:didReceiveRemoteNotification:` using `-[Dimelo consumeReceivedRemoteNotification:]`. If this method returns `YES`, it means that Dimelo recognized the notification as its own and you should not process the notification yourself. The chat will be updated automatically with a new message.
+4. Let Dimelo consume the notification inside `-application:didReceiveRemoteNotification:`
+   using `-[Dimelo consumeReceivedRemoteNotification:]`. If this method returns `YES`,
+   it means that Dimelo recognized the notification as its own and you should not
+   process the notification yourself. The chat will be updated automatically with a new message.
 
-If the notification was received as a result of a user action (e.g. user opened it from the lock screen), the chat will be displayed automatically.
+If the notification was received as a result of a user action
+(e.g. user opened it from the lock screen), the chat will be displayed automatically.
 
-When notification is received while app is running, but the chat is not visible, Dimelo will display a temporary notification bar on top of the screen (looking similar to a iOS notification bar when another application is notified). If user taps that bar, a chat will open.
+When the notification is received while your app is running, but the chat is not visible,
+Dimelo will display a temporary notification bar on top of the screen (looking similar
+to a iOS notification bar when another application is notified).
+If the user taps that bar, a chat will open.
 
-You may control whether to display this bar or show the notification differently using `-dimelo:shouldDisplayNotificationWithText:` delegate method. E.g. if you'd like to show your own notification bar, return `NO` from this method and use `text` argument to present the notification in your own UI.
+You may control whether to display this bar or maybe show the notification differently
+using `-dimelo:shouldDisplayNotificationWithText:` delegate method.
+If you'd like to show your own notification bar, return `NO` from this method
+and use `text` argument to present the notification using your own UI.
 
 
 
@@ -137,12 +170,14 @@ Customizing Chat Appearance
 
 We provide a lot of properties for you to make the chat look native to your application.
 
-For your convenience, properties are organized in two groups: Basic and Advanced. In many cases
-it would be enough to adjust the Basic properties only.
+For your convenience, properties are organized in two groups: Basic and Advanced.
+In many cases it would be enough to adjust the Basic properties only.
 
-You can customize global tint color, navigation bar colors and title. You can also change the font and the color of any text in the chat view.
+You can customize global tint color, navigation bar colors and title.
+You can also change the font and the color of any text in the chat view.
 
-Advanced options include images and content insets for text bubbles. We use 5 kinds of messages. Each kind can be customized independently.
+Advanced options include images and content insets for text bubbles.
+We use 5 kinds of messages. Each kind can be customized independently.
 
 1. User's text message.
 2. User's image attachment.
@@ -152,11 +187,16 @@ Advanced options include images and content insets for text bubbles. We use 5 ki
 
 All bubble images must be 9-part sliced resizable images to fit arbitrary content.
 
-Text bubbles may have images in two rendering modes: normal and template. In *normal mode*, the image is displayed as-is. In *template mode* it is colored using properties `userMessageBackgroundColor`, `agentMessageBackgroundColor` etc. Default images use template mode.
+Text bubbles may have images in two rendering modes: normal and template.
+In *normal mode*, the image is displayed as-is.
+In *template mode* it is colored using properties `userMessageBackgroundColor`, `agentMessageBackgroundColor` etc.
+Default images use template mode.
 
-If you provide a custom bubble image for text, you should also update `{user,agent,system}MessageBubbleInsets` properties to arrange your text correctly within a bubble.
+If you provide a custom bubble image for text, you should also update
+`{user,agent,system}MessageBubbleInsets` properties to arrange your text correctly within a bubble.
 
-Attachment bubbles only use alpha channel of the image to mask the image preview. Insets do not apply to attachment bubbles.
+Attachment bubbles only use alpha channel of the image to mask the image preview.
+Insets do not apply to attachment bubbles.
 
 Check the **API Reference** to learn about all customization options.
 
@@ -291,3 +331,96 @@ You are reading this.
 ##### ./Reference
 
 An appledoc-style API reference generated from `Dimelo.h`.
+
+
+Sample Code
+-----------
+
+The following code is a minimal configuration of Dimelo chat. It presents
+the chat, handles push notifications and displays network activity in status bar.
+
+
+```
+#import "AppDelegate.h"
+#import "Dimelo.h"
+
+@interface AppDelegate () <DimeloDelegate>
+@property(nonatomic) Dimelo* dimelo;
+@end
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSString* secret = @"<ENTER YOUR API SECRET HERE>";
+
+    self.dimelo = [[Dimelo alloc] initWithApiSecret:secret delegate:self];
+
+    // When any of these properties are set, JWT is recomputed instantly.
+    self.dimelo.userIdentifier = @"U-1000555777";
+    self.dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
+    self.dimelo.title = NSLocalizedString(@"Support Chat", @"Sample App");
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        [self.dimelo displayChatView];
+
+    });
+
+    return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Register the device token.
+    self.dimelo.deviceToken = deviceToken;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    if ([self.dimelo consumeReceivedRemoteNotification:userInfo])
+    {
+        // Notification is consumed by Dimelo, do not do anything else with it.
+        return;
+    }
+
+    // You app's handling of the notification.
+    // ...
+}
+
+
+#pragma mark - Dimelo API callbacks
+
+
+- (void) dimeloDisplayChatViewController:(Dimelo*)dimelo
+{
+    UIViewController* vc = [dimelo chatViewController];
+
+    vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeChat:)];
+
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+}
+
+- (void) closeChat:(id)_
+{
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) dimeloDidBeginNetworkActivity:(Dimelo*)dimelo
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void) dimeloDidEndNetworkActivity:(Dimelo*)dimelo
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+
+@end
+```
+
+
+
+
+
