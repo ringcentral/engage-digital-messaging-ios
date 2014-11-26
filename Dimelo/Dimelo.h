@@ -15,7 +15,7 @@ extern NSString* const DimeloChatUnreadCountDidChangeNotification;
 extern NSString* const DimeloChatDidSendMessageNotification;
 
 /*!
- * Posted when the chat receives new messages from the server 
+ * Posted when the chat receives new messages from the server
  * (even while the chat is not visible).
  */
 extern NSString* const DimeloChatDidReceiveNewMessagesNotification;
@@ -55,7 +55,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * You may use an existing instance or create a new one using `-[Dimelo chatViewController]`.
  *
  * Typical ways to display a chat view controller:
- * 
+ *
  * 1. Modally, using _-[UIViewController presentViewController:animated:completion:]_.
  *
  * 2. In a tab view, by switching to an existing tab.
@@ -77,7 +77,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * By default, a standard notification slides from the top. When the user taps it,
  * the chat view is opened (via `dimeloDisplayChatViewController:`).
- * 
+ *
  * @param dimelo   An API instance.
  * @param message  A message to be displayed in the notification.
  *                 If you override Dimelo notification bar, you may use this text
@@ -236,7 +236,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  *
  * ### Unsafe mode which does not require signing a JWT token by your server:
- * 
+ *
  * ```
  * // Instantiate dimelo with *secret* api key and a hostname.
  * Dimelo* dimelo = [[Dimelo alloc] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
@@ -249,8 +249,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * // All communications will include the signed JWT token as if they were signed by your server.
  * ```
  *
- * **WARNING:** Note that anyone who extracts your secret API key will be able 
- * to impersonate any user if they know their userIdentifier. User's data is 
+ * **WARNING:** Note that anyone who extracts your secret API key will be able
+ * to impersonate any user if they know their userIdentifier. User's data is
  * relatively safe if userIdentifier is not well-known or cannot be easily guessed.
  *
  */
@@ -481,7 +481,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * ```
  *
  * @param dictionary a `userInfo` dictionary provided by the OS.
- * @return `YES` if notification is consumed by Dimelo and should not be processed by your app. 
+ * @return `YES` if notification is consumed by Dimelo and should not be processed by your app.
  * @return `NO` if notification does not belong to Dimelo and should be processed by your app.
  *
  */
@@ -531,7 +531,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 ////////////////////////////////////////////////////////////////////////////////
 
 
-/*! 
+/*!
  * Tint color for aux controls: Close button, Send button, cursor etc.
  */
 @property(nonatomic) UIColor* tintColor;
@@ -595,7 +595,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /*!
  * Background color for user message bubbles.
  *
- * This color is applied when `userMessageBubbleImage` has template rendering mode (see UIImageRenderingMode). 
+ * This color is applied when `userMessageBubbleImage` has template rendering mode (see UIImageRenderingMode).
  * Default image is configured this way.
  */
 @property(nonatomic) UIColor* userMessageBackgroundColor;
