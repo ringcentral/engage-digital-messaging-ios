@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name     = 'Dimelo-iOS'
   s.version  = '1.0.1'
   s.license  = { :type => 'Proprietary', :file => 'LICENSE' }
-  s.summary  = 'Dimelo feedback component for iOS'
+  s.summary  = 'Dimelo Mobile Messaging SDK for iOS'
   s.homepage = 'https://github.com/dimelo/Dimelo-iOS'
   s.author   = { 'Dimelo' => 'support@dimelo.com' }
   s.source   = { :git => 'https://github.com/dimelo/Dimelo-iOS.git', :tag => 'v1.0.1' }
