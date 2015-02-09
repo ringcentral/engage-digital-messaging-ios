@@ -16,21 +16,21 @@ Follow these steps to integrate the Dimelo chat in your application.
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
-2) Configure a `Dimelo` instance with your API key, optional user identifier and
-   other user-specific info. We recommend to keep this instance in an instance
-   variable in your app delegate.
+2) Create a `DimeloConfig.plist` file and add it to your project. 
+   The library will use it to configure Dimelo.
+   [See more informations about how to use plist to configure Dimelo](PlistCustomization.md)
 
 3) Set `dimelo.developmentAPNS` = `YES` in your development builds to receive
    push notifications. Set it back to `NO` before submitting to AppStore.
 
-4) Specify a delegate for `Dimelo` instance (usually it is your app delegate) and
-   implement `-dimeloDisplayChatViewController:` method. This method will be called by
+4) Specify a delegate for the `Dimelo` shared instance `+[Dimelo sharedInstance]` (usually it is your app delegate)
+   and implement `-dimeloDisplayChatViewController:` method. This method will be called by
    `Dimelo` when it needs to present a chat view. Your application determines
    how and where to display a chat view controller.
-
-To display a chat, get its view controller using `-[Dimelo chatViewController]`
-and present it either modally, in popover or in a UITabBarController.
-See **Displaying Chat** section below for more options.
+    
+   To display a chat, get its view controller using `-[Dimelo chatViewController]`
+   and present it either modally, in popover or in a UITabBarController.
+   See **Displaying Chat** section below for more options.
 
 5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:`
    set `deviceToken` property on your `Dimelo` instance. This will allow your app
@@ -39,11 +39,12 @@ See **Displaying Chat** section below for more options.
 6) Also in the app delegate, in `-application:didReceiveRemoteNotification:`
    pass the `userInfo` to `-[Dimelo consumeReceivedRemoteNotification:]`.
 
-These are minimal steps to make chat work in your app. Read on to learn how
-to customize the appearance and behaviour of the chat to fit perfectly in your app.
+   These are minimal steps to make chat work in your app. Read on to learn how
+   to customize the appearance and behaviour of the chat to fit perfectly in your app.
 
 See also **Sample Code** section in the end of this README or
 download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
+
 
 Displaying the Chat
 -------------------
@@ -164,9 +165,18 @@ If your application has its own unread count, you might want to disable this beh
 `updateAppBadgeNumber` property to `NO`. Then you can access the Dimelo-only unread count using `unreadCount` property.
 
 
+Location Support
+----------------
+
+To enable user location sharing in `Dimelo` chat, please make sure to 
+define the `NSLocationWhenInUseUsageDescription` key inside your project info.plist
+
+
 
 Customizing Chat Appearance
 ---------------------------
+
+[see how to customize Dimelo using plist](PlistCustomization.md)
 
 We provide a lot of properties for you to make the chat look native to your application.
 
@@ -339,31 +349,45 @@ Sample Code
 The following code is a minimal configuration of Dimelo chat. It presents
 the chat, handles push notifications and displays network activity in status bar.
 
+DimeloConfig.plist
+ 
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>apiSecret</key>
+    <string>ENTER YOUR API SECRET HERE</string>
+    <key>title</key>
+    <string>Support Chat</string>
+</dict>
+</plist>
+```
+
+
+
+AppDelegate.m
 
 ```
 #import "AppDelegate.h"
 #import "Dimelo.h"
 
 @interface AppDelegate () <DimeloDelegate>
-@property(nonatomic) Dimelo* dimelo;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString* secret = @"<ENTER YOUR API SECRET HERE>";
-
-    self.dimelo = [[Dimelo alloc] initWithApiSecret:secret delegate:self];
+    [Dimelo sharedInstance].delegate = self;
 
     // When any of these properties are set, JWT is recomputed instantly.
-    self.dimelo.userIdentifier = @"U-1000555777";
-    self.dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
-    self.dimelo.title = NSLocalizedString(@"Support Chat", @"Sample App");
+    [Dimelo sharedInstance].userIdentifier = @"U-1000555777";
+    [Dimelo sharedInstance].authenticationInfo = @{@"bankBranch": @"Test-1234" };
 
     dispatch_async(dispatch_get_main_queue(), ^{
 
-        [self.dimelo displayChatView];
+        [[Dimelo sharedInstance] displayChatView];
 
     });
 
@@ -373,12 +397,12 @@ the chat, handles push notifications and displays network activity in status bar
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Register the device token.
-    self.dimelo.deviceToken = deviceToken;
+    [Dimelo sharedInstance].deviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    if ([self.dimelo consumeReceivedRemoteNotification:userInfo])
+    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo])
     {
         // Notification is consumed by Dimelo, do not do anything else with it.
         return;
@@ -418,6 +442,7 @@ the chat, handles push notifications and displays network activity in status bar
 
 
 @end
+
 ```
 
 

@@ -261,6 +261,18 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /// @name Setting up an API client
 ////////////////////////////////////////////////////////////////////////////////
 
+
+/*!
+* returns API client configured with config from DimeloConfig.plist
+*
+* For correct operation you will have to provide a valid signed JWT token via `jwt` property.
+* To do so, fill in `userIdentifier`, `authenticationInfo` and send the resulting `jwtDictionary` to your server.
+*
+* This is a recommended way to access Dimelo API.
+*
+*/
++ (instancetype)sharedInstance;
+
 /*!
 * Initializes API client with a public API key and a delegate.
 *
@@ -323,6 +335,13 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 
 /*!
+ * Per-application API secret key, typically specific to your app.
+ *
+ * API secret is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
+ */
+- (void) setApiSecret:(NSString*)apiSecret;
+
+/*!
  * Delegate object to present a chat view controller and react to various optional notifications.
  *
  * @see DimeloDelegate
@@ -334,12 +353,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * API Key is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
  */
-@property(nonatomic, readonly, copy) NSString* apiKey;
+@property(nonatomic, copy) NSString* apiKey;
 
 /*!
  * Per-application hostname used to connect to Dimelo backend.
  */
-@property(nonatomic, readonly, copy) NSString* hostname;
+@property(nonatomic, copy) NSString* hostname;
 
 /*!
  * Per-installation identifier generated when the component is instantiated for the first time within the app.
