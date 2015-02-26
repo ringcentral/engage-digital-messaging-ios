@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>apiKey</key>
+	<string></string>
+	<key>hostname</key>
+	<string></string>
+	<key>apiSecret</key>
+	<string></string>
+	<key>title</key>
+	<string>Support Chat</string>
+	<key>tintColor</key>
+	<string></string>
+	<key>navigationBarTintColor</key>
+	<string></string>
+	<key>navigationBarColor</key>
+	<string></string>
+	<key>userMessageTextColor</key>
+	<string>#FFFFFF</string>
+	<key>agentMessageTextColor</key>
+	<string>#000000</string>
+	<key>systemMessageTextColor</key>
+	<string>#666666</string>
+	<key>userMessageBackgroundColor</key>
+	<string>#258CFB</string>
+	<key>agentMessageBackgroundColor</key>
+	<string>#DFDFE5</string>
+	<key>systemMessageBackgroundColor</key>
+	<string>#B3B3B3</string>
+	<key>dateTextColor</key>
+	<string>#808080</string>
+	<key>agentNameColor</key>
+	<string>#808080</string>
+	<key>loadMoreMessagesButtonTextColor</key>
+	<string></string>
+	<key>inputBarTintColor</key>
+	<string></string>
+	<key>inputBarBackgroundColor</key>
+	<string></string>
+	<key>messageFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
+	<key>systemMessageFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>16</integer>
+	</dict>
+	<key>dateFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>13</integer>
+	</dict>
+	<key>agentNameFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue-Medium</string>
+		<key>size</key>
+		<integer>13</integer>
+	</dict>
+</dict>
+</plist>

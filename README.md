@@ -1,7 +1,7 @@
 Dimelo-iOS
 ==========
 
-Dimelo provides a mobile chat component that allows users of your app
+Dimelo provides a mobile messaging component that allows users of your app
 to easily communicate  with your customer support agents. You can send text messages
 and images, and receive push notifications and automatic server-provided replies.
 
@@ -12,7 +12,7 @@ rich customization options to fit perfectly in your application.
 Getting Started
 ---------------
 
-Follow these steps to integrate the Dimelo chat in your application.
+Follow these steps to integrate the Dimelo Mobile Messaging in your application.
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
@@ -46,7 +46,7 @@ See also **Sample Code** section in the end of this README or
 download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
 
 
-Displaying the Chat
+Displaying the Mobile Messaging
 -------------------
 
 Dimelo provides an opaque `UIViewController` instance that you can display how you want
@@ -173,7 +173,7 @@ define the `NSLocationWhenInUseUsageDescription` key inside your project info.pl
 
 
 
-Customizing Chat Appearance
+Customizing Mobile Messaging Appearance
 ---------------------------
 
 [see how to customize Dimelo using plist](PlistCustomization.md)
@@ -211,7 +211,7 @@ Insets do not apply to attachment bubbles.
 Check the **API Reference** to learn about all customization options.
 
 
-Reacting To Chat Events
+Reacting To Mobile Messaging Events
 -----------------------
 
 We provide two ways to react to various events in the char:
@@ -359,7 +359,7 @@ DimeloConfig.plist
     <key>apiSecret</key>
     <string>ENTER YOUR API SECRET HERE</string>
     <key>title</key>
-    <string>Support Chat</string>
+    <string>Support Mobile Messaging</string>
 </dict>
 </plist>
 ```

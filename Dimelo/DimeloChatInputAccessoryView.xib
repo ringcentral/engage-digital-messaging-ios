@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DimeloChatInputAccessoryView">
@@ -34,7 +34,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-VD-3Vb" userLabel="Attachment Button">
-                    <rect key="frame" x="8" y="6" width="28" height="30"/>
+                    <rect key="frame" x="0.0" y="2" width="44" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="R6n-An-mO2"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,17 +68,19 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="7" id="2vu-4i-byf"/>
                 <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" constant="-32" id="Cbl-Dk-XRq"/>
-                <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="F4B-zn-hxh"/>
+                <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="F4B-zn-hxh"/>
                 <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="6" id="JA1-bu-6oq"/>
                 <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="M6x-ZO-dHG"/>
                 <constraint firstAttribute="trailing" secondItem="7So-Pk-JJJ" secondAttribute="trailing" id="NXU-AL-kK4"/>
-                <constraint firstAttribute="bottom" secondItem="4dL-VD-3Vb" secondAttribute="bottom" constant="8" id="QfF-4y-6DG"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4dL-VD-3Vb" secondAttribute="bottom" id="QfF-4y-6DG"/>
                 <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="1" secondAttribute="top" id="Sqp-QT-AeN"/>
                 <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="8" id="VGi-AN-qeH"/>
+                <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1" secondAttribute="top" id="Vgw-8v-zys"/>
                 <constraint firstItem="GNg-UA-tda" firstAttribute="trailing" secondItem="KP7-AG-Cfn" secondAttribute="trailing" constant="2" id="fWo-i3-MQK"/>
+                <constraint firstItem="4dL-VD-3Vb" firstAttribute="centerY" secondItem="fUA-PB-aVf" secondAttribute="centerY" id="fdo-P0-uVW"/>
                 <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="44" id="hk5-GL-Krq"/>
                 <constraint firstItem="GNg-UA-tda" firstAttribute="bottom" secondItem="KP7-AG-Cfn" secondAttribute="bottom" constant="2" id="oRn-tU-3VF"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" constant="8" id="vLg-Zc-1Et"/>
+                <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="vLg-Zc-1Et"/>
                 <constraint firstItem="fUA-PB-aVf" firstAttribute="leading" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="7" id="yvM-fe-BdD"/>
                 <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="zYs-PJ-WSa"/>
             </constraints>
