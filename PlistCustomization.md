@@ -3,6 +3,7 @@ Dimelo Plist configuration
 
 All keys are optional.
 
+[Download example plist](https://raw.githubusercontent.com/dimelo/Dimelo-iOS/master/Dimelo/DimeloConfig.plist?token=AAAerlawQARBQ6TV9UhaL6FzBKNpsC02ks5VAJLlwA%3D%3D).
 
 ### apiKey
 Public API key that identifies all requests to Dimelo (used only for the

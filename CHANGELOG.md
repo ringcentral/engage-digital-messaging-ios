@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.2.1 (March 4, 2015) ##
+
+* Doc: better onboarding
+* Fix: DimeloConfig.plist usage remain optional
+
 ## Dimelo iOS SDK 1.2.0 (February 26, 2015) ##
 
 * Feature: geolocation attachment now takes radius into account
