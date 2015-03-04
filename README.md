@@ -272,6 +272,9 @@ You will see Dimelo files in your project tree:
  * Accelerate.framework
  * MobileCoreServices.framework
  * SystemConfiguration.framework
+ * CoreLocation.framework
+ * MapKit.framework
+ * AddressBookUI.framework
 
 <img src=HowToImages/06-add-frameworks@2x.png width=400></img>
 
