@@ -1,5 +1,11 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.2.2 (March 10, 2015) ##
+
+- Fix: adding location as a first message was crashing the SDK
+- Fix: multiple environment + offline messages created discrepency between
+  chat view, connection status and messages to be sent.
+
 ## Dimelo iOS SDK 1.2.1 (March 4, 2015) ##
 
 * Doc: better onboarding
