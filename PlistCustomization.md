@@ -11,11 +11,6 @@ secure server-side authentication, see section "Setup with a server-side secret"
 
 API Key is always represented in hex format, e.g. `ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70`.
 
-### hostname
-Hostname used to connect to Dimelo backend.
-
-e.g. `mobilemessaging.example.dimelo.info`.
-
 ### apiSecret
 Secret API key, only embed in the app for client-side authentication, see section "Setup with a built-in secret").
 This is not recommended to embed in .plist but rather to set it directly via a setter in the code of the application for better obfuscation.
