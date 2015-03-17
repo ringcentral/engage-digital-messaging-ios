@@ -9,10 +9,12 @@ The component integrates nicely in any iPhone or iPad app, allows presenting
 the chat in tab, modal, popover or even customly designed containers and has
 rich customization options to fit perfectly in your application.
 
+Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for other technical references.
+
 Getting Started
 ---------------
 
-Follow these steps to integrate the Dimelo Mobile Messaging in your application.
+Follow these steps to integrate the Dimelo Mobile SDK in your application.
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
@@ -25,7 +27,7 @@ The library will use it to configure the `Dimelo` shared instance.
 
 3) Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` before submitting to AppStore.
 
-To benefit from APNs on Mobile Messaging you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
+To benefit from APNs on Dimelo Mobile SDK integration you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
 
 4) Specify a delegate for the `Dimelo` shared instance `+[Dimelo sharedInstance]` with `dimelo.delegate` (usually it is your app delegate)
 
@@ -33,7 +35,7 @@ Implement `-dimeloDisplayChatViewController:` method. This method will be called
 
 To display a chat, get its view controller using `-[Dimelo chatViewController]`
 and present it either modally, in popover or in a UITabBarController.
-See **Displaying the Mobile Messaging** section below for more options.
+See **Displaying Dimelo Mobile conversation screen** section below for more options.
 
 5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:` set `deviceToken` property on your `Dimelo` instance. This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.
 
@@ -46,7 +48,7 @@ These are minimal steps to make chat work in your app. Read on to learn how to c
 See also **Sample Code** section in the end of this README or
 download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
 
-Displaying the Mobile Messaging
+Displaying Dimelo Mobile conversation screen
 -------------------
 
 Dimelo provides an opaque `UIViewController` instance that you can display how you want (created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`, show in a popover or present modally. You can also use `transitioningDelegate` to present chat view controller in a very custom way.
@@ -168,7 +170,7 @@ define the `NSLocationWhenInUseUsageDescription` key inside your project info.pl
 
 
 
-Customizing Mobile Messaging Appearance
+Customizing Dimelo Mobile SDK Appearance
 ---------------------------
 
 [see how to customize Dimelo using plist](PlistCustomization.md)
@@ -206,7 +208,7 @@ Insets do not apply to attachment bubbles.
 Check the **API Reference** to learn about all customization options.
 
 
-Reacting To Mobile Messaging Events
+Reacting To Dimelo Mobile SDK Events
 -----------------------
 
 We provide two ways to react to various events in the char:
@@ -359,7 +361,7 @@ DimeloConfig.plist
 <plist version="1.0">
 <dict>
     <key>title</key>
-    <string>Support Mobile Messaging</string>
+    <string>Dimelo Mobile Support</string>
 </dict>
 </plist>
 ```
