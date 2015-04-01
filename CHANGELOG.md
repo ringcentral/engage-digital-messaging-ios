@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.2.3 (April 1, 2015) ##
+
+- Fix: update badge count if different from the unreadCount returned by the server
+
 ## Dimelo iOS SDK 1.2.2 (March 10, 2015) ##
 
 - Fix: adding location as a first message was crashing the SDK
