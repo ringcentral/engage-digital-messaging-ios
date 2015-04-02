@@ -1,3 +1,28 @@
-Copyright (C) 2014 Dimelo. All rights reserved.
+DIMELO MOBILE SDK TERMS OF SERVICE
+----
+The following Dimelo Mobile SDK Terms of Service (“Terms” or “Agreement”) constitutes a legal
+agreement between You as a mobile application Developer ("Developer") and, if applicable the Entity (as defined below)
+on whose behalf you are accessing and/or using the Services (as defined below) and
+Dimelo SA. Your use of the Dimelo Mobile SDK website, documentation, and Software (collectively, the “Services,”) is expressly conditioned on the acceptance of these Terms.
 
+If you are accessing or using the Services on behalf of your employer, client or another entity (“Entity”),you agree to remain responsible and liable for your and such entity's compliance with this agreement. further, you represent and warrant that (i) you are the authorized agent of the applicable entity and have the legal authority to enter into the agreement on behalf of yourself and the entity, and (ii) you have obtained,on behalf of yourself and the Entity (if applicable), all necessary rights, waivers, consents and permissions necessary to collect, use, store, and share user information in connection with the software.
+
+SDK PURPOSE
+The Services provide an in-app mobile messaging solution for mobile application developers, for the sole purpose ("Purpose") of enabling a mobile application to include a message channel between the user of the mobile app and the Entity publishing this app.
+The solution must solely be used in conjonction with commercial products from Dimelo, providing operational management of interactions between the app publisher and the app user.
+
+LICENCE
+Subject to these Terms and in consideration of Dimelo customer's payment of Fees for such commercial products, Dimelo grants you a limited, revocable, non-assignable, non-sublicensable, non-exclusive license to use the Services in due respect of their Purpose (as defined above).
+
+RESTRICTIONS
+Developer shall not directly or indirectly (a) use the Services to create any service, software or documentation that is substantially the same or has similar functionality as the Services, (b) disassemble, decompile, reverse engineer or use any other means to attempt to discover any source code, algorithms or trade secrets underlying the Services (c) use the Services to connect to message management solutions competing with Dimelo product portfolio.
+
+TERM AND TERMINATION
+The term of this Agreement will begin on date you download the Software, and continue until terminated as set forth herein (“Term”).
+Your use of the Services may be terminated by Dimelo or You at any time, for any reason, effective immediately upon notice provided by one party to the other party as set forth herein.
+
+WARRANTY
+The service is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the service or the use or other dealings in the service.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Copyright (C) 2014-2015 Dimelo. All rights reserved.
