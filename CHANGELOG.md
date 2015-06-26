@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.2.4 (June 26, 2015) ##
+
+- Fix: image sent were gone after killing the app
+
 ## Dimelo iOS SDK 1.2.3 (April 1, 2015) ##
 
 - Fix: update badge count if different from the unreadCount returned by the server
