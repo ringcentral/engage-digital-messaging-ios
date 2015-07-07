@@ -242,7 +242,7 @@ How To Install With CocoaPods
 
 4) Include header in your app delegate: `#include "Dimelo.h"`
 
-5) Follow the [API reference](Reference/html/index.html) to configure and use Dimelo instance.
+5) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
 
 
 
@@ -282,14 +282,14 @@ You will see Dimelo files in your project tree:
 
 6) Include header in your app delegate: `#include "Dimelo.h"`
 
-7) Follow the [API reference](Reference/html/index.html) to configure and use Dimelo instance.
+7) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
 
 
 
 API Reference
 -------------
 
-You will find API documentation in `./Reference` folder. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+You can consult [API documentation](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) and in `./Reference` folder. Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 
 Files and folders
