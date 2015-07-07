@@ -205,7 +205,7 @@ If you provide a custom bubble image for text, you should also update
 Attachment bubbles only use alpha channel of the image to mask the image preview.
 Insets do not apply to attachment bubbles.
 
-Check the **API Reference** to learn about all customization options.
+Check the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to learn about all customization options.
 
 
 Reacting To Dimelo Mobile SDK Events
@@ -225,7 +225,7 @@ and `-dimeloDidEndNetworkActivity:`. Dimelo does not change the status bar netwo
 indicator to avoid conflicts with your app. If you would like to indicate it, you should
 override these methods and update the activity indicator accordingly.
 
-Please refer to **API Reference** documentation (in ./Reference folder) for more information.
+Please refer to [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) documentation for more information.
 
 
 
@@ -289,7 +289,7 @@ You will see Dimelo files in your project tree:
 API Reference
 -------------
 
-You can consult [API documentation](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) and in `./Reference` folder. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+[Dimelo Mobile iOS SDK API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html).  Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 
 Files and folders
