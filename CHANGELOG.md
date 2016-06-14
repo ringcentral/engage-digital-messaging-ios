@@ -1,6 +1,14 @@
 ## Dimelo iOS SDK master ##
 
-## Dimelo iOS SDK 1.2.5 (January 29, 2016)
+## Dimelo iOS SDK 1.3.0 (June 14, 2016) ##
+
+- Feature: remove local cache file
+- Better: No more incompatibility with existing versions of TTTAttributedLabel
+- Better: documentation and code samples are now more clear
+- Better: bitcode support
+- Fix: Manually setting JWT token with {{dimelo.jwt=}} now sends the new info to the server for update
+
+## Dimelo iOS SDK 1.2.5 (January 29, 2016) ##
 
 - Fix: close keyboard when opening attachment dialog
 

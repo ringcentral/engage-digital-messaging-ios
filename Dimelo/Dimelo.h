@@ -215,8 +215,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * ### Recommended mode: with server-signed authentication token.
  *
  * ```
- * // Instantiate dimelo with public api key and a hostname.
- * Dimelo* dimelo = [[Dimelo alloc] initWithApiKey:@"public api key" hostname:@"api.example.com" delegate:self];
+ * // Instantiate dimelo with public api key and an optional hostname.
+ * Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiKey:@"public api key" hostname:@"api.example.com" delegate:self];
  *
  * // Assign optional properties to include in authenticated JWT token.
  * dimelo.userIdentifier = @"optional user account ID";
@@ -238,8 +238,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * ### Unsafe mode which does not require signing a JWT token by your server:
  *
  * ```
- * // Instantiate dimelo with *secret* api key and a hostname.
- * Dimelo* dimelo = [[Dimelo alloc] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
+ * // Instantiate dimelo with *secret* api key and an optional hostname.
+ * Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
  *
  * // Assign optional properties to include in authenticated JWT token.
  * dimelo.userIdentifier = @"optional user account ID";
@@ -263,7 +263,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 
 /*!
-* returns API client configured with config from DimeloConfig.plist
+* Returns a shared API client initialized with config from DimeloConfig.plist
 *
 * For correct operation you will have to provide a valid signed JWT token via `jwt` property.
 * To do so, fill in `userIdentifier`, `authenticationInfo` and send the resulting `jwtDictionary` to your server.
@@ -274,7 +274,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 + (instancetype)sharedInstance;
 
 /*!
-* Initializes API client with a public API key and a delegate.
+* Initializes a new API client with a public API key and a delegate.
 *
 * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
 *
@@ -290,7 +290,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiKey:(NSString*)apiKey delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a public API key, custom hostname and a delegate.
+ * Initializes a new API client with a public API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -307,7 +307,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiKey:(NSString*)apiKey hostname:(NSString*)hostname delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a secret API key and a delegate.
+ * Initializes a new API client with a secret API key and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -320,7 +320,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiSecret:(NSString*)apiSecret delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a secret API key, custom hostname and a delegate.
+ * Initializes a new API client with a secret API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
