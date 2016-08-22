@@ -2,6 +2,9 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString* const DimeloHTTPErrorDomain;
+
+
 @class Dimelo;
 
 /*!
@@ -543,6 +546,16 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 - (void) noteUnreadCountDidChange;
 
+/*!
+ * Fetch unreadCount.
+ *
+ * In case of error completion will be called with NSNotFound value and the corresponding error.
+ * Completion is called on main thread.
+ *
+ * NSErrors of domain DimeloHTTPErrorDomain will mirror the HTTP code from Dimelo backend's response in their own code property.
+ * You may want to handle special HTTP code responses like 429 Too many requests for example.
+ */
+- (void) fetchUnreadCountWithCompletionHandler:(void (^)(NSInteger unreadCount, NSError *error))completion;
 
 
 ////////////////////////////////////////////////////////////////////////////////
