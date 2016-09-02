@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.3.1 (September 02, 2016) ##
+
+- Fix: remove call to containsString (iOS 7 compatibility)
+
 ## Dimelo iOS SDK 1.3.0 (June 14, 2016) ##
 
 - Feature: remove local cache file
