@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.3.1 (September 9th, 2016) ##
+
+- Fix: remove call to containsString (iOS 7 compatibility)
+- Better:  No title for viewControllers that are not exposed for customization
+
 ## Dimelo iOS SDK 1.3.0 (June 14, 2016) ##
 
 - Feature: remove local cache file
