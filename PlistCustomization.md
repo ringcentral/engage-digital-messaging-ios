@@ -92,6 +92,11 @@ Background color of the input bar.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
+### disabledSendButtonColor
+Text color of the send button on disabled state
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
 ### messageFont
 Font for user and agent messages.
 

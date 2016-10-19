@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.4.0 (October 19, 2016) ##
+
+- Feature: add the unreadCount feature to poll the number of unread messages
+- Feature: add ability to customize the text color of the send button (on disabled state)
+
 ## Dimelo iOS SDK 1.3.1 (September 12, 2016) ##
 
 - Fix: remove call to containsString (iOS 7 compatibility)
