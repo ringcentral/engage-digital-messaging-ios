@@ -8,7 +8,7 @@ All keys are optional.
 
 ## Screenshots default interface
 
-Some screenshots will used in that documentation to show the impact of the different configuration attributes.
+Some screenshots will be used in that documentation to show the impact of the different configuration attributes.
 
 The default interface without any customization is the following on iOS.
 
