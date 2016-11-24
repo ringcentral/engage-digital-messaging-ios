@@ -1,5 +1,11 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.5.0 (November 24th, 2016) ##
+
+- Feature: Add ability to define a welcome message which is displayed whenever the conversation is empty.
+- Improvement: Better handling of Camera, Gallery and Location permissions (do not display the associated actions if the permissions are not provided).
+- Improvement: Harmonize customization options with what is available for the Android SDK.
+
 ## Dimelo iOS SDK 1.4.0 (October 19, 2016) ##
 
 - Feature: add the unreadCount feature to poll the number of unread messages

@@ -13,6 +13,11 @@ extern NSString* const DimeloHTTPErrorDomain;
 extern NSString* const DimeloChatUnreadCountDidChangeNotification;
 
 /*!
+ * Posted when `-[Dimelo welcomeMessage]` property is changed.
+ */
+extern NSString* const DimeloWelcomeMessageDidChangeNotification;
+
+/*!
  * Posted when the user sends a message.
  */
 extern NSString* const DimeloChatDidSendMessageNotification;
@@ -131,6 +136,18 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @see DimeloChatUnreadCountDidChangeNotification
  */
 - (void) dimeloUnreadCountDidChange:(NSNotification*)notification;
+
+/*!
+ * Called when `-[Dimelo welcomeMessage]` property changes.
+ *
+ * Provided as a courtesy so that you do not need to subscribe to notifications separately
+ * when handling these events in one delegate is enough for your use case.
+ *
+ * @param notification   NSNotification with name DimeloWelcomeMessageDidChangeNotification.
+ *
+ * @see DimeloWelcomeMessageDidChangeNotification
+ */
+- (void) dimeloWelcomeMessageDidChange:(NSNotification*)notification;
 
 /*!
  * Called when the user sends a message.
@@ -688,6 +705,22 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  */
 @property(nonatomic) UIColor* disabledSendButtonColor;
+
+/*!
+ * Font for the message field input
+ *
+ * If this property is nil (default), default font is used
+ *
+ */
+@property(nonatomic) UIFont* messageFieldFont;
+
+/*!
+ * Default font
+ *
+ * If this property is nil (default), default system font is used
+ *
+ */
+@property(nonatomic) UIFont* defaultFont;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Advanced Customization
