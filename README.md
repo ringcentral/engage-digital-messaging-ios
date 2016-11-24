@@ -162,13 +162,18 @@ If your application has its own unread count, you might want to disable this beh
 `updateAppBadgeNumber` property to `NO`. Then you can access the Dimelo-only unread count using `unreadCount` property.
 
 
-Location Support
-----------------
+Required Permissions
+--------------------
 
-To enable user location sharing in `Dimelo` chat, please make sure to 
-define the `NSLocationWhenInUseUsageDescription` key inside your project info.plist
+To access all the features of the Dimelo SDK, some permissions have to be defined inside your project info.plist:
 
+|XCode Key|Raw Info.plist Key|Used for|
+|---------|------------------|--------|
+|Privacy - Photo Library Usage Description|NSPhotoLibraryUsageDescription|Used to allow the user to choose images from its photo album to send them as attachment|
+|Privacy - Camera Usage Description|NSCameraUsageDescription|Used to allow the user to take pictures from its camera to send them as attachment|
+|Privacy - Location When In Use Usage Description|NSLocationWhenInUseUsageDescription|User to allow the user to send a location as attachment|
 
+If these permissions are not provided, the corresponding options will be hidden from the user.
 
 Customizing Dimelo Mobile SDK Appearance
 ---------------------------
