@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.5.1 (December 9th, 2016) ##
+- Feature: Ability to set language (useful for welcome message feature for example)
+- Fix: Check installationId when receiving a new notification. Only process notifications where the notificationId matches the current installationId.
+- Fix: Solve an issue causing the background of the Dimelo Chat not to be displayed in a particular case.
+
 ## Dimelo iOS SDK 1.5.0 (November 24th, 2016) ##
 
 - Feature: Add ability to define a welcome message which is displayed whenever the conversation is empty.

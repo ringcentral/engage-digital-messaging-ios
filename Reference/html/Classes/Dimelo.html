@@ -88,11 +88,15 @@
 		
 		<option value="//api/name/dateTextColor">dateTextColor</option>
 		
+		<option value="//api/name/defaultFont">defaultFont</option>
+		
 		<option value="//api/name/delegate">delegate</option>
 		
 		<option value="//api/name/developmentAPNS">developmentAPNS</option>
 		
 		<option value="//api/name/deviceToken">deviceToken</option>
+		
+		<option value="//api/name/disabledSendButtonColor">disabledSendButtonColor</option>
 		
 		<option value="//api/name/hostname">hostname</option>
 		
@@ -108,9 +112,13 @@
 		
 		<option value="//api/name/keyboardAppearance">keyboardAppearance</option>
 		
+		<option value="//api/name/language">language</option>
+		
 		<option value="//api/name/loadMoreMessagesButtonTextColor">loadMoreMessagesButtonTextColor</option>
 		
 		<option value="//api/name/messageContextInfo">messageContextInfo</option>
+		
+		<option value="//api/name/messageFieldFont">messageFieldFont</option>
 		
 		<option value="//api/name/messageFont">messageFont</option>
 		
@@ -174,6 +182,8 @@
 		
 		<option value="//api/name/displayChatView">- displayChatView</option>
 		
+		<option value="//api/name/fetchUnreadCountWithCompletionHandler:">- fetchUnreadCountWithCompletionHandler:</option>
+		
 		<option value="//api/name/initWithApiKey:delegate:">- initWithApiKey:delegate:</option>
 		
 		<option value="//api/name/initWithApiKey:hostname:delegate:">- initWithApiKey:hostname:delegate:</option>
@@ -229,37 +239,39 @@ about the current user and use it to display a chat view controller.</p>
 
 <h3>Recommended mode: with server-signed authentication token.</h3>
 
-<pre><code>// Instantiate dimelo with public api key and an optional hostname.
-Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiKey:@"public api key" hostname:@"api.example.com" delegate:self];
+<p>```
+// Instantiate dimelo with public api key and an optional hostname.
+Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiKey:@&ldquo;public api key&rdquo; hostname:@&ldquo;api.example.com&rdquo; delegate:self];</p>
 
-// Assign optional properties to include in authenticated JWT token.
-dimelo.userIdentifier = @"optional user account ID";
-dimelo.authenticationInfo = @{ &lt;extra fields to add to JWT token&gt;  }
+<p>// Assign optional properties to include in authenticated JWT token.
+dimelo.userIdentifier = @&ldquo;optional user account ID&rdquo;;
+dimelo.authenticationInfo = @{ <extra fields to add to JWT token>  }</p>
 
-// Retrieve a dictionary to be signed by your server within a JWT token:
-NSDictionary* dict = dimelo.jwtDictionary;
+<p>// Retrieve a dictionary to be signed by your server within a JWT token:
+NSDictionary* dict = dimelo.jwtDictionary;</p>
 
-// Send dict to your server and receive a signed JWT token in response.
-// Token must be signed with a secret key corresponding to public API key that you use in your app.
+<p>// Send dict to your server and receive a signed JWT token in response.
+// Token must be signed with a secret key corresponding to public API key that you use in your app.</p>
 
-// Assign a token to dimelo.jwt so it can be used in all communications.
+<p>// Assign a token to dimelo.jwt so it can be used in all communications.
 dimelo.jwt = jwtFromServer;
-</code></pre>
+```</p>
 
 <p>Now Dimelo will be able to make requests to Dimelo servers, send and receive chat messages etc.</p>
 
 <h3>Unsafe mode which does not require signing a JWT token by your server:</h3>
 
-<pre><code>// Instantiate dimelo with *secret* api key and an optional hostname.
-Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
+<p>```
+// Instantiate dimelo with <em>secret</em> api key and an optional hostname.
+Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiSecret:@&ldquo;secret api key&rdquo; hostname:@&ldquo;api.example.com&rdquo; delegate:self];</p>
 
-// Assign optional properties to include in authenticated JWT token.
-dimelo.userIdentifier = @"optional user account ID";
-dimelo.authenticationInfo = @{ &lt;extra fields to add to JWT token&gt;  }
+<p>// Assign optional properties to include in authenticated JWT token.
+dimelo.userIdentifier = @&ldquo;optional user account ID&rdquo;;
+dimelo.authenticationInfo = @{ <extra fields to add to JWT token>  }</p>
 
-// Dimelo will compute and sign a valid JWT token automatically each time you change one of the properties above.
+<p>// Dimelo will compute and sign a valid JWT token automatically each time you change one of the properties above.
 // All communications will include the signed JWT token as if they were signed by your server.
-</code></pre>
+```</p>
 
 <p><strong>WARNING:</strong> Note that anyone who extracts your secret API key will be able
 to impersonate any user if they know their <a href="#//api/name/userIdentifier">userIdentifier</a>. User&rsquo;s data is
@@ -1401,14 +1413,15 @@ development builds will not receive such notifications.</p>
 
 <p>Recommended usage:</p>
 
-<pre><code>- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+<p><code>
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
 if ([self.dimelo consumeReceivedRemoteNotification:userInfo]) {
 return;
 }
 // You app's handling of this notification...
 }
-</code></pre>
+</code></p>
 			</div>
 			
 
@@ -1580,6 +1593,80 @@ them having explicit references to Dimelo instance (NSNotification <code>object<
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchUnreadCountWithCompletionHandler:" title="fetchUnreadCountWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchUnreadCountWithCompletionHandler:">&ndash;&nbsp;fetchUnreadCountWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetch <a href="#//api/name/unreadCount">unreadCount</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchUnreadCountWithCompletionHandler:(void ( ^ ) ( NSInteger unreadCount , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>In case of error completion will be called with NSNotFound value and the corresponding error.
+Completion is called on main thread.</p>
+
+<p>NSErrors of domain DimeloHTTPErrorDomain will mirror the HTTP code from Dimelo backend&rsquo;s response in their own code property.
+You may want to handle special HTTP code responses like 429 Too many requests for example.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Application language" name="task_Application language"></a>
+						<h2 class="task-title">Application language</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/language" title="language"></a>
+	<h3 class="method-title"><code><a href="#//api/name/language">&nbsp;&nbsp;language</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) NSString *language</code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -2448,6 +2535,144 @@ Default image is configured this way.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/disabledSendButtonColor" title="disabledSendButtonColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disabledSendButtonColor">&nbsp;&nbsp;disabledSendButtonColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Color for the button &ldquo;send&rdquo; in the disabled state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) UIColor *disabledSendButtonColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this property is nil (default), this button is colored into [UIColor grayColor].</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/messageFieldFont" title="messageFieldFont"></a>
+	<h3 class="method-title"><code><a href="#//api/name/messageFieldFont">&nbsp;&nbsp;messageFieldFont</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Font for the message field input</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) UIFont *messageFieldFont</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this property is nil (default), default font is used</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultFont" title="defaultFont"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultFont">&nbsp;&nbsp;defaultFont</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Default font</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) UIFont *defaultFont</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this property is nil (default), default system font is used</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -3196,7 +3421,7 @@ Default image is configured this way.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Dimelo. All rights reserved. Updated: 2016-09-12</p>
+						<p class="copyright">Copyright &copy; 2016 Dimelo. All rights reserved. Updated: 2016-12-09</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
