@@ -33,6 +33,14 @@ This is not recommended to embed in .plist but rather to set it directly via a s
 API Key is always represented in hex format, e.g. `ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70`.
 
 
+## Optionnal configuration
+
+### language
+Language pList field allows you to override the system current language and define what locale should be sent to the Dimelo Server (and thus, what language will be used for messages returned by the server).
+
+language can be any value supported by the Accept-Language HTTP Header.
+
+
 ## Localizable String
 
 ### title
