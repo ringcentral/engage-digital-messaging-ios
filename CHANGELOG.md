@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.5.2 (December 19th, 2016) ##
+- Fix: Patch blinking effect of the welcome message at application startup.
+
 ## Dimelo iOS SDK 1.5.1 (December 9th, 2016) ##
 - Feature: Ability to set language (useful for welcome message feature for example)
 - Fix: Check installationId when receiving a new notification. Only process notifications where the notificationId matches the current installationId.
