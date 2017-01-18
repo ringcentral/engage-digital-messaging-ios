@@ -11,4 +11,5 @@ __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView :
 @property(nonatomic) IBOutlet UIToolbar* toolbar;
 - (IBAction) send:(id)sender;
 - (IBAction) addAttachment:(id)sender;
+
 @end

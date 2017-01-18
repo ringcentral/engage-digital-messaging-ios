@@ -278,6 +278,28 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 
 ////////////////////////////////////////////////////////////////////////////////
+/// Attachments state (retrieval & disabling)
+////////////////////////////////////////////////////////////////////////////////
+
+/*!
+ * disable state of individual attachment category or all of them
+ *
+ */
++ (void) disableLibraryAttachment;
++ (void) disableCameraAttachment;
++ (void) disableLocationAttachment;
++ (void) disableAttachments;
+
+/*!
+ * Get state of individual attachment category or all of them
+ *
+ */
++ (bool) isLibraryAttachmentEnabled;
++ (bool) isCameraAttachmentEnabled;
++ (bool) isLocationAttachmentEnabled;
++ (bool) isAttachmentsEnabled;
+
+////////////////////////////////////////////////////////////////////////////////
 /// @name Setting up an API client
 ////////////////////////////////////////////////////////////////////////////////
 
