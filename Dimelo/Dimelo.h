@@ -2,6 +2,12 @@
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for Dimelo.
+FOUNDATION_EXPORT double DimeloVersionNumber;
+
+//! Project version string for Dimelo.
+FOUNDATION_EXPORT const unsigned char DimeloVersionString[];
+
 extern NSString* const DimeloHTTPErrorDomain;
 
 
