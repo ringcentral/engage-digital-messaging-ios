@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.6.0 (January 18th, 2016) ##
+- Feature: Make attachments optional. It is now possible to disable the ability to send images and/or photos and/or location.
+- Fix: Rollback the installationId fix of v1.5.1 and apply another one instead based on userIdentifier: notification that provides a different userIdentifier than the current one will be skipped.
+
 ## Dimelo iOS SDK 1.5.2 (December 19th, 2016) ##
 - Fix: Patch blinking effect of the welcome message at application startup.
 
