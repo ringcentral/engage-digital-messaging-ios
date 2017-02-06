@@ -1,9 +1,14 @@
 ## Dimelo iOS SDK master ##
 
-## Dimelo iOS SDK 1.6.1 (January 25th, 2016) ##
+## Dimelo iOS SDK 1.7.0 (February 6th, 2017) ##
+- Feature: GIF can now be displayed when clicking on the relevant attachment. GIF images have a small label that helps to easily which images are GIF and which are not.
+- Fix display bug when applying trimming on a sent message
+- Enhancement: Provide .framework for easier integration
+
+## Dimelo iOS SDK 1.6.1 (January 25th, 2017) ##
 - Fix: Fix consumeReceivedRemoteNotification sometimes returning NO while it should.
 
-## Dimelo iOS SDK 1.6.0 (January 18th, 2016) ##
+## Dimelo iOS SDK 1.6.0 (January 18th, 2017) ##
 - Feature: Make attachments optional. It is now possible to disable the ability to send images and/or photos and/or location.
 - Fix: Rollback the installationId fix of v1.5.1 and apply another one instead based on userIdentifier: notification that provides a different userIdentifier than the current one will be skipped.
 

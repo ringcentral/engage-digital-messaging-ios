@@ -254,6 +254,29 @@ How To Install With CocoaPods
 How To Install Manually
 -----------------------
 
+## Fast Way
+
+1) Download contents from Github [Dimelo-iOS project](https://github.com/dimelo/Dimelo-iOS).
+
+2) Drop the `Dimelo.framework` subfolder in your project.
+
+3) Link your target with these frameworks:
+
+ * Dimelo.framework
+ * Accelerate.framework
+ * MobileCoreServices.framework
+ * SystemConfiguration.framework
+ * CoreLocation.framework
+ * MapKit.framework
+ * AddressBookUI.framework
+
+4) Include header in your app delegate: `#include "Dimelo.h"`
+
+5) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
+
+
+## Long way
+
 1) Download contents from Github [Dimelo-iOS project](https://github.com/dimelo/Dimelo-iOS).
 
 <img src=HowToImages/01-downloaded-folder@2x.png width=250></img>
