@@ -1,5 +1,12 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.1 (February 15th, 2017) ##
+- Fix: now, only attachments (images and locations) are clickable, not the entire UICollectionViewCell content (before, clicking an empty space would open the attachment, which does not make sense).
+- Fix: The view displaying the image attachment didn't keep the ratio of the image. This is now fixed.
+- Enhancement: Better handling of server-side failures. In very particular case, the server might refuse the attachment the user tries to send and return a 400 error. Until now, the application would try to send the message undefinitely. Now, the application will only retry to send the message 3 times if the message is impacted by an error 400+. If all attemps are reached, the message will be marked as unsent (by opening a dialog window and displaying a warning icon next to the message) and the application will process the next messages. Offline messages are not concerned by this change.
+- Fix: display of unsent images was broken. Now fixed.
+- Better: rename Unsent label into "Waiting for connection". The previous one was confusing. 
+
 ## Dimelo iOS SDK 1.7.0 (February 6th, 2017) ##
 - Feature: GIF can now be displayed when clicking on the relevant attachment. GIF images have a small label that helps to easily which images are GIF and which are not.
 - Fix display bug when applying trimming on a sent message

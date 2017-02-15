@@ -25,7 +25,7 @@ You can also create a `DimeloConfig.plist` file and add it to your project.
 The library will use it to configure the `Dimelo` shared instance.
 [See more informations about how to use plist to configure Dimelo](PlistCustomization.md)
 
-3) Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` before submitting to AppStore.
+3) Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` when using a distribution provisioning profil.
 
 To benefit from APNs on Dimelo Mobile SDK integration you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
 
@@ -132,7 +132,7 @@ To make them work, three things must be done on your part:
 
 3. Set the `Dimelo.developmentAPNS` property to `YES` in your development builds
    in order to receive development push notifications. Do not forget to set this
-   back to `NO` before submitting to AppStore.
+   back to `NO` when using a distribution provisioning profil.
 
 4. Let Dimelo consume the notification inside `-application:didReceiveRemoteNotification:`
    using `-[Dimelo consumeReceivedRemoteNotification:]`. If this method returns `YES`,

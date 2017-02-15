@@ -10,6 +10,10 @@ FOUNDATION_EXPORT const unsigned char DimeloVersionString[];
 
 extern NSString* const DimeloHTTPErrorDomain;
 
+#ifndef DIMELO_TIME_TO_WAIT_FOR_RESEND
+#define DIMELO_TIME_TO_WAIT_TO_RESEND 0.2f
+#endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
+
 
 @class Dimelo;
 
@@ -713,6 +717,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Date formatter instance used to format the date label.
  */
 @property(nonatomic) NSDateFormatter* dateFormatter;
+
+/*!
+ * Color for the error icon.
+ */
+@property(nonatomic) UIColor* errorIconColor;
 
 /*!
  * Font for agent's name.

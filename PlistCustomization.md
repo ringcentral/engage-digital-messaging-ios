@@ -99,6 +99,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="http://s12.postimg.org/ig3t0r3il/disabled_Send_Button_Color.png"/>
 </p>
 
+### errorIconColor
+Color of the error icon which is displayed when the message could not be sent and no other retry will be operated.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://s1.postimg.org/eeh1b82lr/Capture_d_e_cran_2017_02_15_a_14_59_22.png"/>
+</p>
+
 ### inputBarBackgroundColor
 Background color of the input bar.
 
