@@ -1,9 +1,11 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.3 (August 14th, 2017) ##
+- Fix: internal sdk header version 
+
 ## Dimelo iOS SDK 1.7.2 (August 14th, 2017) ##
 - Fix: rare crash at first message receive on low memory device(#8)
 - Fix: prevent some push notifications to be lost if the SDK is not properly initialized (no userIdentifier)
-- Fix: internal sdk header version 
 
 ## Dimelo iOS SDK 1.7.1 (February 15th, 2017) ##
 - Fix: now, only attachments (images and locations) are clickable, not the entire UICollectionViewCell content (before, clicking an empty space would open the attachment, which does not make sense).

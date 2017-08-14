@@ -873,6 +873,10 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 @property(nonatomic) UIKeyboardAppearance keyboardAppearance;
 
+/*!
+ * sdk version.
+ */
+@property(nonatomic) NSString* sdkVersion;
 
 @end
 
