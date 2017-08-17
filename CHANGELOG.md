@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.4 (August 17th, 2017) ##
+- Fix: improve image quality
+- Fix: missing binary for simulator architecture in Dimelo.framework
+
 ## Dimelo iOS SDK 1.7.3 (August 14th, 2017) ##
 - Fix: internal sdk header version 
 

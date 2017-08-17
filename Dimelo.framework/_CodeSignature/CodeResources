@@ -102,15 +102,15 @@
 		</data>
 		<key>DimeloChatInputAccessoryView.nib</key>
 		<data>
-		EcRoUyWKK0MqpZgDUB8jp17/e40=
+		kT2g4ZpwgXVg0bznRFt/s20SnMc=
 		</data>
 		<key>DimeloChatNotificationContentView.nib</key>
 		<data>
-		A+x7o/ZtC35Flb0gjqG7LBEkwwI=
+		XuDpst3L+Z7bLSUjplK5x666VzM=
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		K0EZbLv8RW8uDJ7pe85gx5DHG2M=
+		JnTF6Os/yDCqApgx0dFsC1bFP60=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nX8Ub1ZuYyYH0hDIplnDNQGfogk=
+		M/cKQpboQSYQsjBUFPItXam1o+g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -399,33 +399,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EcRoUyWKK0MqpZgDUB8jp17/e40=
+			kT2g4ZpwgXVg0bznRFt/s20SnMc=
 			</data>
 			<key>hash2</key>
 			<data>
-			epczEMQhhjX8TjeOx1AboTCj9d5eXWRvyaX0oyqpz60=
+			BhOrSp8kFV9+w83SX+/F2iEi308PdR3o9ddDS2qfLcA=
 			</data>
 		</dict>
 		<key>DimeloChatNotificationContentView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A+x7o/ZtC35Flb0gjqG7LBEkwwI=
+			XuDpst3L+Z7bLSUjplK5x666VzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			W22bbukGBq0GWlY5xwfmXt1ew54R1iD8WHcAzaNgYEM=
+			tpeNQ4zKrypagKXNVNXaVY9hEZ6Ao5o3+jHfL4Z1p+k=
 			</data>
 		</dict>
 		<key>DimeloConfig.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K0EZbLv8RW8uDJ7pe85gx5DHG2M=
+			JnTF6Os/yDCqApgx0dFsC1bFP60=
 			</data>
 			<key>hash2</key>
 			<data>
-			GJ2EJFNNwe2/PFIclGTrG4jPV1OzlHUUmnNIAWMhxuM=
+			xajEzBhHjDAvSgBWKDOKcfXHHxrxRTN0KOLfl1u37RE=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
