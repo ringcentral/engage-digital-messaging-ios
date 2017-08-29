@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>1.7.3</string>
+	<string>1.7.5</string>
 	<key>title</key>
 	<string>Support Chat</string>
 	<key>tintColor</key>
