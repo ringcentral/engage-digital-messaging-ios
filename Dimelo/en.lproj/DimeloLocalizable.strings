@@ -1,0 +1,14 @@
+/* 
+  DimeloLocalizable.strings
+  Dimelo
+
+  Created by Khelif Ghassen on 22/03/2017.
+  Copyright © 2017 Dimelo. All rights reserved.
+*/
+"dimeloChatTitle" = "Chat";
+"dimeloSendButtonTitle" = "Send";
+"dimeloChoosePhotoButtonTitle" = "Choose Photo";
+"dimeloLocationButtonTitle" ="Share location";
+"dimeloCancelButtonTitle" ="Cancel";
+"dimeloLoadMoreMessagesButtonTitle" = "View previous messages";
+"dimeloTakePhotoButtonTitle" = "Take picture";

@@ -231,6 +231,18 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 - (void) dimeloChatDidDisappear:(NSNotification*)notification;
 
+/*!
+ * Called when the chat view is opened (animation completed).
+ * @param dimelo   An `Dimelo` API instance.
+ */
+-(void)onOpen:(Dimelo *)dimelo;
+
+/*!
+ * Called when the chat view is closed (animation completed).
+ * @param dimelo   An `Dimelo` API instance.
+ */
+- (void) onClose:(Dimelo*)dimelo;
+
 @end
 
 
@@ -624,6 +636,21 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property(nonatomic) UIColor* tintColor;
 
 /*!
+ * Tint color for cursor: 
+ */
+@property(nonatomic) UIColor* cursorTintColor;
+
+/*!
+ * Tint color for navigationBar Item Button:
+ */
+@property(nonatomic) UIColor* navigationBarItemTintColor;
+
+/*!
+ * Tint color for send Button:
+ */
+@property(nonatomic) UIColor* sendTintColor;
+
+/*!
  * Bar tint color for navigation bar (sets `barTintColor` property).
  */
 @property(nonatomic) UIColor* navigationBarTintColor;
@@ -877,6 +904,41 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * sdk version.
  */
 @property(nonatomic) NSString* sdkVersion;
+
+/*!
+ * navigation bar title color.
+ */
+@property(nonatomic) UIColor* navigationBarTitleColor;
+
+/*!
+ * Flag to set the notification interactive or not when Category key is present in the aps.
+ * Default is `NO`.
+ */
+@property(nonatomic) BOOL interactiveNotification;
+
+/*!
+ * localize titles (doneButton, sendButton, cancelButton, photoButton, galleryButton, locationButton).
+ */
++ (NSString *)localizeString :(NSString *)key;
+
+/*!
+ * Called when reply notification is called.
+ *
+ * @param identifier   NSString this is the handleActionWithIdentifier identifier parameter (ACTION_SEND)
+ * @param responseInfo   NSDictionary this is the handleActionWithIdentifier withResponseInfo parameter
+ */
+- (void) handleRemoteNotificationWithIdentifier: (NSString*)identifier responseInfo:(NSDictionary*)responseInfo;
+
+////////////////////////////////////////////////////////////////////////////////
+/// @name API to send a customer message
+////////////////////////////////////////////////////////////////////////////////
+
+/*!
+ * Called to send a customer message
+ *
+ * @param messageText   NSString this is the message content
+ */
+- (void) sendMessage: (NSString*)messageText;
 
 @end
 

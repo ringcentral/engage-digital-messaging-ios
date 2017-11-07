@@ -60,6 +60,14 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/onOpen:">- onOpen:</option>
+	
+		<option value="//api/name/onClose:">- onClose:</option>
+
+		<option value="//api/name/handleRemoteNotificationWithIdentifier:responseInfo:">- handleRemoteNotificationWithIdentifier:responseInfo:</option>
+
+		<option value="//api/name/sendMessage:">- sendMessage:</option>
+
 		<option value="//api/name/dimelo:shouldDisplayNotificationWithText:">- dimelo:shouldDisplayNotificationWithText:</option>
 		
 		<option value="//api/name/dimeloChatDidAppear:">- dimeloChatDidAppear:</option>
@@ -135,6 +143,244 @@ display network activity progress and react to events created by the chat views.
 
 						<div class="task-list">
 							<div class="section-method">
+								<a name="//api/name/onOpen:" title="onOpen:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onOpen:">&ndash;&nbsp;onOpen:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when the chat view is opened.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onOpen:(Dimelo *)<em>dimelo</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dimelo</code></th>
+						<td><p>A <a href="../Classes/Dimelo.html"><code>Dimelo</code></a> API instance.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To get authentification data, and context data ... when the chat view is just opened</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onClose:" title="onClose:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onClose:">&ndash;&nbsp;onClose:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when the chat view is closed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)onClose:(Dimelo *)<em>dimelo</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dimelo</code></th>
+						<td><p>A <a href="../Classes/Dimelo.html"><code>Dimelo</code></a> API instance.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To get authentification data, and context data ... when the chat view is just closed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handleRemoteNotificationWithIdentifier:responseInfo:" title="handleRemoteNotificationWithIdentifier:responseInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleRemoteNotificationWithIdentifier:responseInfo:">&ndash;&nbsp;handleRemoteNotificationWithIdentifier:responseInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when reply notification is called.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) handleRemoteNotificationWithIdentifier: (NSString*)<em>identifier</em> responseInfo:(NSDictionary*)<em>responseInfo</em>
+</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>identifier</code></th>
+						<td><p>A <a href="../Classes/Dimelo.html"></a> handleActionWithIdentifier identifier.</p></td>
+					</tr>
+					<tr>
+						<th scope="row" class="argument-name"><code>responseInfo</code></th>
+						<td><p>A <a href="../Classes/Dimelo.html"></a> resesponseInfo dictionnary.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To add the interactive push notification with direct reply</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMessage:" title="sendMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMessage:">&ndash;&nbsp;sendMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called to send a customer message.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) sendMessage: (NSString*)<em>messageText</em>
+</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>messageText</code></th>
+						<td><p>A <a href="../Classes/Dimelo.html"></a> message content.</p></td>
+					</tr>
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>To send a customer message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Dimelo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+
 	<a name="//api/name/dimeloDisplayChatViewController:" title="dimeloDisplayChatViewController:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/dimeloDisplayChatViewController:">&ndash;&nbsp;dimeloDisplayChatViewController:</a></code>
 <span class="task-item-suffix">required method</span></h3>

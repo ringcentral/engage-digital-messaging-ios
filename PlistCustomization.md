@@ -40,19 +40,25 @@ Language pList field allows you to override the system current language and defi
 
 language can be any value supported by the Accept-Language HTTP Header.
 
+## Notification
 
-## Localizable String
-
-### title
-Title of the conversation window. 
-
-This will be used as an argument to NSLocalizedString.
+### interactiveNotification
+Used to disable reception of the interactive push notification with direct reply (default is enabled)
 
 <p align="center">
-   <img src="http://s12.postimg.org/d3eymmfm5/title.png"/>
+<img src="https://s1.postimg.org/63hyips04f/push.png"/>
 </p>
 
 ## Color
+
+### navigationBarTitleColor
+Text color for the chat title.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+<img src="https://s26.postimg.org/c96y4xw9l/title_Color.png"/>
+</p>
 
 ### agentNameColor
 Text color for agent's name.
@@ -170,12 +176,39 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 Similar to `systemMessageTextColor`, but for system messages.
 
 ### tintColor
-Tint color for aux controls: Close button, Send button, cursor etc.
+Tint color for aux controls: Close button, Send button, Share button, cursor etc.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/u2nx1vqtp/tint_Color.png"/>
+   <img src="https://s26.postimg.org/hd7uy1r15/share_Button.png"/>
+</p>
+
+### cursorTintColor
+Tint color for cursor.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+<img src="https://s26.postimg.org/ezuz45ixl/cursor.png"/>
+</p>
+
+### sendTintColor
+Tint color for Send Button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+<img src="https://s26.postimg.org/5vwk3phcp/send_Button.png"/>
+</p>
+
+### navigationBarItemTintColor
+Tint color for Navigation Item Button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+<img src="https://s26.postimg.org/a1c23d4ih/done_Button.png"/>
 </p>
 
 ### userMessageBackgroundColor

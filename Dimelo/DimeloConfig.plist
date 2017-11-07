@@ -3,10 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>1.7.5</string>
+	<string>1.7.6</string>
+	<key>navigationBarTitleColor</key>
+	<string></string>
 	<key>title</key>
-	<string>Support Chat</string>
+	<string>Chat</string>
 	<key>tintColor</key>
+	<string></string>
+	<key>cursorTintColor</key>
+	<string></string>
+	<key>navigationBarItemTintColor</key>
+	<string></string>
+	<key>sendTintColor</key>
 	<string></string>
 	<key>navigationBarTintColor</key>
 	<string></string>
@@ -62,5 +70,7 @@
 		<key>size</key>
 		<integer>13</integer>
 	</dict>
+	<key>interactiveNotification</key>
+	<true/>
 </dict>
 </plist>

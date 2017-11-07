@@ -1,5 +1,14 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.6 (November 7th, 2017) ##
+- Fix: Support safe area for iPhone X when local notification is shown.
+- Enhancement: When using server-side authentication parse JWT token and set user informations with its content
+- Feature: Support any kind of attachment for agent only
+- Feature: add onOpen and onClose callback
+- Enhancement: Add the interactive push notification with direct reply
+- Feature: Add new API to send a customer message
+- Feature: Support French and German localizations with the possibility to customize them
+
 ## Dimelo iOS SDK 1.7.5 (August 29th, 2017) ##
 - Fix: change CFBundleSupportedPlatforms key from iphonesimulators to iPhoneOS
 

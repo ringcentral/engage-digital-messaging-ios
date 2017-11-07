@@ -139,6 +139,8 @@ To make them work, three things must be done on your part:
    it means that Dimelo recognized the notification as its own and you should not
    process the notification yourself. The chat will be updated automatically with a new message.
 
+5. You will receive interactive push notifications with direct reply by default and need to forward the instant reply to Dimelo by calling `-[Dimelo handleRemoteNotificationWithIdentifier:responseInfo:]`  from the  `-application:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:` callback. To disable this, set the  `Dimelo.interactiveNotification` property to  `NO`.
+
 If the notification was received as a result of a user action
 (e.g. user opened it from the lock screen), the chat will be displayed automatically.
 
@@ -212,6 +214,94 @@ Insets do not apply to attachment bubbles.
 
 Check the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to learn about all customization options.
 
+Localization
+------------
+
+- add the localizations to your project:
+
+<p align="center">
+<img src="https://s26.postimg.org/ab44y4x7d/demo.png"/>
+</p>
+
+- Create a DimeloLocalizable.strings file in Supporting File directory
+- Check the supported languages.
+
+<p align="center">
+<img src="https://s26.postimg.org/n526rhamx/localization.png"/>
+</p>
+
+- add these keys to DimeloLocalizable.strings file if you want to change the default dimelo translation
+
+### dimeloChatTitle
+Title of the conversation window. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="http://s12.postimg.org/d3eymmfm5/title.png"/>
+</p>
+
+### dimeloSendButtonTitle
+Title of the chat send Button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/tnlucx82h/IMG_0010.png"/>
+</p>
+
+### dimeloChoosePhotoButtonTitle
+Title of the attachment photo button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/ph0zxl8gp/choose_titles.png"/>
+</p>
+
+### dimeloLocationButtonTitle
+Title of the attachment location button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/ph0zxl8gp/choose_titles.png"/>
+</p>
+
+###  dimeloTakePhotoButtonTitle
+Title of the Take Photo button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/ph0zxl8gp/choose_titles.png"/>
+</p>
+
+### dimeloCancelButtonTitle
+Title of the Cancel button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/ph0zxl8gp/choose_titles.png"/>
+</p>
+
+### dimeloLoadMoreMessagesButtonTitle
+Title of the Load more messages button. 
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://s26.postimg.org/az3splh5l/load_more_messages_title.png"/>
+</p>
+
 
 Reacting To Dimelo Mobile SDK Events
 -----------------------
@@ -225,10 +315,11 @@ We provide two ways to react to various events in the char:
 For your convenince all notifications have a corresponding delegate method (e.g. `-dimeloUnreadCountDidChange:`), so you don't have to subscribe to them explicitly if you
 wish to process events in `DimeloDelegate` object.
 
-Two particular events that might be interesting to you are `-dimeloDidBeginNetworkActivity:`
-and `-dimeloDidEndNetworkActivity:`. Dimelo does not change the status bar network activity
+Two particular events that might be interesting to you are `-dimeloDidBeginNetworkActivity:`, `-dimeloDidEndNetworkActivity:`. Dimelo does not change the status bar network activity
 indicator to avoid conflicts with your app. If you would like to indicate it, you should
 override these methods and update the activity indicator accordingly.
+
+Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
 Please refer to [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) documentation for more information.
 
