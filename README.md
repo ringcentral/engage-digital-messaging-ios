@@ -345,8 +345,6 @@ How To Install With CocoaPods
 How To Install Manually
 -----------------------
 
-## Fast Way
-
 1) Download contents from Github [Dimelo-iOS project](https://github.com/dimelo/Dimelo-iOS).
 
 2) Drop the `Dimelo.framework` subfolder in your project.
@@ -363,108 +361,10 @@ How To Install Manually
 
 4) Include header in your app delegate: `#include "Dimelo.h"`
 
-5) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
-
-
-## Long way
-
-1) Download contents from Github [Dimelo-iOS project](https://github.com/dimelo/Dimelo-iOS).
-
-<img src=HowToImages/01-downloaded-folder@2x.png width=250></img>
-
-2) Drop `Dimelo` subfolder in your project.
-
-<img src=HowToImages/02-drag-to-project@2x.png width=400></img>
-
-3) Make sure to copy the files, convert folders to groups and check the correct target.
-
-<img src=HowToImages/03-copy-groups-target@2x.png width=400></img>
-
-You will see Dimelo files in your project tree:
-
-<img src=HowToImages/04-view-in-sidebar@2x.png width=250></img>
-
-4) Make sure `Dimelo.bundle`, `libDimelo-iOS.a` and `Dimelo*.xib` files are included in your target.
-
-<img src=HowToImages/05-check-xib-bundle-a-for-target@2x.png width=250></img>
-
-5) Link your target with these frameworks:
-
- * Accelerate.framework
- * MobileCoreServices.framework
- * SystemConfiguration.framework
- * CoreLocation.framework
- * MapKit.framework
- * AddressBookUI.framework
-
-<img src=HowToImages/06-add-frameworks@2x.png width=400></img>
-
-6) Include header in your app delegate: `#include "Dimelo.h"`
-
-7) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
-
-
-
 API Reference
 -------------
 
 [Dimelo Mobile iOS SDK API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html).  Alternatively, you may consult `Dimelo/Dimelo.h` file.
-
-
-Files and folders
------------------
-
-Dimelo package contains the following files and folders:
-
-
-##### ./Dimelo
-
-A folder with necessary headers and resources to be installed in your app.
-If you don't use CocoaPods, you can simply drag and drop this folder into
-your Xcode project (don't forget to link extra system frameworks too, see above).
-
-##### ./Dimelo/Dimelo.bundle
-
-A bundle with Dimelo default images. This should be copied as-is into your app
-during the build process.
-
-##### ./Dimelo/Dimelo.h
-
-Primary header file. You should import it to use Dimelo API.
-
-##### ./Dimelo/Dimelo*.h
-
-Private header files to make XIB files work correctly.
-
-##### ./Dimelo/*.xib
-
-Required user interface XIB files. These are not supposed to be edited.
-
-##### ./Dimelo/libDimelo-iOS.a
-
-A static lib to be linked with your app. It is build for multiple platforms,
-including iOS simulators.
-
-##### ./Dimelo-iOS.podspec
-
-A CocoaPods specification.
-
-##### ./LICENSE
-
-A license file.
-
-##### ./README.md
-
-You are reading this.
-
-##### ./CHANGELOG
-
-Changelog and versionning of the Dimelo iOS SDK
-
-##### ./Reference
-
-An appledoc-style API reference generated from `Dimelo.h`.
-
 
 Sample Code
 -----------

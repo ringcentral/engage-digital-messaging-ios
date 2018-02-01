@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="attachmentButton" destination="4dL-VD-3Vb" id="is3-kB-LPP"/>
                 <outlet property="attachmentImageView" destination="KP7-AG-Cfn" id="5GO-wI-xm3"/>
+                <outlet property="bottomConstraint" destination="4UD-V3-WSZ" id="2B3-Tf-3tH"/>
                 <outlet property="sendButton" destination="fUA-PB-aVf" id="h1C-Z3-rGy"/>
                 <outlet property="textView" destination="GNg-UA-tda" id="swI-XG-MuK"/>
                 <outlet property="toolbar" destination="7So-Pk-JJJ" id="Ghs-nw-xcV"/>
@@ -23,84 +24,90 @@
             <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
-                    <rect key="frame" x="0.0" y="0.0" width="458" height="76"/>
-                    <items/>
-                </toolbar>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-PB-aVf">
-                    <rect key="frame" x="412" y="6" width="39" height="32"/>
-                    <accessibility key="accessibilityConfiguration" identifier="send_button"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                    <state key="normal" title="Send">
-                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="send:" destination="-1" eventType="touchUpInside" id="rHM-AU-SmN"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-VD-3Vb" userLabel="Attachment Button">
-                    <rect key="frame" x="0.0" y="2" width="44" height="40"/>
-                    <accessibility key="accessibilityConfiguration" identifier="select_attachment"/>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-MX-giu">
+                    <rect key="frame" x="0.0" y="-5" width="458" height="49"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-AG-Cfn" userLabel="AttachmentImageView">
+                            <rect key="frame" x="309" y="-60" width="96" height="96"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="96" id="Khk-20-QL2"/>
+                                <constraint firstAttribute="width" constant="96" id="yuM-NL-178"/>
+                            </constraints>
+                        </imageView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
+                            <rect key="frame" x="0.0" y="0.0" width="458" height="49"/>
+                            <items/>
+                        </toolbar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-PB-aVf">
+                            <rect key="frame" x="412" y="6" width="39" height="32"/>
+                            <accessibility key="accessibilityConfiguration" identifier="send_button"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Send">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="send:" destination="-1" eventType="touchUpInside" id="rHM-AU-SmN"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-UA-tda">
+                            <rect key="frame" x="44" y="8" width="361" height="28"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" identifier="text_field"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="hpv-3c-NZX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="gQp-sU-Uzq"/>
+                            </connections>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-VD-3Vb" userLabel="Attachment Button">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="select_attachment"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="5Bd-9l-Mnv"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="myP-Cr-d4P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addAttachment:" destination="-1" eventType="touchUpInside" id="mYq-sR-edx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="R6n-An-mO2"/>
-                        <constraint firstAttribute="width" constant="44" id="yBb-gb-ZT9"/>
+                        <constraint firstItem="fUA-PB-aVf" firstAttribute="leading" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="7" id="1bf-sG-w8U"/>
+                        <constraint firstAttribute="trailing" secondItem="7So-Pk-JJJ" secondAttribute="trailing" id="1dh-Q8-nda"/>
+                        <constraint firstItem="fUA-PB-aVf" firstAttribute="centerY" secondItem="4dL-VD-3Vb" secondAttribute="centerY" constant="2" id="5ae-H5-ZCH"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4dL-VD-3Vb" secondAttribute="bottom" constant="4" id="FHf-6b-w4L"/>
+                        <constraint firstItem="KP7-AG-Cfn" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" id="GUK-Ne-Adc"/>
+                        <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="7" id="LUY-Kw-Let"/>
+                        <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="Scl-gW-FgZ"/>
+                        <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="ZmO-pn-IZM"/>
+                        <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" constant="8" id="a9k-i8-pym"/>
+                        <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" id="b67-c1-Uei"/>
+                        <constraint firstItem="KP7-AG-Cfn" firstAttribute="trailing" secondItem="GNg-UA-tda" secondAttribute="trailing" id="epx-61-RWK"/>
+                        <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" id="jFw-Kx-tdC"/>
+                        <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="11" id="mGO-x5-8Nd"/>
+                        <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nIi-MX-giu" secondAttribute="top" id="tZv-dV-F7R"/>
+                        <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" priority="250" constant="44" id="uUj-bs-XDh"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal">
-                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="addAttachment:" destination="-1" eventType="touchUpInside" id="mYq-sR-edx"/>
-                    </connections>
-                </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-UA-tda">
-                    <rect key="frame" x="44" y="8" width="361" height="28"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="text_field"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="gQp-sU-Uzq"/>
-                    </connections>
-                </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-AG-Cfn" userLabel="AttachmentImageView">
-                    <rect key="frame" x="307" y="-62" width="96" height="96"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="96" id="TE6-88-Ydn"/>
-                        <constraint firstAttribute="width" constant="96" id="pcT-5T-UiG"/>
-                    </constraints>
-                </imageView>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="1lJ-V4-d5o"/>
-                <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="7" id="2vu-4i-byf"/>
-                <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" constant="-32" id="Cbl-Dk-XRq"/>
-                <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="F4B-zn-hxh"/>
-                <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="6" id="JA1-bu-6oq"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="M6x-ZO-dHG"/>
-                <constraint firstAttribute="trailing" secondItem="7So-Pk-JJJ" secondAttribute="trailing" id="NXU-AL-kK4"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4dL-VD-3Vb" secondAttribute="bottom" id="QfF-4y-6DG"/>
-                <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="1" secondAttribute="top" id="Sqp-QT-AeN"/>
-                <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="8" id="VGi-AN-qeH"/>
-                <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1" secondAttribute="top" id="Vgw-8v-zys"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="trailing" secondItem="KP7-AG-Cfn" secondAttribute="trailing" constant="2" id="fWo-i3-MQK"/>
-                <constraint firstItem="4dL-VD-3Vb" firstAttribute="centerY" secondItem="fUA-PB-aVf" secondAttribute="centerY" id="fdo-P0-uVW"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="1" secondAttribute="leading" priority="250" constant="7" id="ibX-dm-vZS"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="bottom" secondItem="KP7-AG-Cfn" secondAttribute="bottom" constant="2" id="oRn-tU-3VF"/>
-                <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="vLg-Zc-1Et"/>
-                <constraint firstItem="fUA-PB-aVf" firstAttribute="leading" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="7" id="yvM-fe-BdD"/>
-                <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="zYs-PJ-WSa"/>
+                <constraint firstItem="nIi-MX-giu" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="4UD-V3-WSZ"/>
+                <constraint firstItem="nIi-MX-giu" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="bni-2t-BFA"/>
+                <constraint firstItem="nIi-MX-giu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="qY0-SK-Z37"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-370" y="109"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

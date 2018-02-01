@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.7 (February 1, 2018) ##
+- Improvement: update cocoapods to use Dimelo.framework.
+- Fix: fix crash when using safeAreaInsets on device running on iOS older than 11.
+- Fix: fix ui bug when the keyboard height decrease in talk mode.
+
 ## Dimelo iOS SDK 1.7.6 (November 7th, 2017) ##
 - Fix: Support safe area for iPhone X when local notification is shown.
 - Enhancement: When using server-side authentication parse JWT token and set user informations with its content
