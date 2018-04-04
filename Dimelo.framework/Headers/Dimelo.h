@@ -940,6 +940,10 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 - (void) sendMessage: (NSString*)messageText;
 
+/*!
+* return CFBundleDisplayName otherwise return CFBundleName
+*/
++ (NSString *)getApplicationName;
 @end
 
 

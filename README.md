@@ -177,6 +177,8 @@ To access all the features of the Dimelo SDK, some permissions have to be define
 
 If these permissions are not provided, the corresponding options will be hidden from the user.
 
+To support localization, add these keys (`NSPhotoLibraryUsageDescription`, `NSCameraUsageDescription` and `NSLocationWhenInUseUsageDescription`) to the `InfoPlist.strings` file.
+
 Customizing Dimelo Mobile SDK Appearance
 ---------------------------
 
@@ -360,6 +362,8 @@ How To Install Manually
  * AddressBookUI.framework
 
 4) Include header in your app delegate: `#include "Dimelo.h"`
+
+5) To support ***Bitcode*** when publishing to the App Store, create a ***Run Script*** after the ***Embed Frameworks*** and add this command : <br/>`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dimelo.framework/strip_frameworks.sh"`
 
 API Reference
 -------------

@@ -1,5 +1,13 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.8 (April 4, 2018) ##
+- Fix: prevent multiple tap on attachements from opening multiple zoom views
+- Fix: Text entry field disappears by clicking on the local notification.
+- Improvement: disable sending empty message in dictation mode.
+- Fix: fix bitcode error message when the ENABLE_BITCODE flag is enabled (#22)
+- Fix: always ask the GPS, the camera and the photo gallery permissions when it is refused for the first time.
+- Fix: center the GPS button on device running on iOS older than 11.
+
 ## Dimelo iOS SDK 1.7.7 (February 1, 2018) ##
 - Improvement: update cocoapods to use Dimelo.framework.
 - Fix: fix crash when using safeAreaInsets on device running on iOS older than 11.

@@ -25,6 +25,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tys-9U-UOd">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <accessibility key="accessibilityConfiguration" identifier="tap_push"/>
                     <state key="normal">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>

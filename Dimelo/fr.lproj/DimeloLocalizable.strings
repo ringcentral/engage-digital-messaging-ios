@@ -12,3 +12,15 @@
 "dimeloCancelButtonTitle" ="Annuler";
 "dimeloLoadMoreMessagesButtonTitle" = "Voir les messages précédents";
 "dimeloTakePhotoButtonTitle" = "Prendre une photo";
+"dimeloFailedLocatePosition" = "Impossible de localiser votre position";
+"dimeloSettings" = "Paramètres";
+"dimeloAuthorizeLocation" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre position";
+"dimeloSearchAddress" = "Rechercher une adresse";
+"dimeloWaitConnection" = "Attente de connexion";
+"dimeloError" = "Erreur";
+"dimeloFailedSendMessage" = "Impossible d'envoyer le message";
+"dimeloConnectionOffline" = "Vous n'êtes pas connecté à internet";
+"dimeloFailedOpenCamera" = "L'application n'a pas la permission d'accèder à l'appareil photo";
+"dimeloAuthorizeCamera" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre appareil photo";
+"dimeloFailedOpenPhotoGallery" = "L'application n'a pas la permission d'accéder à la galerie photo";
+"dimeloAuthorizePhotoGallery" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre galerie photo";

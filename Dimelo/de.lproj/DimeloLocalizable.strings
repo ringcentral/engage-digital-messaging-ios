@@ -12,3 +12,15 @@
 "dimeloCancelButtonTitle" ="Abbrechen";
 "dimeloLoadMoreMessagesButtonTitle" = "Vorherige Beiträge anzeigen";
 "dimeloTakePhotoButtonTitle" = "Foto aufnehmen";
+"dimeloFailedLocatePosition" = "Ihre Position konnte nicht gefunden werden";
+"dimeloSettings" = "Einstellungen";
+"dimeloAuthorizeLocation" = "Bitte rufen Sie \"Einstellungen\" auf und autorisieren %@ Sie den Zugriff auf Ihren Standort";
+"dimeloSearchAddress" = "Adresse suchen";
+"dimeloWaitConnection" = "Auf Verbindung warten";
+"dimeloError" = "Fehler";
+"dimeloFailedSendMessage" = "Die Nachricht konnte nicht gesendet werden";
+"dimeloConnectionOffline" = "Sie sind nicht mit dem Internet verbunden";
+"dimeloFailedOpenCamera" = "Die Kamera konnte nicht geöffnet werden";
+"dimeloAuthorizeCamera" = "Öffnen Sie \"Einstellungen\" und erlauben %@, auf Ihre Kamera zugreifen zu können";
+"dimeloFailedOpenPhotoGallery" = "Die Fotogalerie konnte nicht geöffnet werden";
+"dimeloAuthorizePhotoGallery" = "Öffnen Sie \"Einstellungen\" und erlauben %@, auf Ihre Fotogalerie zu können";

@@ -12,3 +12,15 @@
 "dimeloCancelButtonTitle" ="Cancel";
 "dimeloLoadMoreMessagesButtonTitle" = "View previous messages";
 "dimeloTakePhotoButtonTitle" = "Take picture";
+"dimeloFailedLocatePosition" = "Could not locate your position";
+"dimeloSettings" = "Settings";
+"dimeloAuthorizeLocation" = "Please go the Settings application, and authorize %@ to access your location";
+"dimeloSearchAddress" = "Search Address";
+"dimeloWaitConnection" = "Waiting for connection";
+"dimeloError" = "Error";
+"dimeloFailedSendMessage" = "Could not send the message";
+"dimeloConnectionOffline" = "You are currently offline";
+"dimeloFailedOpenCamera" = "The application is not permitted to use your camera";
+"dimeloAuthorizeCamera" = "Please go to the Settings application, and authorize %@ to access your camera";
+"dimeloFailedOpenPhotoGallery" = "The application is not permitted to use your photo gallery";
+"dimeloAuthorizePhotoGallery" = "Please go to the Settings application, and authorize %@ to access your photo gallery";
