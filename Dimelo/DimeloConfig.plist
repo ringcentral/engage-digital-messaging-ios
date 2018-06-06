@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>1.7.8</string>
+	<string>1.7.9</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -69,6 +69,20 @@
 		<string>HelveticaNeue-Medium</string>
 		<key>size</key>
 		<integer>13</integer>
+	</dict>
+	<key>navigationBarTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
+	<key>navigationBarItemTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>17</integer>
 	</dict>
 	<key>interactiveNotification</key>
 	<true/>
