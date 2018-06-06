@@ -227,6 +227,26 @@ Similar to `systemMessageTextColor`, but for system messages.
 
 ## Font
 
+### navigationBarTitleFont
+Font for navigationBar's title.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://s31.postimg.cc/vsheyxoh7/navigation_bar_title_font.png"/>
+</p>
+
+### navigationBarItemTitleFont
+Font for navigationBarItem's title.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://s31.postimg.cc/u0og47kln/navigation_bar_item_title_font.png"/>
+</p>
+
 ### agentNameFont
 Font for agent's name.
 Must contain a dictionary with `name` and `size` keys.

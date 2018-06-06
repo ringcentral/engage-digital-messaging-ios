@@ -756,6 +756,16 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property(nonatomic) UIFont* agentNameFont;
 
 /*!
+ * Font for navigation bar title.
+ */
+@property(nonatomic) UIFont* navigationBarTitleFont;
+
+/*!
+ * Font for navigation bar item title.
+ */
+@property(nonatomic) UIFont* navigationBarItemTitleFont;
+
+/*!
  * Text color for agent's name.
  */
 @property(nonatomic) UIColor* agentNameColor;

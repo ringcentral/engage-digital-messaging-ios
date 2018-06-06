@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.7.9 (June 6, 2018) ##
+- Fix: rare crash when notification is clicked
+- Feature: support the right to left alignment for text message.
+- Feature: add navigationBarTitleFont and navigationBarItemTitleFont to customize the navigationBar and the navigationBar item titles fonts.
+
 ## Dimelo iOS SDK 1.7.8 (April 4, 2018) ##
 - Fix: prevent multiple tap on attachements from opening multiple zoom views
 - Fix: Text entry field disappears by clicking on the local notification.
