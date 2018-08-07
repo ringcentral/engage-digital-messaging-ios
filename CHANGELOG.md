@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.8.0 (August 7, 2018) ##
+- Fix: resize input text size according to the entered text.
+- Enhancement: show notifiaction when using a wrong installation identifier.
+
 ## Dimelo iOS SDK 1.7.9 (June 6, 2018) ##
 - Fix: rare crash when notification is clicked
 - Feature: support the right to left alignment for text message.
