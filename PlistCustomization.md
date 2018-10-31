@@ -15,10 +15,13 @@ The default interface without any customization is the following on iOS.
 You can refer to this interface to understand how an option affect the interface.
 
 <p align="center">
-   <img src="http://s12.postimg.org/5ysjzuiz1/default.png"/>
+   <img src="http://s12.postimg.cc/5ysjzuiz1/default.png"/>
 </p>
 
 ## Required Configuration
+
+### domainName
+This is a mandatory key (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
 
 ### apiKey
 Public API key that identifies all requests to Dimelo (used only for the
@@ -42,11 +45,14 @@ language can be any value supported by the Accept-Language HTTP Header.
 
 ## Notification
 
+### disableNotification
+Used to disable notification permission prompt (default is enabled). Disabling this attribute will result in not receiving any notification
+
 ### interactiveNotification
 Used to disable reception of the interactive push notification with direct reply (default is enabled)
 
 <p align="center">
-<img src="https://s1.postimg.org/63hyips04f/push.png"/>
+<img src="https://s1.postimg.cc/63hyips04f/push.png"/>
 </p>
 
 ## Color
@@ -57,7 +63,7 @@ Text color for the chat title.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.org/c96y4xw9l/title_Color.png"/>
+<img src="https://s26.postimg.cc/c96y4xw9l/title_Color.png"/>
 </p>
 
 ### agentNameColor
@@ -66,7 +72,7 @@ Text color for agent's name.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/vmonmj9u5/agent_Name_Color.png"/>
+   <img src="http://s12.postimg.cc/vmonmj9u5/agent_Name_Color.png"/>
 </p>
 
 ### agentMessageBackgroundColor
@@ -75,7 +81,7 @@ Background color for agent message bubbles.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/qy8nrcknh/agent_Message_Background_Color.png"/>
+   <img src="http://s12.postimg.cc/qy8nrcknh/agent_Message_Background_Color.png"/>
 </p>
 
 ### agentMessageTextColor
@@ -84,7 +90,7 @@ Foreground color for agent's message text.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/p7pmpv34d/agent_Message_Text_Color.png"/>
+   <img src="http://s12.postimg.cc/p7pmpv34d/agent_Message_Text_Color.png"/>
 </p>
 
 ### dateTextColor
@@ -93,7 +99,7 @@ Text color for the date label.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/dq99yen4d/date_Text_Color.png"/>
+   <img src="http://s12.postimg.cc/dq99yen4d/date_Text_Color.png"/>
 </p>
 
 ### disabledSendButtonColor
@@ -102,7 +108,7 @@ Text color of the send button on disabled state
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/ig3t0r3il/disabled_Send_Button_Color.png"/>
+   <img src="http://s12.postimg.cc/ig3t0r3il/disabled_Send_Button_Color.png"/>
 </p>
 
 ### errorIconColor
@@ -111,7 +117,7 @@ Color of the error icon which is displayed when the message could not be sent an
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="https://s1.postimg.org/eeh1b82lr/Capture_d_e_cran_2017_02_15_a_14_59_22.png"/>
+   <img src="https://s1.postimg.cc/eeh1b82lr/Capture_d_e_cran_2017_02_15_a_14_59_22.png"/>
 </p>
 
 ### inputBarBackgroundColor
@@ -120,7 +126,7 @@ Background color of the input bar.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/8k2q13xql/input_Bar_Background_Color.png"/>
+   <img src="http://s12.postimg.cc/8k2q13xql/input_Bar_Background_Color.png"/>
 </p>
 
 ### inputBarTintColor
@@ -129,7 +135,7 @@ Bar tint color of the input bar.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/lpi877rm5/input_Bar_Tint_Color.png"/>
+   <img src="http://s12.postimg.cc/lpi877rm5/input_Bar_Tint_Color.png"/>
 </p>
 
 ### loadMoreMessagesButtonTextColor
@@ -138,13 +144,13 @@ Text color for the button "load more messages".
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/4dhvlry4t/load_More_Messages_Button_Text_Color.png"/>
+   <img src="http://s12.postimg.cc/4dhvlry4t/load_More_Messages_Button_Text_Color.png"/>
 </p>
 
 The default display is the following:
 
 <p align="center">
-   <img src="http://s12.postimg.org/mhkw6evt9/load_More_Messages_Button_Text_Colordefault.png"/>
+   <img src="http://s12.postimg.cc/mhkw6evt9/load_More_Messages_Button_Text_Colordefault.png"/>
 </p>
 
 ### navigationBarColor
@@ -158,7 +164,7 @@ Bar tint color for navigation bar (sets `barTintColor` property).
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/5kvtdzo99/navigation_Bar_Tint_Color.png"/>
+   <img src="http://s12.postimg.cc/5kvtdzo99/navigation_Bar_Tint_Color.png"/>
 </p>
 
 ### systemMessageBackgroundColor
@@ -181,7 +187,7 @@ Tint color for aux controls: Close button, Send button, Share button, cursor etc
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="https://s26.postimg.org/hd7uy1r15/share_Button.png"/>
+   <img src="https://s26.postimg.cc/hd7uy1r15/share_Button.png"/>
 </p>
 
 ### cursorTintColor
@@ -190,7 +196,7 @@ Tint color for cursor.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.org/ezuz45ixl/cursor.png"/>
+<img src="https://s26.postimg.cc/ezuz45ixl/cursor.png"/>
 </p>
 
 ### sendTintColor
@@ -199,7 +205,7 @@ Tint color for Send Button.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.org/5vwk3phcp/send_Button.png"/>
+<img src="https://s26.postimg.cc/5vwk3phcp/send_Button.png"/>
 </p>
 
 ### navigationBarItemTintColor
@@ -208,7 +214,7 @@ Tint color for Navigation Item Button.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.org/a1c23d4ih/done_Button.png"/>
+<img src="https://s26.postimg.cc/a1c23d4ih/done_Button.png"/>
 </p>
 
 ### userMessageBackgroundColor
@@ -254,7 +260,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/z7kj5redp/agent_Name_Font.png"/>
+   <img src="http://s12.postimg.cc/z7kj5redp/agent_Name_Font.png"/>
 </p>
 
 ### dateFont
@@ -265,7 +271,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/dozc4zlal/date_Font.png"/>
+   <img src="http://s12.postimg.cc/dozc4zlal/date_Font.png"/>
 </p>
 
 ### defaultFont
@@ -276,7 +282,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/6ctvzg32l/default_Font.png"/>
+   <img src="http://s12.postimg.cc/6ctvzg32l/default_Font.png"/>
 </p>
 
 ### messageFieldFont
@@ -287,7 +293,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/cyb7cy8b1/message_Field_Font.png"/>
+   <img src="http://s12.postimg.cc/cyb7cy8b1/message_Field_Font.png"/>
 </p>
 
 ### messageFont
@@ -298,7 +304,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/694nwxmz1/message_Font.png"/>
+   <img src="http://s12.postimg.cc/694nwxmz1/message_Font.png"/>
 </p>
 
 ### systemMessageFont
@@ -338,7 +344,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/q128ih959/agent_Name_Insets.png"/>
+   <img src="http://s12.postimg.cc/q128ih959/agent_Name_Insets.png"/>
 </p>
 
 ### systemMessageBubbleInsets
@@ -358,7 +364,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/4ntziv24t/user_Attachment_Bubble_Insets.png"/>
+   <img src="http://s12.postimg.cc/4ntziv24t/user_Attachment_Bubble_Insets.png"/>
 </p>
 
 In the screenshot, top=60, right=40, bottom=20, left=0.
@@ -371,7 +377,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.org/q01hgjm31/user_Message_Bubble_Insets.png"/>
+   <img src="http://s12.postimg.cc/q01hgjm31/user_Message_Bubble_Insets.png"/>
 </p>
 
 In the screenshot, top=60, right=40, bottom=20, left=0.
@@ -408,7 +414,7 @@ So, the `top`, `left`, `bottom` and `right` parameters will be used to define th
 E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myAttachmentIcon`
 
 <p align="center">
-   <img src="http://s12.postimg.org/ru556subx/attachment_Icon.png"/>
+   <img src="http://s12.postimg.cc/ru556subx/attachment_Icon.png"/>
 </p>
 
 ### systemMessageBubbleImage
@@ -431,7 +437,7 @@ So, the `top`, `left`, `bottom` and `right` parameters will be used to define th
 E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myBubbleImage`
 
 <p align="center">
-   <img src="http://s12.postimg.org/4zbfvmikt/user_Attachment_Bubble_Image.png"/>
+   <img src="http://s12.postimg.cc/4zbfvmikt/user_Attachment_Bubble_Image.png"/>
 </p>
 
 In the screenshot, top=18, left=19, bottom=18, right=36.
@@ -445,7 +451,7 @@ So, the `top`, `left`, `bottom` and `right` parameters will be used to define th
 E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myBubbleImage`
 
 <p align="center">
-   <img src="http://s12.postimg.org/iisa1bwjx/user_Message_Bubble_Image.png"/>
+   <img src="http://s12.postimg.cc/iisa1bwjx/user_Message_Bubble_Image.png"/>
 </p>
 
 In the screenshot, top=18, left=19, bottom=18, right=36.

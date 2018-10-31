@@ -1,5 +1,14 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.8.1 (October 31, 2018) ##
+- BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
+  * `setApiSecret: apiSecret` is now deprecated in favor of `initWithApiSecret: secret domainName: domainName delegate: delegate`.
+  * `setApiKey: apiKey` is now deprecated in favor of `initWithApiKey: apiKey domainName: domainName delegate: delegate`.
+  * `setHostname: hostName` is not available anymore.
+- Feature: add `disableNotification` attribute to disable the notification permission prompt
+- Feature: add local draft saving for unsent text messages
+- Improvement: log a warning when an invalid key is used for installations or users extra values.
+
 ## Dimelo iOS SDK 1.8.0 (August 7, 2018) ##
 - Fix: resize input text size according to the entered text.
 - Enhancement: show notifiaction when using a wrong installation identifier.

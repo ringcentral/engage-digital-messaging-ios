@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>1.8.0</string>
+	<string>1.8.1</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -86,5 +86,7 @@
 	</dict>
 	<key>interactiveNotification</key>
 	<true/>
+	<key>disableNotification</key>
+	<false/>
 </dict>
 </plist>

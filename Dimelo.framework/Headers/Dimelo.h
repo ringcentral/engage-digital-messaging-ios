@@ -14,6 +14,7 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define DIMELO_TIME_TO_WAIT_TO_RESEND 0.2f
 #endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
 
+static NSString* const DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
 
 @class Dimelo;
 
@@ -338,23 +339,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 + (instancetype)sharedInstance;
 
 /*!
-* Initializes a new API client with a public API key and a delegate.
-*
-* Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
-*
-* For correct operation you will have to provide a valid signed JWT token via `jwt` property.
-* To do so, fill in `userIdentifier`, `authenticationInfo` and send the resulting `jwtDictionary` to your server.
-*
-* This is a recommended way to access Dimelo API.
-*
-* @param apiKey public hex-encoded API key, typically specific to your app.
-* @param delegate an instance conforming to `DimeloDelegate` protocol.
-*
-*/
-- (id) initWithApiKey:(NSString*)apiKey delegate:(id<DimeloDelegate>)delegate;
-
-/*!
- * Initializes a new API client with a public API key, custom hostname and a delegate.
+ * Initializes a new API client with a public API key, custom domainName and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -364,38 +349,25 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * This is a recommended way to access Dimelo API.
  *
  * @param apiKey public hex-encoded API key, typically specific to your app.
- * @param hostname a Dimelo API hostname specific to your app.
+ * @param domainName a Dimelo API domainName specific to your app.
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initWithApiKey:(NSString*)apiKey hostname:(NSString*)hostname delegate:(id<DimeloDelegate>)delegate;
+- (id) initWithApiKey:(NSString*)apiKey domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes a new API client with a secret API key and a delegate.
+ * Initializes a new API client with a secret API key, custom domainName and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
- * This mode is less secure than `-initWithApiKey:delegate:` because shared secret is stored inside the app.
+ * This mode is less secure than `-initWithApiKey:domainName:delegate:` because shared secret is stored inside the app.
  *
  * @param apiSecret a hex-encoded API secret key, typically specific to your app.
+ * @param domainName a Dimelo API domainName specific to your app.
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initWithApiSecret:(NSString*)apiSecret delegate:(id<DimeloDelegate>)delegate;
-
-/*!
- * Initializes a new API client with a secret API key, custom hostname and a delegate.
- *
- * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
- *
- * This mode is less secure than `-initWithApiKey:hostname:delegate:` because shared secret is stored inside the app.
- *
- * @param apiSecret a hex-encoded API secret key, typically specific to your app.
- * @param hostname a Dimelo API hostname specific to your app.
- * @param delegate an instance conforming to `DimeloDelegate` protocol.
- *
- */
-- (id) initWithApiSecret:(NSString*)apiSecret hostname:(NSString*)hostname delegate:(id<DimeloDelegate>)delegate;
+- (id) initWithApiSecret:(NSString*)apiSecret domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate;
 
 
 /*!
@@ -403,7 +375,10 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * API secret is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
  */
-- (void) setApiSecret:(NSString*)apiSecret;
+
+- (void) setApiSecret:(NSString*)apiSecret __attribute__((deprecated("setApiSecret:apiSecret is deprecated, please use initWithApiSecret:apiSecret domainName:domainName delegate:delegate")));
+
+@property(nonatomic, readonly) NSString* domainName;
 
 /*!
  * Delegate object to present a chat view controller and react to various optional notifications.
@@ -417,12 +392,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * API Key is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
  */
-@property(nonatomic, copy) NSString* apiKey;
-
-/*!
- * Per-application hostname used to connect to Dimelo backend.
- */
-@property(nonatomic, copy) NSString* hostname;
+@property(nonatomic, copy) NSString* apiKey __attribute__((deprecated("apiKey or setApiKey:apiKey is deprecated, please use initWithApiKey:apiKey domainName:domainName delegate:delegate")));
 
 /*!
  * Per-installation identifier generated when the component is instantiated for the first time within the app.
@@ -445,7 +415,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /*!
  * Additional fields to be added to the JWT dictionary under "extra" key.
  *
- * You must make sure only PropertyList-compatible items a present inside this dictionary.
+ * You must make sure only PropertyList-compatible items a present inside this dictionary (keys must not be empty, whitespace only or contain the characters "$" or ".").
  */
 @property(nonatomic, copy) NSDictionary* authenticationInfo;
 
@@ -480,6 +450,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * Example: user selects a category of a problem ("Technical" or "Sales")
  * and then contacts the support. First message indicates what type of the problem user is talking about.
+ * You must make sure only PropertyList-compatible items a present inside this dictionary (keys must not be empty, whitespace only or contain the characters "$" or ".").
  */
 @property(nonatomic, copy) NSDictionary* messageContextInfo;
 
@@ -925,6 +896,13 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Default is `NO`.
  */
 @property(nonatomic) BOOL interactiveNotification;
+
+/*!
+ * Flag to set to disable reception of the push notification
+ * Default is `NO`.
+ */
+@property(nonatomic) BOOL disableNotification;
+
 
 /*!
  * localize titles (doneButton, sendButton, cancelButton, photoButton, galleryButton, locationButton).
