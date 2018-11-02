@@ -1,6 +1,6 @@
 ## Dimelo iOS SDK master ##
 
-## Dimelo iOS SDK 1.8.1 (October 31, 2018) ##
+## Dimelo iOS SDK 1.9.0 (November 2, 2018) ##
 - BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
   * `setApiSecret: apiSecret` is now deprecated in favor of `initWithApiSecret: secret domainName: domainName delegate: delegate`.
   * `setApiKey: apiKey` is now deprecated in favor of `initWithApiKey: apiKey domainName: domainName delegate: delegate`.
