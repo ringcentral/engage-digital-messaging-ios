@@ -1,5 +1,11 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.9.1 (January 16, 2019) ##
+- Improvement: better resizing of input text size according to the entered text
+- Improvement: disable network calls to Dimelo mobile API when source is disabled
+- Fix: compiler Warning: `umbrella header for module 'Dimelo' does not include header 'DimeloChatInputAccessoryView.h'` (#31)
+- Fix: prevent sending empty body in send message request
+
 ## Dimelo iOS SDK 1.9.0 (November 2, 2018) ##
 - BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
   * `setApiSecret: apiSecret` is now deprecated in favor of `initWithApiSecret: secret domainName: domainName delegate: delegate`.
