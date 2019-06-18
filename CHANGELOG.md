@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.9.2 (June 18, 2019) ##
+- Improvement: open Apple Maps when a location is tapped
+- Fix: remove unused white space above messages in chat view
+- Improvement: better support for iPhone X safe area in landscape mode
+
 ## Dimelo iOS SDK 1.9.1 (January 16, 2019) ##
 - Improvement: better resizing of input text size according to the entered text
 - Improvement: disable network calls to Dimelo mobile API when source is disabled

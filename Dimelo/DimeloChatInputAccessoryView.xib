@@ -14,6 +14,8 @@
                 <outlet property="attachmentButton" destination="4dL-VD-3Vb" id="is3-kB-LPP"/>
                 <outlet property="attachmentImageView" destination="KP7-AG-Cfn" id="5GO-wI-xm3"/>
                 <outlet property="bottomConstraint" destination="4UD-V3-WSZ" id="2B3-Tf-3tH"/>
+                <outlet property="leftConstraint" destination="Scl-gW-FgZ" id="BAf-XS-C0C"/>
+                <outlet property="rightConstraint" destination="LUY-Kw-Let" id="uJq-kZ-tLP"/>
                 <outlet property="sendButton" destination="fUA-PB-aVf" id="h1C-Z3-rGy"/>
                 <outlet property="textView" destination="GNg-UA-tda" id="swI-XG-MuK"/>
                 <outlet property="textViewHeightConstraint" destination="hpv-3c-NZX" id="obT-Zw-bYI"/>
@@ -96,8 +98,8 @@
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="trailing" secondItem="GNg-UA-tda" secondAttribute="trailing" id="epx-61-RWK"/>
                         <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" id="jFw-Kx-tdC"/>
                         <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="11" id="mGO-x5-8Nd"/>
+                        <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="qWN-sM-sPy"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nIi-MX-giu" secondAttribute="top" id="tZv-dV-F7R"/>
-                        <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" priority="250" constant="44" id="uUj-bs-XDh"/>
                     </constraints>
                 </view>
             </subviews>

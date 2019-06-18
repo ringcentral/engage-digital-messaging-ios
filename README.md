@@ -15,7 +15,12 @@ Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for othe
 API Reference
 -------------
 
-Please refer to [Dimelo Mobile SDK Android API Reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+Please refer to [Dimelo Mobile SDK iOS API Reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+
+Supported Versions
+------------------
+
+The Dimelo Mobile SDK is currently supporting **iOS 7.0 and above**.
 
 Getting Started
 ---------------

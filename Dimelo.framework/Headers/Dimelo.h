@@ -14,7 +14,7 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define DIMELO_TIME_TO_WAIT_TO_RESEND 0.2f
 #endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
 
-static NSString* const DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
+static NSString* DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
 
 @class Dimelo;
 
@@ -932,6 +932,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
 * return CFBundleDisplayName otherwise return CFBundleName
 */
 + (NSString *)getApplicationName;
+
+- (NSString *)getDimeloDefaultHostName;
 @end
 
 
