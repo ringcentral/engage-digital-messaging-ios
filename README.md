@@ -1,7 +1,7 @@
-Dimelo-iOS
+Engage Digital Messaging iOS
 ==========
 
-Dimelo provides a mobile messaging component that allows users of your app
+Engage Digital provides a mobile messaging component that allows users of your app
 to easily communicate  with your customer support agents. You can send text messages
 and images, and receive push notifications and automatic server-provided replies.
 
@@ -15,17 +15,17 @@ Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for othe
 API Reference
 -------------
 
-Please refer to [Dimelo Mobile SDK iOS API Reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+Please refer to [Engage Digital Messaging SDK iOS API Reference](http://rawgit.com/ringcentral/engage-digital-ios/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 Supported Versions
 ------------------
 
-The Dimelo Mobile SDK is currently supporting **iOS 7.0 and above**.
+The Engage Digital Messaging SDK is currently supporting **iOS 7.0 and above**.
 
 Getting Started
 ---------------
 
-Follow these three mandatory steps to integrate the Dimelo Mobile Messaging in your application:
+Follow these three mandatory steps to integrate the Engage Digital  Messaging in your application:
 
 1. [Install the Dimelo library either via CocoaPods or manually](#install-the-dimelo-library-either-via-cocoapods-or-manually).
 2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
@@ -41,7 +41,7 @@ Read on how to customize the appearance and the behavior of the Mobile Messaging
 - [Add a Dimelo listener to react to SDK triggered events](#reacting-to-dimelo-mobile-sdk-events)
 
 
-You can see an example of Dimelo Mobile Messaging implementation by downloading the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
+You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-ios-demo).
 
 
 Install the Dimelo library either via CocoaPods or manually
@@ -54,7 +54,7 @@ How To Install With CocoaPods
 
 2) Add "Dimelo-iOS" to your Podfile like so:
 
-    pod 'Dimelo-iOS', :git => 'https://github.com/dimelo/Dimelo-iOS.git'
+    pod 'Dimelo-iOS', :git => 'https://github.com/ringcentral/engage-digital-ios.git'
 
 3) Run `pod install` to update your project.
 
@@ -64,7 +64,7 @@ How To Install With CocoaPods
 How To Install Manually
 -----------------------
 
-1) Download contents from Github [Dimelo-iOS project](https://github.com/dimelo/Dimelo-iOS).
+1) Download contents from Github [Dimelo-iOS project](https://github.com/ringcentral/engage-digital-ios).
 
 2) Drop the `Dimelo.framework` subfolder in your project.
 
@@ -98,7 +98,7 @@ DimeloConfig.plist
 <plist version="1.0">
 <dict>
     <key>title</key>
-    <string>Dimelo Mobile Support</string>
+    <string>Engage Digital Messaging Support</string>
 </dict>
 </plist>
 ```
@@ -245,7 +245,7 @@ only during development, or ensure that user identifiers are not predictable (e.
 
 #### 2. Setup with a server-side secret (better security but more complicated)
 
-This is a more secure mode. Dimelo will provide you with two keys: a public API key and a secret key.
+This is a more secure mode. Engage Digital will provide you with two keys: a public API key and a secret key.
 The public one will be used to configure `Dimelo` instance and identify your app.
 The secret key will be stored on your server and used to sign JWT token on your server.
 
@@ -276,11 +276,11 @@ signature. Using hex string as-is will yield incorrect signature.
 /!\ `[Dimelo setUserIdentifier];`, `[Dimelo setAuthenticationInfo];` and `[Dimelo setUserName];` must only be called **BEFORE** `[Dimelo setJwt];` otherwise your JWT will be emptied and your request will end up in a 404 error.
 
 You have to do this authentication only once per user identifier,
-but before you try to use Dimelo Mobile Messaging. Your application should prevent
+but before you try to use Engage Digital Messaging. Your application should prevent
 user from opening a Mobile Messaging until you receive a JWT token.
 
 
-Displaying Dimelo Mobile conversation screen
+Displaying Engage Digital Messaging conversation screen
 --------------------------------------------
 
 Dimelo provides an opaque `UIViewController` instance that you can display how you want (created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`, show in a popover or present modally. You can also use `transitioningDelegate` to present chat view controller in a very custom way.
@@ -298,7 +298,7 @@ The chat is displayed automatically in two cases:
 To display the chat manually and reuse the code in `-dimeloDisplayChatViewController:`, call `-[Dimelo displayChatView]`. When necessary, you can request another instance of a chat view controller (`-[Dimelo chatViewController]`) to show the chat in some other context.
 
 
-Customizing Dimelo Mobile SDK Appearance
+Customizing Engage Digital Messaging SDK Appearance
 ----------------------------------------
 
 [see how to customize Dimelo using plist](PlistCustomization.md)
@@ -340,12 +340,12 @@ The library will use it to configure the `Dimelo` shared instance.
 Push Notifications
 ------------------
 
-Dimelo chat can receive push notifications from Dimelo server.
+Engage Digital Messaging can receive push notifications from Engage Digital server.
 To make them work:
 1. You need to have properly configured and generated Apple APN cerficates ([see how to generate APNS certificate](GenerateAPNSCertificate.md)) and have them configured in your SMCC admin configuration interface.
 
 2. Your app should register for remote notifications using `UIApplication` APIs.
-   This is not strictly necessary as the Dimelo chat will attempt to do that automatically
+   This is not strictly necessary as Engage Digital Messaging will attempt to do that automatically
    when user sends the first message. But if you are interested in sending notifications
    even before user has used the chat (e.g. a "welcome" message),
    then you should register for remote notifications earlier in the app's lifecycle.
@@ -367,7 +367,7 @@ If the notification was received as a result of a user action
 (e.g. user opened it from the lock screen), the chat will be displayed automatically.
 
 When the notification is received while your app is running, but the chat is not visible,
-Dimelo will display a temporary notification bar on top of the screen (looking similar
+Engage Digital Messaging will display a temporary notification bar on top of the screen (looking similar
 to a iOS notification bar when another application is notified).
 If the user taps that bar, a chat will open.
 
@@ -388,7 +388,7 @@ If your application has its own unread count, you might want to disable this beh
 Required Permissions
 --------------------
 
-To access all the features of the Dimelo SDK, some permissions have to be defined inside your project info.plist:
+To access all the features of the Engage Digital Messaging SDK, some permissions have to be defined inside your project info.plist:
 
 |XCode Key|Raw Info.plist Key|Used for|
 |---------|------------------|--------|
@@ -404,93 +404,10 @@ To support localization, add these keys (`NSPhotoLibraryUsageDescription`, `NSCa
 Localization
 ------------
 
-- add the localizations to your project:
-
-<p align="center">
-<img src="https://s26.postimg.cc/ab44y4x7d/demo.png"/>
-</p>
-
-- Create a DimeloLocalizable.strings file in Supporting File directory
-- Check the supported languages.
-
-<p align="center">
-<img src="https://s26.postimg.cc/n526rhamx/localization.png"/>
-</p>
-
-- add these keys to DimeloLocalizable.strings file if you want to change the default dimelo translation
-
-### dimeloChatTitle
-Title of the conversation window. 
-
-This will be used as an argument to NSLocalizedString.
+[see how to change the default translation](Localization.md)
 
 
-<p align="center">
-<img src="http://s12.postimg.cc/d3eymmfm5/title.png"/>
-</p>
-
-### dimeloSendButtonTitle
-Title of the chat send Button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/tnlucx82h/IMG_0010.png"/>
-</p>
-
-### dimeloChoosePhotoButtonTitle
-Title of the attachment photo button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/ph0zxl8gp/choose_titles.png"/>
-</p>
-
-### dimeloLocationButtonTitle
-Title of the attachment location button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/ph0zxl8gp/choose_titles.png"/>
-</p>
-
-###  dimeloTakePhotoButtonTitle
-Title of the Take Photo button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/ph0zxl8gp/choose_titles.png"/>
-</p>
-
-### dimeloCancelButtonTitle
-Title of the Cancel button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/ph0zxl8gp/choose_titles.png"/>
-</p>
-
-### dimeloLoadMoreMessagesButtonTitle
-Title of the Load more messages button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/az3splh5l/load_more_messages_title.png"/>
-</p>
-
-
-Reacting To Dimelo Mobile SDK Events
+Reacting To Engage Digital Messaging SDK Events
 ------------------------------------
 
 We provide two ways to react to various events in the char:
@@ -502,10 +419,10 @@ We provide two ways to react to various events in the char:
 For your convenince all notifications have a corresponding delegate method (e.g. `-dimeloUnreadCountDidChange:`), so you don't have to subscribe to them explicitly if you
 wish to process events in `DimeloDelegate` object.
 
-Two particular events that might be interesting to you are `-dimeloDidBeginNetworkActivity:`, `-dimeloDidEndNetworkActivity:`. Dimelo does not change the status bar network activity
+Two particular events that might be interesting to you are `-dimeloDidBeginNetworkActivity:`, `-dimeloDidEndNetworkActivity:`. Engage Digital Messaging does not change the status bar network activity
 indicator to avoid conflicts with your app. If you would like to indicate it, you should
 override these methods and update the activity indicator accordingly.
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
-Please refer to [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) documentation for more information.
+Please refer to [API reference](http://rawgit.com/ringcentral/engage-digital-ios/master/Reference/html/index.html) documentation for more information.
