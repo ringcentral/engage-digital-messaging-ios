@@ -15,7 +15,7 @@ Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for othe
 API Reference
 -------------
 
-Please refer to [Engage Digital Messaging SDK iOS API Reference](http://rawgit.com/ringcentral/engage-digital-ios/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+Please refer to [Engage Digital Messaging SDK iOS API Reference](http://rawgit.com/ringcentral/engage-digital-messaging-ios/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 Supported Versions
 ------------------
@@ -41,7 +41,7 @@ Read on how to customize the appearance and the behavior of the Mobile Messaging
 - [Add a Dimelo listener to react to SDK triggered events](#reacting-to-dimelo-mobile-sdk-events)
 
 
-You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-ios-demo).
+You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-messaging-ios-demo).
 
 
 Install the Dimelo library either via CocoaPods or manually
@@ -54,7 +54,7 @@ How To Install With CocoaPods
 
 2) Add "Dimelo-iOS" to your Podfile like so:
 
-    pod 'Dimelo-iOS', :git => 'https://github.com/ringcentral/engage-digital-ios.git'
+    pod 'Dimelo-iOS', :git => 'https://github.com/ringcentral/engage-digital-messaging-ios.git'
 
 3) Run `pod install` to update your project.
 
@@ -64,7 +64,7 @@ How To Install With CocoaPods
 How To Install Manually
 -----------------------
 
-1) Download contents from Github [Dimelo-iOS project](https://github.com/ringcentral/engage-digital-ios).
+1) Download contents from Github [Dimelo-iOS project](https://github.com/ringcentral/engage-digital-messaging-ios).
 
 2) Drop the `Dimelo.framework` subfolder in your project.
 
@@ -425,4 +425,4 @@ override these methods and update the activity indicator accordingly.
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
-Please refer to [API reference](http://rawgit.com/ringcentral/engage-digital-ios/master/Reference/html/index.html) documentation for more information.
+Please refer to [API reference](http://rawgit.com/ringcentral/engage-digital-messaging-ios/master/Reference/html/index.html) documentation for more information.
