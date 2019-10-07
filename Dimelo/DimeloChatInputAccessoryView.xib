@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +15,7 @@
                 <outlet property="attachmentImageView" destination="KP7-AG-Cfn" id="5GO-wI-xm3"/>
                 <outlet property="bottomConstraint" destination="4UD-V3-WSZ" id="2B3-Tf-3tH"/>
                 <outlet property="leftConstraint" destination="Scl-gW-FgZ" id="BAf-XS-C0C"/>
+                <outlet property="mainView" destination="nIi-MX-giu" id="is7-HE-bhm"/>
                 <outlet property="rightConstraint" destination="LUY-Kw-Let" id="uJq-kZ-tLP"/>
                 <outlet property="sendButton" destination="fUA-PB-aVf" id="h1C-Z3-rGy"/>
                 <outlet property="textView" destination="GNg-UA-tda" id="swI-XG-MuK"/>
@@ -27,8 +28,8 @@
             <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-MX-giu">
-                    <rect key="frame" x="0.0" y="-5" width="458" height="49"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-MX-giu">
+                    <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
                     <subviews>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-AG-Cfn" userLabel="AttachmentImageView">
                             <rect key="frame" x="309" y="-60" width="96" height="96"/>
@@ -91,13 +92,13 @@
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" id="GUK-Ne-Adc"/>
                         <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="7" id="LUY-Kw-Let"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="Scl-gW-FgZ"/>
-                        <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="13" id="Stc-O4-nZx"/>
+                        <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="8" id="Stc-O4-nZx"/>
                         <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="ZmO-pn-IZM"/>
                         <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" constant="8" id="a9k-i8-pym"/>
-                        <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" id="b67-c1-Uei"/>
+                        <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" constant="-5" id="b67-c1-Uei"/>
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="trailing" secondItem="GNg-UA-tda" secondAttribute="trailing" id="epx-61-RWK"/>
                         <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" id="jFw-Kx-tdC"/>
-                        <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="11" id="mGO-x5-8Nd"/>
+                        <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="6" id="mGO-x5-8Nd"/>
                         <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="qWN-sM-sPy"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nIi-MX-giu" secondAttribute="top" id="tZv-dV-F7R"/>
                     </constraints>
@@ -106,7 +107,7 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="4UD-V3-WSZ"/>
-                <constraint firstItem="nIi-MX-giu" firstAttribute="top" secondItem="1" secondAttribute="top" constant="-5" id="bEC-cq-jjG"/>
+                <constraint firstItem="nIi-MX-giu" firstAttribute="top" secondItem="1" secondAttribute="top" id="bEC-cq-jjG"/>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="bni-2t-BFA"/>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="qY0-SK-Z37"/>
             </constraints>

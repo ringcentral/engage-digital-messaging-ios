@@ -24,3 +24,5 @@
 "dimeloAuthorizeCamera" = "Öffnen Sie \"Einstellungen\" und erlauben %@, auf Ihre Kamera zugreifen zu können";
 "dimeloFailedOpenPhotoGallery" = "Die Fotogalerie konnte nicht geöffnet werden";
 "dimeloAuthorizePhotoGallery" = "Öffnen Sie \"Einstellungen\" und erlauben %@, auf Ihre Fotogalerie zu können";
+"dimeloNotificationDirectReplyButtonTitle" = "Senden";
+"dimeloNotificationDirectReplyInputTextPlaceholder" = "";

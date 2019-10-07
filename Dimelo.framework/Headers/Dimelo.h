@@ -1,6 +1,7 @@
 //  Copyright (c) 2014 Dimelo. All rights reserved.
 
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
 
 //! Project version number for Dimelo.
 FOUNDATION_EXPORT double DimeloVersionNumber;
@@ -297,7 +298,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * relatively safe if userIdentifier is not well-known or cannot be easily guessed.
  *
  */
-@interface Dimelo : NSObject
+@interface Dimelo : NSObject<UNUserNotificationCenterDelegate>
 
 
 ////////////////////////////////////////////////////////////////////////////////

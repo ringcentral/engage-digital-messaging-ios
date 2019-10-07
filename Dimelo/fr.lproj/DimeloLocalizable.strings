@@ -24,3 +24,5 @@
 "dimeloAuthorizeCamera" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre appareil photo";
 "dimeloFailedOpenPhotoGallery" = "L'application n'a pas la permission d'accéder à la galerie photo";
 "dimeloAuthorizePhotoGallery" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre galerie photo";
+"dimeloNotificationDirectReplyButtonTitle" = "Envoyer";
+"dimeloNotificationDirectReplyInputTextPlaceholder" = "";

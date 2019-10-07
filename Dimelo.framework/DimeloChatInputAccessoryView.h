@@ -9,11 +9,15 @@ __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView :
 @property(nonatomic) IBOutlet UIButton *sendButton;
 @property(nonatomic) IBOutlet UIImageView *attachmentImageView;
 @property(nonatomic) IBOutlet UIToolbar* toolbar;
+@property(nonatomic) UITabBar* tabBar;
+@property(weak, nonatomic) IBOutlet UIView *mainView;
 - (IBAction) send:(id)sender;
 - (IBAction) addAttachment:(id)sender;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstraint;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraint;
+@property(weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property(nonatomic) CGFloat keyboardHeight;
+- (void) updateChatInputAccessoryViewFrame;
 - (BOOL) updateFittingSize;
 @end

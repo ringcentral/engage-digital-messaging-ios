@@ -15,7 +15,7 @@ Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for othe
 API Reference
 -------------
 
-Please refer to [Engage Digital Messaging SDK iOS API Reference](http://rawgit.com/ringcentral/engage-digital-messaging-ios/master/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+Please refer to [Engage Digital Messaging SDK iOS API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-ios/64b957d54ad0d9a9da65e214f01524cae7977140/Reference/html/index.html) for advanced use. Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 Supported Versions
 ------------------
@@ -425,4 +425,4 @@ override these methods and update the activity indicator accordingly.
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
-Please refer to [API reference](http://rawgit.com/ringcentral/engage-digital-messaging-ios/master/Reference/html/index.html) documentation for more information.
+Please refer to [API reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-ios/64b957d54ad0d9a9da65e214f01524cae7977140/Reference/html/index.html) documentation for more information.

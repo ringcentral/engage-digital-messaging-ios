@@ -1,5 +1,14 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.9.3 (October 7, 2019) ##
+- Fix: Input text overlap on tab bar when using a UITabBarController
+- Fix: Input text disappears when using a UITabBarController
+- Fix: crash when opening Apple Maps when a location is tapped on iOS 13+ devices
+- Fix: race condition when rotating the screen while scrolling was breaking the layout
+- Feature: support foreground notification on iOS 10+ devices
+- Feature: add text customization for notification direct reply [button](https://github.com/ringcentral/engage-digital-messaging-ios/blob/master/Localization.md#dimelonotificationdirectreplybuttontitle) and [placeholder](https://github.com/ringcentral/engage-digital-messaging-ios/blob/master/Localization.md#dimelonotificationdirectreplyinputtextplaceholder) on iOS 10+ devices
+- Fix: prevent direct reply notification crash on iOS 8
+
 ## Dimelo iOS SDK 1.9.2 (June 18, 2019) ##
 - Improvement: open Apple Maps when a location is tapped
 - Fix: remove unused white space above messages in chat view
