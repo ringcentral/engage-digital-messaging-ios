@@ -26,3 +26,5 @@
 "dimeloAuthorizePhotoGallery" = "Öffnen Sie \"Einstellungen\" und erlauben %@, auf Ihre Fotogalerie zu können";
 "dimeloNotificationDirectReplyButtonTitle" = "Senden";
 "dimeloNotificationDirectReplyInputTextPlaceholder" = "";
+"dimeloAttachmentSizeLabelMegaByteUnit" = "MB";
+"dimeloAttachmentSizeLabelKiloByteUnit" = "KB";

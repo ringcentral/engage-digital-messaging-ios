@@ -29,16 +29,16 @@ Follow these three mandatory steps to integrate the Engage Digital  Messaging in
 
 1. [Install the Dimelo library either via CocoaPods or manually](#install-the-dimelo-library-either-via-cocoapods-or-manually).
 2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
-3. [Display the Mobile Messaging in your application](#displaying-dimelo-mobile-conversation-screen).
+3. [Display the Mobile Messaging in your application](#displaying-engage-digital-messaging-conversation-screen).
 4. Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` when using a distribution provisioning profil.
 
 \
 These are minimal steps to make the Mobile Messaging work in your app.
 Read on how to customize the appearance and the behavior of the Mobile Messaging to perfectly fit in your app:
-- [Customize the Mobile Messaging appearance](#customizing-dimelo-mobile-sdk-appearance)
+- [Customize the Mobile Messaging appearance](#customizing-engage-digital-messaging-sdk-appearance)
 - [Add push notifications support](#push-notifications)
 - [Add required permissions to activate map, photo, gallery and Camera](#required-permissions)
-- [Add a Dimelo listener to react to SDK triggered events](#reacting-to-dimelo-mobile-sdk-events)
+- [Add a Dimelo listener to react to SDK triggered events](#reacting-to-engage-digital-messaging-sdk-events)
 
 
 You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-messaging-ios-demo).
@@ -200,8 +200,8 @@ Migration to Dimelo 1.8.1
 -------------------------
 
 Dimelo 1.8.1 uses a new mandatory domain name setting (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com), so these changes **must** be taken into consideration:
-* `setApiSecret: apiSecret` is now deprecated in favor of `initWithApiSecret: secret domainName: domainName delegate: delegate`.
-* `setApiKey: apiKey` is now deprecated in favor of `initWithApiKey: apiKey domainName: domainName delegate: delegate`.
+* `setApiSecret: apiSecret` is now deprecated in favor of `initWithApiSecret: secret domainName: domainName delegate: delegate` for objecive C call or `initializeWithApiSecret: secret domainName: domainName delegate: delegate` for Swift call.
+* `setApiKey: apiKey` is now deprecated in favor of `initWithApiKey: apiKey domainName: domainName delegate: delegate` for Objective C call or `initializeWithApiKey: apiKey domainName: domainName delegate: delegate` for Swift call.
 * `setHostname: hostName` is not available anymore.
 
 
@@ -223,12 +223,49 @@ We support two kinds of authentication modes: with **built-in secret** and with 
 This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
 Here's how to create the Dimelo instance and initialize it using a built-in secret:
+
+- Using Objective-C:
 ```objectivec
 Dimelo dimelo = [Dimelo sharedInstance];
 [dimelo initWithApiSecret: SOURCE_API_SECRET domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
 /*
   SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+- Using Swift:
+```swift
+let dimelo: Dimelo = Dimelo.sharedInstance()
+dimelo.initialize(withApiSecret: SOURCE_API_SECRET, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
+/*
+  SOURCE_API_SECRET can be found in your source configuration
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a built-in secret:
+
+- Using Objective-C:
+```objectivec
+Dimelo dimelo = [Dimelo sharedInstance];
+[dimelo initializeWithApiSecretAndHostName: SOURCE_API_SECRET hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
+/*
+  SOURCE_API_SECRET can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+- Using Swift:
+```swift
+let dimelo: Dimelo = Dimelo.sharedInstance()
+dimelo.initialize(withApiSecretAndHostName: SOURCE_API_SECRET, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
+/*
+  SOURCE_API_SECRET can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
   DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
 */
 ```
@@ -250,12 +287,49 @@ The public one will be used to configure `Dimelo` instance and identify your app
 The secret key will be stored on your server and used to sign JWT token on your server.
 
 Here's how create the Dimelo instance and initialize it using a server-side secret:
+
+- Using Objective-C:
 ```objectivec
 Dimelo dimelo = [Dimelo sharedInstance];
 [dimelo initWithApiKey: SOURCE_API_KEY domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
 /*
   SOURCE_API_KEY can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+- Using Swift:
+```swift
+let dimelo: Dimelo = Dimelo.sharedInstance()
+dimelo.initialize(withApiKey: SOURCE_API_KEY, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
+/*
+  SOURCE_API_KEY can be found in your source configuration
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a server-side secret:
+
+- Using Objective-C:
+```objectivec
+Dimelo dimelo = [Dimelo sharedInstance];
+[dimelo initializeWithApiKeyAndHostName: SOURCE_API_KEY hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
+/*
+  SOURCE_API_KEY can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+- Using Swift:
+```swift
+let dimelo: Dimelo = Dimelo.sharedInstance()
+dimelo.initialize(withApiKeyAndHostName: SOURCE_API_KEY, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
+/*
+  SOURCE_API_KEY can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
   DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
 */
 ```

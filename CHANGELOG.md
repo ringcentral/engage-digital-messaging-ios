@@ -1,5 +1,17 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.9.4 (January 20th, 2020) ##
+- Fix: the SDK now takes the application's current notification categories into account when adding its own notification category
+- Fix: text input is not resized well when rotating device during attachment prompt
+- Fix: force the display of the location, gallery and camera view in full screen mode on iOS13+ devices to avoid bug where input accessory view is not displayed anymore after opening one of these views
+- Feature: allow to initialize the `Dimelo` instance using a hostname:
+*  add `initializeWithApiKeyAndHostName: apiKey hostName: hostName delegate: delegate`  method to configure Dimelo with an api key and a hostname.
+*  add `initializeWithApiSecretAndHostName: apiSecret hostName: hostName  delegate: delegate`  method to configure Dimelo with an api secret and a hostname.
+- Feature: add [`enableLightStatusBarStyle`](https://github.com/ringcentral/engage-digital-messaging-ios/blob/master/PlistCustomization.md#enableLightStatusBarStyle) option to set the light status bar style
+- Feature: add [`dimeloAttachmentSizeLabelMegaByteUnit`](https://github.com/ringcentral/engage-digital-messaging-ios/blob/master/Localization.md#dimeloAttachmentSizeLabelMegaByteUnit) and  [`dimeloAttachmentSizeLabelKiloByteUnit`](https://github.com/ringcentral/engage-digital-messaging-ios/blob/master/Localization.md#dimeloAttachmentSizeLabelKiloByteUnit) keys to customize the size unit of the attachment.
+- Improvement: open gallery or camera view on the main thread
+- Fix: add `initializeWithApiSecret: secret domainName: domainName delegate: delegate`  and `initializeWithApiKey: apiKey domainName: domainName delegate: delegate` to be used in swift call
+
 ## Dimelo iOS SDK 1.9.3 (October 7, 2019) ##
 - Fix: Input text overlap on tab bar when using a UITabBarController
 - Fix: Input text disappears when using a UITabBarController

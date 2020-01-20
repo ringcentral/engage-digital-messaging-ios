@@ -105,3 +105,23 @@ This will be used as an argument to NSLocalizedString.
 <p align="center">
 <img src="https://i.postimg.cc/NFGLJv9n/reply-hint-input-text.jpg"/>
 </p>
+
+### dimeloAttachmentSizeLabelMegaByteUnit
+Attachment size label, in megabytes (Mo in French, MB otherwise)
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/Hx8hgWXP/mb.png"/>
+</p>
+
+### dimeloAttachmentSizeLabelKiloByteUnit
+Attachment size label, in kilobytes (Ko in French, KB otherwise)
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/FF8h31T1/kb.png"/>
+</p>

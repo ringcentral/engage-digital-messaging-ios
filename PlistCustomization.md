@@ -21,7 +21,9 @@ You can refer to this interface to understand how an option affect the interface
 ## Required Configuration
 
 ### domainName
-This is a mandatory key (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+Allows the SDK to send its requests to the right endpoint (e.g. if your Dimelo Digital url is `DIMELO_DOMAIN_NAME.engagement.dimelo.com`, then your `domainName` will be `DIMELO_DOMAIN_NAME`)
+
+:warning: Will be ignored if `hostName` is set (see [hostName](#hostname))
 
 ### apiKey
 Public API key that identifies all requests to Dimelo (used only for the
@@ -36,7 +38,12 @@ This is not recommended to embed in .plist but rather to set it directly via a s
 API Key is always represented in hex format, e.g. `ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70`.
 
 
-## Optionnal configuration
+## Optional configuration
+
+### hostName
+Allows the SDK to send its requests to the right endpoint (e.g. if your Dimelo Digital url is `DIMELO_DOMAIN_NAME.engagement.dimelo.com`, then your `hostName` will be `DIMELO_DOMAIN_NAME.messaging.dimelo.com`)
+
+:warning: Will take precedence on `domainName` (see [domainName](#domainname))
 
 ### language
 Language pList field allows you to override the system current language and define what locale should be sent to the Dimelo Server (and thus, what language will be used for messages returned by the server).
@@ -56,6 +63,23 @@ Used to disable reception of the interactive push notification with direct reply
 </p>
 
 ## Color
+
+### enableLightStatusBarStyle
+Text color for status bar text (white or black).
+
+Must be a boolean, default is the black color.
+
+`enableLightStatusBarStyle=true`:
+
+<p align="center">
+<img src="https://i.postimg.cc/pLwbt22Q/light.png"/>
+</p>
+
+`enableLightStatusBarStyle=false`:
+
+<p align="center">
+<img src="https://i.postimg.cc/gjHHPg4p/default.png"/>
+</p>
 
 ### navigationBarTitleColor
 Text color for the chat title.

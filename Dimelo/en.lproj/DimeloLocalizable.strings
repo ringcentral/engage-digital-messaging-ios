@@ -26,3 +26,5 @@
 "dimeloAuthorizePhotoGallery" = "Please go to the Settings application, and authorize %@ to access your photo gallery";
 "dimeloNotificationDirectReplyButtonTitle" = "Send";
 "dimeloNotificationDirectReplyInputTextPlaceholder" = "";
+"dimeloAttachmentSizeLabelMegaByteUnit" = "MB";
+"dimeloAttachmentSizeLabelKiloByteUnit" = "KB";
