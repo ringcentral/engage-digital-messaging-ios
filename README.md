@@ -25,7 +25,7 @@ The Engage Digital Messaging SDK is currently supporting **iOS 7.0 and above**.
 Getting Started
 ---------------
 
-Follow these three mandatory steps to integrate the Engage Digital  Messaging in your application:
+Follow these three mandatory steps to integrate Engage Digital Messaging in your application:
 
 1. [Install the Dimelo library either via CocoaPods or manually](#install-the-dimelo-library-either-via-cocoapods-or-manually).
 2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
@@ -478,7 +478,7 @@ To support localization, add these keys (`NSPhotoLibraryUsageDescription`, `NSCa
 Localization
 ------------
 
-[see how to change the default translation](Localization.md)
+Please refer to [Localization.md](Localization.md) for guidance on strings customization
 
 
 Reacting To Engage Digital Messaging SDK Events

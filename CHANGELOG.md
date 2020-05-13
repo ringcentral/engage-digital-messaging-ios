@@ -1,5 +1,13 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 1.9.5 (May 13th, 2020) ##
+- Fix: dismiss share action sheet when the chat disappear
+- Feature: add `agentAttachmentTitleInsets` to customize insets for file name and size label inside the agent cell
+- Fix: apply an ellipsis to attachments filename to fit them in the screen
+- Improvement: add space in bottom safe area on compatible devices
+- Improvement: use `WKWebView` instead of `UIWebView` in `AttachmentViewController` on device running on iOS 8+
+- Fix: race condition when rotating the screen was breaking the attachment layout in `AttachmentViewController`
+
 ## Dimelo iOS SDK 1.9.4 (January 20th, 2020) ##
 - Fix: the SDK now takes the application's current notification categories into account when adding its own notification category
 - Fix: text input is not resized well when rotating device during attachment prompt

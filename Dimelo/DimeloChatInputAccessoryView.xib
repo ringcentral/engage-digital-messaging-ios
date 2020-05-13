@@ -28,6 +28,10 @@
             <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
+                    <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
+                    <items/>
+                </toolbar>
                 <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-MX-giu">
                     <rect key="frame" x="0.0" y="0.0" width="458" height="44"/>
                     <subviews>
@@ -39,10 +43,6 @@
                                 <constraint firstAttribute="width" constant="96" id="yuM-NL-178"/>
                             </constraints>
                         </imageView>
-                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
-                            <rect key="frame" x="0.0" y="0.0" width="458" height="49"/>
-                            <items/>
-                        </toolbar>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-PB-aVf">
                             <rect key="frame" x="412" y="6" width="39" height="32"/>
                             <accessibility key="accessibilityConfiguration" identifier="send_button"/>
@@ -86,18 +86,14 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="fUA-PB-aVf" firstAttribute="leading" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="7" id="1bf-sG-w8U"/>
-                        <constraint firstAttribute="trailing" secondItem="7So-Pk-JJJ" secondAttribute="trailing" id="1dh-Q8-nda"/>
                         <constraint firstItem="fUA-PB-aVf" firstAttribute="centerY" secondItem="4dL-VD-3Vb" secondAttribute="centerY" constant="2" id="5ae-H5-ZCH"/>
                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4dL-VD-3Vb" secondAttribute="bottom" constant="4" id="FHf-6b-w4L"/>
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" id="GUK-Ne-Adc"/>
                         <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="7" id="LUY-Kw-Let"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="Scl-gW-FgZ"/>
                         <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="8" id="Stc-O4-nZx"/>
-                        <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="nIi-MX-giu" secondAttribute="leading" id="ZmO-pn-IZM"/>
                         <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" constant="8" id="a9k-i8-pym"/>
-                        <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" constant="-5" id="b67-c1-Uei"/>
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="trailing" secondItem="GNg-UA-tda" secondAttribute="trailing" id="epx-61-RWK"/>
-                        <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" id="jFw-Kx-tdC"/>
                         <constraint firstAttribute="bottom" secondItem="fUA-PB-aVf" secondAttribute="bottom" constant="6" id="mGO-x5-8Nd"/>
                         <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" id="qWN-sM-sPy"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nIi-MX-giu" secondAttribute="top" id="tZv-dV-F7R"/>
@@ -107,9 +103,13 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="4UD-V3-WSZ"/>
+                <constraint firstAttribute="trailing" secondItem="7So-Pk-JJJ" secondAttribute="trailing" id="H6F-w0-xdX"/>
+                <constraint firstItem="7So-Pk-JJJ" firstAttribute="top" secondItem="1" secondAttribute="top" id="Yeh-mV-7F1"/>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="top" secondItem="1" secondAttribute="top" id="bEC-cq-jjG"/>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="bni-2t-BFA"/>
                 <constraint firstItem="nIi-MX-giu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="qY0-SK-Z37"/>
+                <constraint firstAttribute="bottom" secondItem="7So-Pk-JJJ" secondAttribute="bottom" id="rxA-VB-T09"/>
+                <constraint firstItem="7So-Pk-JJJ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="sWJ-Z1-B9a"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

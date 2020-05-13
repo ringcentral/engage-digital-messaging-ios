@@ -920,6 +920,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property(nonatomic) UIEdgeInsets agentAttachmentBubbleInsets;
 
 /*!
+* Insets for file name and size label (inside the agent message bubble).
+*
+*/
+@property(nonatomic) UIEdgeInsets agentAttachmentTitleInsets;
+
+/*!
  * Bar tint color of the input bar.
  */
 @property(nonatomic) UIColor* inputBarTintColor;

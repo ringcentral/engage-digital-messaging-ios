@@ -342,6 +342,17 @@ Similar to `messageFont`, but for system messages.
 
 ## Insets
 
+### agentAttachmentTitleInsets
+Insets for file name and size label (inside the agent message bubble).
+
+<p align="center">
+   <img src="https://i.postimg.cc/P5WP7sWJ/agent-Attachment-Title-Insets.png"/>
+</p>
+
+Must contain a dictionary with `top`, `left`, `bottom` and `right`.
+The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, right)`.
+E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
+
 ### agentAttachmentBubbleInsets
 Insets for agent message bubbles (containing attachment).
 
