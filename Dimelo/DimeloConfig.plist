@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>1.9.5</string>
+	<string>2.0.0</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -24,18 +24,46 @@
 	<string>#FFFFFF</string>
 	<key>agentMessageTextColor</key>
 	<string>#000000</string>
+	<key>agentStructuredMessageTitleColor</key>
+	<string>#000000</string>
+	<key>agentStructuredMessageSubtitleColor</key>
+	<string>#757575</string>
+	<key>agentStructuredMessageUrlColor</key>
+	<string>#A1A1A1</string>
+	<key>agentStructuredMessageItemColor</key>
+	<string>#ECF0F6</string>
+	<key>agentStructuredMessageItemBackgroundColor</key>
+	<string></string>
+	<key>agentStructuredMessageItemTappedColor</key>
+	<string>#ECF0F6</string>
+	<key>quickRepliesBackgroundColor</key>
+	<string></string>
+	<key>quickRepliesBorderColor</key>
+	<string>#ECF0F6</string>
+	<key>quickRepliesTappedBorderColor</key>
+	<string>#ECF0F6</string>
+	<key>quickRepliesTextColor</key>
+	<string>#ECF0F6</string>
+	<key>quickRepliesTappedTextColor</key>
+	<string>#FFFFFF</string>
+	<key>quickRepliesTappedBackgroundColor</key>
+	<string>#ECF0F6</string>
 	<key>systemMessageTextColor</key>
-	<string>#666666</string>
+	<string>#000000</string>
 	<key>userMessageBackgroundColor</key>
 	<string>#258CFB</string>
 	<key>agentMessageBackgroundColor</key>
-	<string>#DFDFE5</string>
+	<string>#ECF0F6</string>
 	<key>systemMessageBackgroundColor</key>
-	<string>#B3B3B3</string>
+	<string>#ECF0F6</string>
+	<key>agentStructuredMessageItemTappedBackgroundColor</key>
+	<string>#258BFB</string>
 	<key>dateTextColor</key>
-	<string>#808080</string>
+	<string>#A1A1A1</string>
+	<key>hourTimeTextColor</key>
+	<string>#A1A1A1</string>
 	<key>agentNameColor</key>
-	<string>#808080</string>
+	<string>#A1A1A1</string>
 	<key>loadMoreMessagesButtonTextColor</key>
 	<string></string>
 	<key>inputBarTintColor</key>
@@ -54,21 +82,63 @@
 		<key>name</key>
 		<string>HelveticaNeue</string>
 		<key>size</key>
-		<integer>16</integer>
+		<integer>17</integer>
 	</dict>
 	<key>dateFont</key>
 	<dict>
 		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
+	<key>hourTimeFont</key>
+	<dict>
+		<key>name</key>
 		<string>HelveticaNeue</string>
 		<key>size</key>
-		<integer>13</integer>
+		<integer>12</integer>
+	</dict>
+	<key>agentTimeFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>12</integer>
 	</dict>
 	<key>agentNameFont</key>
 	<dict>
 		<key>name</key>
-		<string>HelveticaNeue-Medium</string>
+		<string>.SFUIText-Semibold</string>
 		<key>size</key>
-		<integer>13</integer>
+		<integer>12</integer>
+	</dict>
+	<key>agentStructuredMessageTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
+	<key>agentStructuredMessageSubTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
+	<key>agentStructuredMessageUrlFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Medium</string>
+		<key>size</key>
+		<integer>15</integer>
+	</dict>
+	<key>agentStructuredMessageItemFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Medium</string>
+		<key>size</key>
+		<integer>17</integer>
 	</dict>
 	<key>navigationBarTitleFont</key>
 	<dict>
@@ -90,5 +160,7 @@
 	<false/>
 	<key>enableLightStatusBarStyle</key>
 	<false/>
+	<key>showAgentAvatarImage</key>
+	<true/>
 </dict>
 </plist>

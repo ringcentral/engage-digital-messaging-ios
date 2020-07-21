@@ -28,3 +28,6 @@
 "dimeloNotificationDirectReplyInputTextPlaceholder" = "";
 "dimeloAttachmentSizeLabelMegaByteUnit" = "MB";
 "dimeloAttachmentSizeLabelKiloByteUnit" = "KB";
+"rcHintInputText" = "Send a message...";
+"rcToday" = "Today";
+"rcRetryButtonTitle" = "Resend";

@@ -15,7 +15,10 @@ The default interface without any customization is the following on iOS.
 You can refer to this interface to understand how an option affect the interface.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/5ysjzuiz1/default.png"/>
+   <img src="https://i.postimg.cc/qBmfxmXn/1.png"/>
+</p>
+<p align="center">
+   <img src="https://i.postimg.cc/nrX3k1pY/2.png"/>
 </p>
 
 ## Required Configuration
@@ -96,7 +99,43 @@ Text color for agent's name.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/vmonmj9u5/agent_Name_Color.png"/>
+   <img src="https://i.postimg.cc/LX1QJzVJ/agent-Name-Color.png"/>
+</p>
+
+### agentTimeColor
+Time color for agent's name.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/przP2h7v/agent-Time-Color.png"/>
+</p>
+
+### agentTemplateBorderColor
+Border color for agent structured message bubbles.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/jSWVR0hm/agent-Template-Border-Color.png"/>
+</p>
+
+### agentTemplateWithImageBodyBackgroundColor
+Background color for template agent structured message.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Y0g5Q1v7/agent-Template-With-Image-Body-Background-Color.png"/>
+</p>
+
+### agentStructuredMessageBodyBackgroundColor
+Background color for body agent structured message view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/76THQJ5s/agent-Structured-Message-Body-Background-Color.png"/>
 </p>
 
 ### agentMessageBackgroundColor
@@ -105,7 +144,7 @@ Background color for agent message bubbles.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/qy8nrcknh/agent_Message_Background_Color.png"/>
+   <img src="https://i.postimg.cc/q7WfzB2v/agent-Message-Background-Color.png"/>
 </p>
 
 ### agentMessageTextColor
@@ -114,8 +153,148 @@ Foreground color for agent's message text.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/p7pmpv34d/agent_Message_Text_Color.png"/>
+   <img src="https://i.postimg.cc/qMJFB6WG/agent-Message-Text-Color.png"/>
 </p>
+
+### agentStructuredMessageUrlMarginTop
+Margin top for structured message url label.
+
+<p align="center">
+   <img src="https://i.postimg.cc/zfvTtNTt/agent-Structured-Message-Url-Margin-Top.png"/>
+</p>
+
+### agentStructuredMessageSubtitleMarginTop
+Margin top for structured message subtitle label.
+
+<p align="center">
+   <img src="https://i.postimg.cc/CKx9cRv3/agent-Structured-Message-Subtitle-Margin-Top.png"/>
+</p>
+
+### agentStructuredMessageTitleColor
+Foreground color for agent's structured message title text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bJcngtgg/agent-Structured-Message-Title-Color.png"/>
+</p>
+
+### agentStructuredMessageSubtitleColor
+Foreground color for agent's structured message subtitle text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/cLzksF1J/agent-Structured-Message-Subtitle-Color.png"/>
+</p>
+
+### agentStructuredMessageUrlColor
+Foreground color for agent's structured message url text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/44rSkLdN/agent-Structured-Message-Url-Color.png"/>
+</p>
+
+### agentStructuredMessageItemColor
+Foreground color for agent's structured message item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/N0bN4bR7/agent-Structured-Message-Item-Color.png"/>
+</p>
+
+### agentStructuredMessageItemTappedColor
+Foreground color for agent's structured message tapped item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/N0bN4bR7/agent-Structured-Message-Item-Color.png"/>
+</p>
+
+### agentStructuredMessageItemBackgroundColor
+Background color for agent's structured message item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/YCsHFNR4/agent-Structured-Message-Item-Background-Color.png"/>
+</p>
+
+### agentStructuredMessageItemTappedBackgroundColor
+Background color for agent's structured message tapped item.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/YCsHFNR4/agent-Structured-Message-Item-Background-Color.png"/>
+</p>
+
+### quickRepliesBorderWidth
+Border width for quick replies.
+
+<p align="center">
+   <img src="https://i.postimg.cc/sgD5gLVR/quick-Replies-Border-Width.png"/>
+</p>
+
+### quickRepliesHorizontalSpacing
+Horizontal spacing for quick replies.
+
+<p align="center">
+   <img src="https://i.postimg.cc/P529C0Yb/quick-Replies-Horizontal-Spacing.png"/>
+</p>
+
+### quickRepliesVerticalSpacing
+Vertical spacing for quick replies.
+
+<p align="center">
+   <img src="https://i.postimg.cc/mDRHKppq/quick-Replies-Vertical-Spacing.png"/>
+</p>
+
+### quickRepliesBorderColor
+Border color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/RZcN7QXZ/quick-Replies-Border-Color.png"/>
+</p>
+
+### quickRepliesTappedBorderColor
+ Border color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+### quickRepliesTextColor
+Text color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/28jDcdk5/quick-Replies-Text-Color.png"/>
+</p>
+
+### quickRepliesTappedTextColor
+Text color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+### quickRepliesBackgroundColor
+Background color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/GhTQ1Vhg/quick-Replies-Background-Color.png"/>
+</p>
+
+### quickRepliesTappedBackgroundColor
+Background color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 ### dateTextColor
 Text color for the date label.
@@ -123,16 +302,25 @@ Text color for the date label.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/dq99yen4d/date_Text_Color.png"/>
+   <img src="https://i.postimg.cc/RhvYMyPq/date-text-color.png"/>
 </p>
 
-### disabledSendButtonColor
-Text color of the send button on disabled state
+### hourTimeTextColor
+Text color for the hour label.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/ig3t0r3il/disabled_Send_Button_Color.png"/>
+   <img src="https://i.postimg.cc/pTRC88K6/hour-text-color.png"/>
+</p>
+
+### disabledSendButtonColor
+Tint color of the send button image on disabled state
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/D0ffvyqY/disabled-Send-Button-Color.png"/>
 </p>
 
 ### errorIconColor
@@ -141,7 +329,7 @@ Color of the error icon which is displayed when the message could not be sent an
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="https://s1.postimg.cc/eeh1b82lr/Capture_d_e_cran_2017_02_15_a_14_59_22.png"/>
+   <img src="https://i.postimg.cc/L6JzVHPp/error-icon.png"/>
 </p>
 
 ### inputBarBackgroundColor
@@ -150,7 +338,7 @@ Background color of the input bar.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/8k2q13xql/input_Bar_Background_Color.png"/>
+   <img src="https://i.postimg.cc/Ss74X2qf/input-Bar-Background-Color.png"/>
 </p>
 
 ### inputBarTintColor
@@ -159,7 +347,7 @@ Bar tint color of the input bar.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/lpi877rm5/input_Bar_Tint_Color.png"/>
+   <img src="https://i.postimg.cc/RCK6RXCg/input-Bar-Tint-Color.png"/>
 </p>
 
 ### loadMoreMessagesButtonTextColor
@@ -220,16 +408,16 @@ Tint color for cursor.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.cc/ezuz45ixl/cursor.png"/>
+<img src="https://i.postimg.cc/VkBy6Tcb/cursor.png"/>
 </p>
 
 ### sendTintColor
-Tint color for Send Button.
+Tint color for Send Button image.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-<img src="https://s26.postimg.cc/5vwk3phcp/send_Button.png"/>
+<img src="https://i.postimg.cc/xjFVJRYd/send-Button.png"/>
 </p>
 
 ### navigationBarItemTintColor
@@ -284,7 +472,74 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/z7kj5redp/agent_Name_Font.png"/>
+   <img src="https://i.postimg.cc/W1jH3WzC/agent-Name-Font.png"/>
+</p>
+
+### showAgentAvatarImage
+Show or hide the agent avatar image.
+
+Must be a boolean, default is `true`.
+
+`showAgentAvatarImage=true`:
+
+<p align="center">
+<img src="https://i.postimg.cc/s2F4YkfW/1.png"/>
+</p>
+
+`showAgentAvatarImage=false`:
+
+<p align="center">
+<img src="https://i.postimg.cc/NMD8wL68/2.png"/>
+</p>
+
+### agentTimeFont
+Font for agent's time.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/q7yVQHsH/3.png"/>
+</p>
+
+### agentStructuredMessageTitleFont
+Font for agent's structured message title.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bv6jQ7h9/agent-Structured-Message-Title-Font.png"/>
+</p>
+
+### agentStructuredMessageSubTitleFont
+Font for agent's structured message subtitle.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/rwKHBDXx/agent-Structured-Message-Sub-Title-Font.png"/>
+</p>
+
+### agentStructuredMessageUrlFont
+Font for agent's structured message url.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bwynrnNS/agent-Structured-Message-Url-Font.png"/>
+</p>
+
+### agentStructuredMessageItemFont
+Font for agent's structured message item.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/VNP3Xzpt/agent-Structured-Message-Item-Font.png"/>
 </p>
 
 ### dateFont
@@ -295,7 +550,18 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/dozc4zlal/date_Font.png"/>
+   <img src="https://i.postimg.cc/HkNFQSLP/date-font.png"/>
+</p>
+
+### hourTimeFont
+Font for the hour label.
+
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/dt4b0QcF/hour-font.png"/>
 </p>
 
 ### defaultFont
@@ -306,7 +572,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/6ctvzg32l/default_Font.png"/>
+   <img src="https://i.postimg.cc/FzyxXvyR/default-Font.png"/>
 </p>
 
 ### messageFieldFont
@@ -317,7 +583,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/cyb7cy8b1/message_Field_Font.png"/>
+   <img src="https://i.postimg.cc/LXzPnTnQ/message-Field-Font.png"/>
 </p>
 
 ### messageFont
@@ -328,7 +594,7 @@ These values will be used as arguments to `+[UIFont fontWithName:size:]`.
 E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/694nwxmz1/message_Font.png"/>
+   <img src="https://i.postimg.cc/BZm6Nk9c/message-Font.png"/>
 </p>
 
 ### systemMessageFont
@@ -346,7 +612,7 @@ Similar to `messageFont`, but for system messages.
 Insets for file name and size label (inside the agent message bubble).
 
 <p align="center">
-   <img src="https://i.postimg.cc/P5WP7sWJ/agent-Attachment-Title-Insets.png"/>
+   <img src="https://i.postimg.cc/Gt8ZF4nf/agent-Attachment-Title-Insets.png"/>
 </p>
 
 Must contain a dictionary with `top`, `left`, `bottom` and `right`.
@@ -371,6 +637,50 @@ E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 Similar to `userMessageBubbleInsets`, but for agent messages.
 
+### agentStructuredMessageBodyInsets
+Insets for agent structured message bubbles.
+
+<p align="center">
+   <img src="https://i.postimg.cc/XvmSXw3V/agent-Structured-Message-Body-Insets.png"/>
+</p>
+
+Must contain a dictionary with `top`, `left`, `bottom` and `right`.
+The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, right)`.
+E.g. `top=40`, `left=40`, `bottom=40` and `right=40`.
+
+### agentStructuredMessageItemInsets
+Insets for agent structured message item.
+
+<p align="center">
+   <img src="https://i.postimg.cc/fTLG72Lw/agent-Structured-Message-Item-Insets.png"/>
+</p>
+
+Must contain a dictionary with `top`, `left`, `bottom` and `right`.
+The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, right)`.
+E.g. `top=40`, `left=40`, `bottom=40` and `right=40`.
+
+### quickRepliesInsets
+Insets for quick replies.
+
+<p align="center">
+   <img src="https://i.postimg.cc/PqwydZqs/quick-Replies-Insets.png"/>
+</p>
+
+Must contain a dictionary with `top`, `left`, `bottom` and `right`.
+The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, right)`.
+E.g. `top=40`, `left=40`, `bottom=40` and `right=40`.
+
+### quickRepliesPaddingInsets
+Insets for quick replies item.
+
+<p align="center">
+   <img src="https://i.postimg.cc/qRdqDmMF/quick-Replies-Padding-Insets.png"/>
+</p>
+
+Must contain a dictionary with `top`, `left`, `bottom` and `right`.
+The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, right)`.
+E.g. `top=40`, `left=40`, `bottom=40` and `right=40`.
+
 ### agentNameInsets
 Insets for agent name text.
 
@@ -379,7 +689,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/q128ih959/agent_Name_Insets.png"/>
+   <img src="https://i.postimg.cc/9FSygr5p/agent-Name-Insets.png"/>
 </p>
 
 ### systemMessageBubbleInsets
@@ -399,7 +709,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/4ntziv24t/user_Attachment_Bubble_Insets.png"/>
+   <img src="https://i.postimg.cc/d1khy9Dc/user-Attachment-Bubble-Insets.png"/>
 </p>
 
 In the screenshot, top=60, right=40, bottom=20, left=0.
@@ -412,7 +722,7 @@ The values will be used as arguments to `UIEdgeInsetsMake(top, left, bottom, rig
 E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 
 <p align="center">
-   <img src="http://s12.postimg.cc/q01hgjm31/user_Message_Bubble_Insets.png"/>
+   <img src="https://i.postimg.cc/sgj1cz1c/user-Message-Bubble-Insets.png"/>
 </p>
 
 In the screenshot, top=60, right=40, bottom=20, left=0.
@@ -449,7 +759,7 @@ So, the `top`, `left`, `bottom` and `right` parameters will be used to define th
 E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myAttachmentIcon`
 
 <p align="center">
-   <img src="http://s12.postimg.cc/ru556subx/attachment_Icon.png"/>
+   <img src="https://i.postimg.cc/8PPVXzBj/attachment-Icon.png"/>
 </p>
 
 ### systemMessageBubbleImage
@@ -486,7 +796,7 @@ So, the `top`, `left`, `bottom` and `right` parameters will be used to define th
 E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myBubbleImage`
 
 <p align="center">
-   <img src="http://s12.postimg.cc/iisa1bwjx/user_Message_Bubble_Image.png"/>
+   <img src="https://i.postimg.cc/XJ78Sm2c/user-Message-Bubble-Image.png"/>
 </p>
 
 In the screenshot, top=18, left=19, bottom=18, right=36.

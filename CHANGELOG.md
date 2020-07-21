@@ -1,5 +1,23 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.0.0 (July 21th, 2020) ##
+- Feature: tapping the error icon alongside a message now allows to retry the message sending request
+- Feature: support the structured messages (quick reply, template, carousel and rich link):
+    - Add multiple customization keys ([listed in PlistCustomization.md](PlistCustomization.md))
+    - The input accessory view is hidden when a quick reply disabling it is sent
+    - Support gif and deeplinks in structured messages
+- Feature: new design:
+    - Support agent avatar (`showAgentAvatarImage = YES | NO` defaults to `YES`)
+    - Support messages grouping (text, image, location, attachment, structured)
+    - Add `hourTimeFont` and `hourTimeTextColor` keys to customize the hour part of the date
+    - Add `agentTimeFont` and `agentTimeColor` keys to customize the time next to the agent name
+    - Replace the send button by an icon. Use the existing `sendTintColor` (when active) and `disabledSendButtonColor` keys to customize the send icon
+    - Add `rcHintInputText` key to customize the hint text in the input accessory view
+    - Add `rcToday` localization key for the date
+    - Automatically apply system date and time to the chat date and time
+    - Welcome message is now displayed in the middle of the screen
+    - Make the default colors compatible with the dark mode
+
 ## Dimelo iOS SDK 1.9.5 (May 13th, 2020) ##
 - Fix: dismiss share action sheet when the chat disappear
 - Feature: add `agentAttachmentTitleInsets` to customize insets for file name and size label inside the agent cell

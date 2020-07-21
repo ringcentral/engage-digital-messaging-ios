@@ -15,6 +15,11 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define DIMELO_TIME_TO_WAIT_TO_RESEND 0.2f
 #endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
 
+#define USER_MESSAGE_DEFAULT_BACKGROUND_COLOR [UIColor colorWithRed:0.145f green:0.546f blue:0.984f alpha:1.000f]
+
+#define DEFAULT_DATE_FORMATTER @"MMMM dd yyyy jj:mm"
+#define DEFAULT_DATE_FORMATTER_WITHOUT_YEAR @"MMMM dd jj:mm"
+
 static NSString* const DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
 
 @class Dimelo;
@@ -88,7 +93,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param dimelo An API instance.
  *
  */
-- (void) dimeloDisplayChatViewController:(Dimelo*)dimelo;
+- (void)dimeloDisplayChatViewController:(Dimelo *)dimelo;
 
 @optional
 
@@ -107,7 +112,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @return `NO` if you want to display custom UI or simply ignore this notification.
  *
  */
-- (BOOL) dimelo:(Dimelo*)dimelo shouldDisplayNotificationWithText:(NSString*)message;
+- (BOOL)dimelo:(Dimelo *)dimelo shouldDisplayNotificationWithText:(NSString *)message;
 
 /*!
  * Called when a network activity started.
@@ -121,7 +126,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param dimelo   An `Dimelo` API instance.
  *
  */
-- (void) dimeloDidBeginNetworkActivity:(Dimelo*)dimelo;
+- (void)dimeloDidBeginNetworkActivity:(Dimelo *)dimelo;
 
 /*!
  * Called when a network activity ended.
@@ -135,7 +140,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param dimelo   A `Dimelo` API instance.
  *
  */
-- (void) dimeloDidEndNetworkActivity:(Dimelo*)dimelo;
+- (void)dimeloDidEndNetworkActivity:(Dimelo *)dimelo;
 
 /*!
  * Called when `-[Dimelo unreadCount]` property changes.
@@ -147,7 +152,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatUnreadCountDidChangeNotification
  */
-- (void) dimeloUnreadCountDidChange:(NSNotification*)notification;
+- (void)dimeloUnreadCountDidChange:(NSNotification *)notification;
 
 /*!
  * Called when `-[Dimelo welcomeMessage]` property changes.
@@ -159,7 +164,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloWelcomeMessageDidChangeNotification
  */
-- (void) dimeloWelcomeMessageDidChange:(NSNotification*)notification;
+- (void)dimeloWelcomeMessageDidChange:(NSNotification *)notification;
 
 /*!
  * Called when the user sends a message.
@@ -171,7 +176,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatDidSendMessageNotification
  */
-- (void) dimeloChatDidSendMessage:(NSNotification*)notification;
+- (void)dimeloChatDidSendMessage:(NSNotification *)notification;
 
 /*!
  * Called when chat receives new messages from the server (even while the chat is not visible).
@@ -183,7 +188,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatDidReceiveNewMessagesNotification
  */
-- (void) dimeloChatDidReceiveNewMessages:(NSNotification*)notification;
+- (void)dimeloChatDidReceiveNewMessages:(NSNotification *)notification;
 
 /*!
  * Called when the chat view is about to be displayed.
@@ -195,7 +200,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatWillAppearNotification
  */
-- (void) dimeloChatWillAppear:(NSNotification*)notification;
+- (void)dimeloChatWillAppear:(NSNotification *)notification;
 
 /*!
  * Called when the chat view is displayed (animation completed).
@@ -207,7 +212,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatDidAppearNotification
  */
-- (void) dimeloChatDidAppear:(NSNotification*)notification;
+- (void)dimeloChatDidAppear:(NSNotification *)notification;
 
 /*!
  * Called when the chat view is about to be closed.
@@ -219,7 +224,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatWillDisappearNotification
  */
-- (void) dimeloChatWillDisappear:(NSNotification*)notification;
+- (void)dimeloChatWillDisappear:(NSNotification *)notification;
 
 /*!
  * Called when the chat view is closed (animation completed).
@@ -231,7 +236,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see DimeloChatDidDisappearNotification
  */
-- (void) dimeloChatDidDisappear:(NSNotification*)notification;
+- (void)dimeloChatDidDisappear:(NSNotification *)notification;
 
 /*!
  * Called when the chat view is opened (animation completed).
@@ -243,7 +248,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Called when the chat view is closed (animation completed).
  * @param dimelo   An `Dimelo` API instance.
  */
-- (void) onClose:(Dimelo*)dimelo;
+- (void)onClose:(Dimelo *)dimelo;
 
 @end
 
@@ -309,19 +314,19 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * disable state of individual attachment category or all of them
  *
  */
-+ (void) disableLibraryAttachment;
-+ (void) disableCameraAttachment;
-+ (void) disableLocationAttachment;
-+ (void) disableAttachments;
++ (void)disableLibraryAttachment;
++ (void)disableCameraAttachment;
++ (void)disableLocationAttachment;
++ (void)disableAttachments;
 
 /*!
  * Get state of individual attachment category or all of them
  *
  */
-+ (bool) isLibraryAttachmentEnabled;
-+ (bool) isCameraAttachmentEnabled;
-+ (bool) isLocationAttachmentEnabled;
-+ (bool) isAttachmentsEnabled;
++ (bool)isLibraryAttachmentEnabled;
++ (bool)isCameraAttachmentEnabled;
++ (bool)isLocationAttachmentEnabled;
++ (bool)isAttachmentsEnabled;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Setting up an API client
@@ -354,7 +359,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initWithApiKey:(NSString*)apiKey domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiKey:domainName:delegate: instead.");
+- (id)initWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiKey:domainName:delegate: instead.");
 
 /*!
  * Initializes a new API client with a api API key, custom hostName and a delegate.
@@ -367,7 +372,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initializeWithApiKeyAndHostName:(NSString*)apiKey hostName:(NSString*)hostName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiKeyAndHostName:(NSString *)apiKey hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate;
 
 /*!
  * Initializes a new API client with a public API key, custom domainName and a delegate for Swift call.
@@ -384,7 +389,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initializeWithApiKey:(NSString*)apiKey domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate;
 
 
 /*!
@@ -399,7 +404,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initWithApiSecret:(NSString*)apiSecret domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiSecret:domainName:delegate: instead.");
+- (id)initWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiSecret:domainName:delegate: instead.");
 
 /*!
  * Initializes a new API client with a secret API key, custom hostName and a delegate.
@@ -413,7 +418,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initializeWithApiSecretAndHostName:(NSString*)apiSecret hostName:(NSString*)hostName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiSecretAndHostName:(NSString *)apiSecret hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate;
 
 /*!
  * Initializes a new API client with a secret API key, custom domainName and a delegate for Swift call.
@@ -427,7 +432,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id) initializeWithApiSecret:(NSString*)apiSecret domainName:(NSString*)domainName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate;
 
 /*!
  * Per-application API secret key, typically specific to your app.
@@ -435,29 +440,29 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * API secret is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
  */
 
-- (void) setApiSecret:(NSString*)apiSecret __attribute__((deprecated("setApiSecret:apiSecret is deprecated, please use initWithApiSecret:apiSecret domainName:domainName delegate:delegate")));
+- (void)setApiSecret:(NSString *)apiSecret __attribute__((deprecated("setApiSecret:apiSecret is deprecated, please use initWithApiSecret:apiSecret domainName:domainName delegate:delegate")));
 
-@property(nonatomic, readonly) NSString* domainName;
-@property(nonatomic, readonly) NSString* hostName;
+@property (nonatomic, readonly) NSString *domainName;
+@property (nonatomic, readonly) NSString *hostName;
 
 /*!
  * Delegate object to present a chat view controller and react to various optional notifications.
  *
  * @see DimeloDelegate
  */
-@property(nonatomic, weak) id<DimeloDelegate> delegate;
+@property (nonatomic, weak) id<DimeloDelegate> delegate;
 
 /*!
  * Per-application public API key that identifies all requests to Dimelo.
  *
  * API Key is always represented in hex format, e.g. `@"ab12d1a2a9349797b807589e7e1635cb760d69de3a8241070b1682a1bdbd6d70"`.
  */
-@property(nonatomic, copy) NSString* apiKey __attribute__((deprecated("apiKey or setApiKey:apiKey is deprecated, please use initWithApiKey:apiKey domainName:domainName delegate:delegate")));
+@property (nonatomic, copy) NSString *apiKey __attribute__((deprecated("apiKey or setApiKey:apiKey is deprecated, please use initWithApiKey:apiKey domainName:domainName delegate:delegate")));
 
 /*!
  * Per-installation identifier generated when the component is instantiated for the first time within the app.
  */
-@property(nonatomic, readonly) NSString* installationIdentifier;
+@property (nonatomic, readonly) NSString *installationIdentifier;
 
 /*!
  * Per-user unique identifier used to link messages sent from different devices to a single person.
@@ -470,19 +475,19 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * If `userIdentifier` is nil, user will be uniquely identified on the server by the `installationIdentifier`.
  */
-@property(nonatomic, copy) NSString* userIdentifier;
+@property (nonatomic, copy) NSString *userIdentifier;
 
 /*!
  * Additional fields to be added to the JWT dictionary under "extra" key.
  *
  * You must make sure only PropertyList-compatible items a present inside this dictionary (keys must not be empty, whitespace only or contain the characters "$" or ".").
  */
-@property(nonatomic, copy) NSDictionary* authenticationInfo;
+@property (nonatomic, copy) NSDictionary *authenticationInfo;
 
 /*!
  * Optional name of the person to be sent to Dimelo.
  */
-@property(nonatomic, copy) NSString* userName;
+@property (nonatomic, copy) NSString *userName;
 
 /*!
  * Complete serialized JWT token.
@@ -492,7 +497,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * If you instantiate `Dimelo` with a secret API key, this property is computed automatically.
  */
-@property(nonatomic, copy) NSString* jwt;
+@property (nonatomic, copy) NSString *jwt;
 
 /*!
  * JWT dictionary to be signed. Computed out of apiKey, installationIdentifier, userIdentifier, authenticationInfo.
@@ -501,7 +506,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * If you instantiate `Dimelo` with API secret, this dictionary will be used to compute `jwt` property automatically.
  */
-@property(nonatomic, readonly) NSDictionary* jwtDictionary;
+@property (nonatomic, readonly) NSDictionary *jwtDictionary;
 
 /*!
  * Arbitrary contextual info attached to a message.
@@ -512,7 +517,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * and then contacts the support. First message indicates what type of the problem user is talking about.
  * You must make sure only PropertyList-compatible items a present inside this dictionary (keys must not be empty, whitespace only or contain the characters "$" or ".").
  */
-@property(nonatomic, copy) NSDictionary* messageContextInfo;
+@property (nonatomic, copy) NSDictionary *messageContextInfo;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -528,7 +533,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see -[DimeloDelegate dimeloDisplayChatViewController:]
  */
-- (void) displayChatView;
+- (void)displayChatView;
 
 /*!
  * Creates a new instance of a chat view controller.
@@ -543,7 +548,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see -[DimeloDelegate dimeloDisplayChatViewController:]
  */
-- (UIViewController*) chatViewController;
+- (UIViewController *)chatViewController;
 
 
 
@@ -558,7 +563,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Override `-application:didRegisterForRemoteNotificationsWithDeviceToken:` and
  * set this property to a provided deviceToken.
  */
-@property(nonatomic, copy) NSData* deviceToken;
+@property (nonatomic, copy) NSData *deviceToken;
 
 /*!
  * Flag to tell Dimelo server to send push notifications using development channel.
@@ -569,7 +574,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * Default is `NO`.
  */
-@property(nonatomic) BOOL developmentAPNS;
+@property (nonatomic) BOOL developmentAPNS;
 
 /*!
  * Attempts to process the remote notification.
@@ -599,7 +604,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @return `NO` if notification does not belong to Dimelo and should be processed by your app.
  *
  */
-- (BOOL) consumeReceivedRemoteNotification:(NSDictionary*)dictionary;
+- (BOOL)consumeReceivedRemoteNotification:(NSDictionary *)dictionary;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -613,7 +618,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * Default value is 0.
  */
-@property(nonatomic, readonly) NSInteger unreadCount;
+@property (nonatomic, readonly) NSInteger unreadCount;
 
 /*!
  * Whether the app's icon badge is automatically updated with `unreadCount` value.
@@ -627,7 +632,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * Default is YES.
  */
-@property(nonatomic) BOOL updateAppBadgeNumber;
+@property (nonatomic) BOOL updateAppBadgeNumber;
 
 /*!
  * Sends notifications to `NSNotificationCenter` and notifies the delegate about `unreadCount` change. Does not affect the value itself.
@@ -636,7 +641,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * It may be useful to call it manually when you want to refresh counters after the views are presented without
  * them having explicit references to Dimelo instance (NSNotification `object` will store reference to `Dimelo` instance).
  */
-- (void) noteUnreadCountDidChange;
+- (void)noteUnreadCountDidChange;
 
 /*!
  * Fetch unreadCount.
@@ -647,13 +652,13 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * NSErrors of domain DimeloHTTPErrorDomain will mirror the HTTP code from Dimelo backend's response in their own code property.
  * You may want to handle special HTTP code responses like 429 Too many requests for example.
  */
-- (void) fetchUnreadCountWithCompletionHandler:(void (^)(NSInteger unreadCount, NSError *error))completion;
+- (void)fetchUnreadCountWithCompletionHandler:(void (^)(NSInteger unreadCount, NSError *error))completion;
 
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Application language
 ////////////////////////////////////////////////////////////////////////////////
-@property(nonatomic) NSString* language;
+@property (nonatomic) NSString *language;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -664,78 +669,168 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /*!
  * Tint color for aux controls: Close button, Send button, cursor etc.
  */
-@property(nonatomic) UIColor* tintColor;
+@property (nonatomic) UIColor *tintColor;
 
 /*!
  * Tint color for cursor: 
  */
-@property(nonatomic) UIColor* cursorTintColor;
+@property (nonatomic) UIColor *cursorTintColor;
 
 /*!
  * Tint color for navigationBar Item Button:
  */
-@property(nonatomic) UIColor* navigationBarItemTintColor;
+@property (nonatomic) UIColor *navigationBarItemTintColor;
 
 /*!
  * Tint color for send Button:
  */
-@property(nonatomic) UIColor* sendTintColor;
+@property (nonatomic) UIColor *sendTintColor;
 
 /*!
  * Bar tint color for navigation bar (sets `barTintColor` property).
  */
-@property(nonatomic) UIColor* navigationBarTintColor;
+@property (nonatomic) UIColor *navigationBarTintColor;
 
 /*!
  * Background color for navigation bar (sets `backgroundColor` property).
  */
-@property(nonatomic) UIColor* navigationBarColor;
+@property (nonatomic) UIColor *navigationBarColor;
 
 /*!
  * Title for the chat.
  *
  * Used only if `titleView` is nil.
  */
-@property(nonatomic, copy) NSString* title;
+@property (nonatomic, copy) NSString *title;
 
 /*!
  * Title view for the chat.
  *
  * If not nil, overrides `title` value.
  */
-@property(nonatomic) UIView* titleView;
+@property (nonatomic) UIView *titleView;
 
 /*!
  * Background view of the chat.
  *
  * You may customize its backgroundColor or place arbitrary views inside it.
  */
-@property(nonatomic, readonly) UIView* backgroundView;
+@property (nonatomic, readonly) UIView *backgroundView;
 
 /*!
  * Font for user and agent messages.
  */
-@property(nonatomic) UIFont* messageFont;
+@property (nonatomic) UIFont *messageFont;
 
 /*!
  * Font for system messages.
  */
-@property(nonatomic) UIFont* systemMessageFont;
+@property (nonatomic) UIFont *systemMessageFont;
 
 /*!
  * Foreground color for user's message text.
  */
-@property(nonatomic) UIColor* userMessageTextColor;
+@property (nonatomic) UIColor *userMessageTextColor;
 
 /*!
  * Foreground color for agent's message text.
  */
-@property(nonatomic) UIColor* agentMessageTextColor;
+@property (nonatomic) UIColor *agentMessageTextColor;
+
+/*!
+ * Foreground color for agent's structured message title text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageTitleColor;
+
+/*!
+ * Border color for quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesBorderColor;
+
+/*!
+ * Border color for tapped quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesTappedBorderColor;
+
+/*!
+ * Text color for quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesTextColor;
+
+/*!
+ * Text color for tapped quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesTappedTextColor;
+
+/*!
+ * Background color for quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesBackgroundColor;
+
+/*!
+ * Background color for tapped quick replies.
+ */
+@property (nonatomic) UIColor *quickRepliesTappedBackgroundColor;
+
+/*!
+ * Border width for quick replies.
+ */
+@property (nonatomic) CGFloat quickRepliesBorderWidth;
+
+/*!
+ * Horizontal spacing for quick replies.
+ */
+@property (nonatomic) CGFloat quickRepliesHorizontalSpacing;
+
+/*!
+ * Margin top for structured message subtitle label.
+ */
+@property (nonatomic) CGFloat agentStructuredMessageSubtitleMarginTop;
+
+/*!
+ * Margin top for structured message url label.
+ */
+@property (nonatomic) CGFloat agentStructuredMessageUrlMarginTop;
+
+/*!
+ * Vertical spacing for quick replies.
+ */
+@property (nonatomic) CGFloat quickRepliesVerticalSpacing;
+
+/*!
+ * Foreground color for agent's structured message subtitle text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageSubtitleColor;
+
+/*!
+ * Foreground color for agent's structured message url text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageUrlColor;
+
+/*!
+ * Foreground color for agent's structured message item text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageItemColor;
+
+/*!
+ * Foreground color for agent's structured message tapped item text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageItemTappedColor;
+
+/*!
+ * Background color for agent's structured message item text.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageItemBackgroundColor;
+
+/*!
+ * Background color for agent's structured message tapped item.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageItemTappedBackgroundColor;
 
 /*!
  * Foreground color for system notification message text.
  */
-@property(nonatomic) UIColor* systemMessageTextColor;
+@property (nonatomic) UIColor *systemMessageTextColor;
 
 /*!
  * Background color for user message bubbles.
@@ -743,7 +838,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * This color is applied when `userMessageBubbleImage` has template rendering mode (see UIImageRenderingMode).
  * Default image is configured this way.
  */
-@property(nonatomic) UIColor* userMessageBackgroundColor;
+@property (nonatomic) UIColor *userMessageBackgroundColor;
 
 /*!
  * Background color for agent message bubbles.
@@ -751,7 +846,22 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * This color is applied when `agentMessageBubbleImage` has template rendering mode (see UIImageRenderingMode).
  * Default image is configured this way.
  */
-@property(nonatomic) UIColor* agentMessageBackgroundColor;
+@property (nonatomic) UIColor *agentMessageBackgroundColor;
+
+/*!
+ * Background color for body agent structured message view.
+ */
+@property (nonatomic) UIColor *agentStructuredMessageBodyBackgroundColor;
+
+/*!
+ * Background color for template agent structured message.
+ */
+@property (nonatomic) UIColor *agentTemplateWithImageBodyBackgroundColor;
+
+/*!
+ * Border color for agent structured message bubbles.
+ */
+@property (nonatomic) UIColor *agentTemplateBorderColor;
 
 /*!
  * Background color for system message bubbles.
@@ -759,47 +869,87 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * This color is applied when `systemMessageBubbleImage` has template rendering mode (see UIImageRenderingMode).
  * Default image is configured this way.
  */
-@property(nonatomic) UIColor* systemMessageBackgroundColor;
+@property (nonatomic) UIColor *systemMessageBackgroundColor;
 
 /*!
  * Font for the date label.
  */
-@property(nonatomic) UIFont* dateFont;
+@property (nonatomic) UIFont *dateFont;
+
+/*!
+ * Font for the hour label.
+ */
+@property (nonatomic) UIFont *hourTimeFont;
 
 /*!
  * Text color for the date label.
  */
-@property(nonatomic) UIColor* dateTextColor;
+@property (nonatomic) UIColor *dateTextColor;
+
+/*!
+ * Text color for the hour label.
+ */
+@property (nonatomic) UIColor *hourTimeTextColor;
 
 /*!
  * Date formatter instance used to format the date label.
  */
-@property(nonatomic) NSDateFormatter* dateFormatter;
+@property (nonatomic) NSDateFormatter *dateFormatter;
 
 /*!
  * Color for the error icon.
  */
-@property(nonatomic) UIColor* errorIconColor;
+@property (nonatomic) UIColor *errorIconColor;
 
 /*!
  * Font for agent's name.
  */
-@property(nonatomic) UIFont* agentNameFont;
+@property (nonatomic) UIFont *agentNameFont;
+
+/*!
+ * Font for agent's time.
+ */
+@property (nonatomic) UIFont *agentTimeFont;
+
+/*!
+ * Font for agent's structured message title.
+ */
+@property (nonatomic) UIFont *agentStructuredMessageTitleFont;
+
+/*!
+ * Font for agent's structured message subtitle.
+ */
+@property (nonatomic) UIFont *agentStructuredMessageSubTitleFont;
+
+/*!
+ * Font for agent's structured message url.
+ */
+@property (nonatomic) UIFont *agentStructuredMessageUrlFont;
+
+/*!
+ * Font for agent's structured message item.
+ */
+@property (nonatomic) UIFont *agentStructuredMessageItemFont;
 
 /*!
  * Font for navigation bar title.
  */
-@property(nonatomic) UIFont* navigationBarTitleFont;
+@property (nonatomic) UIFont *navigationBarTitleFont;
 
 /*!
  * Font for navigation bar item title.
  */
-@property(nonatomic) UIFont* navigationBarItemTitleFont;
+@property (nonatomic) UIFont *navigationBarItemTitleFont;
 
 /*!
  * Text color for agent's name.
  */
-@property(nonatomic) UIColor* agentNameColor;
+@property (nonatomic) UIColor *agentNameColor;
+
+/*!
+ * Time color for agent's name.
+ */
+@property (nonatomic) UIColor *agentTimeColor;
 
 /*!
  * Text color for the button "load more messages".
@@ -807,7 +957,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * If this property is nil (default), this button is colored using `tintColor`.
  *
  */
-@property(nonatomic) UIColor* loadMoreMessagesButtonTextColor;
+@property (nonatomic) UIColor *loadMoreMessagesButtonTextColor;
 
 /*!
  * Color for the button "send" in the disabled state.
@@ -815,7 +965,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * If this property is nil (default), this button is colored into [UIColor grayColor].
  *
  */
-@property(nonatomic) UIColor* disabledSendButtonColor;
+@property (nonatomic) UIColor *disabledSendButtonColor;
 
 /*!
  * Font for the message field input
@@ -823,7 +973,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * If this property is nil (default), default font is used
  *
  */
-@property(nonatomic) UIFont* messageFieldFont;
+@property (nonatomic) UIFont *messageFieldFont;
 
 /*!
  * Default font
@@ -831,7 +981,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * If this property is nil (default), default system font is used
  *
  */
-@property(nonatomic) UIFont* defaultFont;
+@property (nonatomic) UIFont *defaultFont;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Advanced Customization
@@ -843,49 +993,60 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * These insets should be in sync with `agentMessageBubbleImage`.
  */
-@property(nonatomic) UIEdgeInsets agentNameInsets;
+@property (nonatomic) UIEdgeInsets agentNameInsets;
 
 /*!
  * Resizable (9-part) image to decorate user text bubble.
  *
  * @see userMessageBubbleImage
  */
-@property(nonatomic) UIImage*     userMessageBubbleImage;
+@property (nonatomic) UIImage *userMessageBubbleImage;
 
 /*!
  * Resizable (9-part) image to decorate agent text bubble.
  *
  * @see agentMessageBubbleInsets
  */
-@property(nonatomic) UIImage*     agentMessageBubbleImage;
-
-/*!
- * Resizable (9-part) image to decorate system text bubble.
- *
- * @see systemMessageBubbleInsets
- */
-@property(nonatomic) UIImage*     systemMessageBubbleImage;
+@property (nonatomic) UIImage *agentMessageBubbleImage;
 
 /*!
  * Insets for text in user's message bubble.
  *
  * @see userMessageBubbleImage
  */
-@property(nonatomic) UIEdgeInsets userMessageBubbleInsets;
+@property (nonatomic) UIEdgeInsets userMessageBubbleInsets;
 
 /*!
  * Insets for text in agent's message bubble.
  *
  * @see agentMessageBubbleImage
  */
-@property(nonatomic) UIEdgeInsets agentMessageBubbleInsets;
+@property (nonatomic) UIEdgeInsets agentMessageBubbleInsets;
+
+/*!
+ * Insets for text in agent's structured message bubble.
+ */
+@property (nonatomic) UIEdgeInsets agentStructuredMessageBodyInsets;
+
+/*!
+ * Insets for quick replies item.
+ */
+@property (nonatomic) UIEdgeInsets quickRepliesPaddingInsets;
+
+/*!
+ * Insets for quick replies.
+ */
+@property (nonatomic) UIEdgeInsets quickRepliesInsets;
+
+/*!
+ * Insets for text in agent's structured message item.
+ */
+@property (nonatomic) UIEdgeInsets agentStructuredMessageItemInsets;
 
 /*!
  * Insets for text in system message bubble.
- *
- * @see systemMessageBubbleImage
  */
-@property(nonatomic) UIEdgeInsets systemMessageBubbleInsets;
+@property (nonatomic) UIEdgeInsets systemMessageBubbleInsets;
 
 /*!
  * Resizable (9-part) image to mask user's attachment (alpha channel is used as a mask).
@@ -894,7 +1055,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see userAttachmentBubbleInsets
  */
-@property(nonatomic) UIImage*     userAttachmentBubbleImage;
+@property (nonatomic) UIImage *userAttachmentBubbleImage;
 
 /*!
  * Resizable (9-part) image to mask agent's attachment (alpha channel is used as a mask).
@@ -903,79 +1064,87 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @see agentAttachmentBubbleInsets
  */
-@property(nonatomic) UIImage*     agentAttachmentBubbleImage;
+@property (nonatomic) UIImage *agentAttachmentBubbleImage;
+
+/*!
+ * Resizable (9-part) image to decorate system text bubble.
+ *
+ * @see systemMessageBubbleInsets
+ */
+@property (nonatomic) UIImage *systemMessageBubbleImage;
 
 /*!
  * Insets for user's attachment preview bubble.
  *
  * @see userAttachmentBubbleImage
  */
-@property(nonatomic) UIEdgeInsets userAttachmentBubbleInsets;
+@property (nonatomic) UIEdgeInsets userAttachmentBubbleInsets;
 
 /*!
  * Insets for agent's attachment preview bubble.
  *
  * @see agentAttachmentBubbleImage
  */
-@property(nonatomic) UIEdgeInsets agentAttachmentBubbleInsets;
+@property (nonatomic) UIEdgeInsets agentAttachmentBubbleInsets;
 
 /*!
 * Insets for file name and size label (inside the agent message bubble).
 *
 */
-@property(nonatomic) UIEdgeInsets agentAttachmentTitleInsets;
+@property (nonatomic) UIEdgeInsets agentAttachmentTitleInsets;
 
 /*!
  * Bar tint color of the input bar.
  */
-@property(nonatomic) UIColor* inputBarTintColor;
+@property (nonatomic) UIColor *inputBarTintColor;
 
 /*!
  * Background color of the input bar.
  */
-@property(nonatomic) UIColor* inputBarBackgroundColor;
+@property (nonatomic) UIColor *inputBarBackgroundColor;
 
 /*!
  * Icon to be displayed on "attach" button in the input bar.
  */
-@property(nonatomic) UIImage* attachmentIcon;
+@property (nonatomic) UIImage *attachmentIcon;
 
 /*!
  * Keyboard appearance for a system keyboard.
  *
  * Default is `UIKeyboardAppearanceDefault`.
  */
-@property(nonatomic) UIKeyboardAppearance keyboardAppearance;
+@property (nonatomic) UIKeyboardAppearance keyboardAppearance;
 
 /*!
  * sdk version.
  */
-@property(nonatomic) NSString* sdkVersion;
+@property (nonatomic) NSString *sdkVersion;
 
 /*!
  * navigation bar title color.
  */
-@property(nonatomic) UIColor* navigationBarTitleColor;
+@property (nonatomic) UIColor *navigationBarTitleColor;
 
 /*!
  * Flag to set the notification interactive or not when Category key is present in the aps.
  * Default is `NO`.
  */
-@property(nonatomic) BOOL interactiveNotification;
+@property (nonatomic) BOOL interactiveNotification;
 
 /*!
  * Flag to set to disable reception of the push notification
  * Default is `NO`.
  */
-@property(nonatomic) BOOL disableNotification;
+@property (nonatomic) BOOL disableNotification;
 
+@property (nonatomic) BOOL enableLightStatusBarStyle;
 
-@property(nonatomic) BOOL enableLightStatusBarStyle;
+@property (nonatomic) BOOL showAgentAvatarImage;
 
 /*!
  * localize titles (doneButton, sendButton, cancelButton, photoButton, galleryButton, locationButton).
  */
-+ (NSString *)localizeString :(NSString *)key;
++ (NSString *)localizeString:(NSString *)key;
 
 /*!
  * Called when reply notification is called.
@@ -983,7 +1152,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param identifier   NSString this is the handleActionWithIdentifier identifier parameter (ACTION_SEND)
  * @param responseInfo   NSDictionary this is the handleActionWithIdentifier withResponseInfo parameter
  */
-- (void) handleRemoteNotificationWithIdentifier: (NSString*)identifier responseInfo:(NSDictionary*)responseInfo;
+- (void)handleRemoteNotificationWithIdentifier:(NSString *)identifier responseInfo:(NSDictionary *)responseInfo;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name API to send a customer message
@@ -994,7 +1163,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * @param messageText   NSString this is the message content
  */
-- (void) sendMessage: (NSString*)messageText;
+- (void)sendMessage:(NSString *)messageText;
 
 /*!
 * return CFBundleDisplayName otherwise return CFBundleName
@@ -1002,6 +1171,9 @@ extern NSString* const DimeloChatDidDisappearNotification;
 + (NSString *)getApplicationName;
 
 - (NSString *)getDimeloDefaultHostName;
++ (UIColor *)colorFromHexString:(NSString *)hexString;
+- (UIViewController *)topViewController;
++(BOOL)isSafeAreaAvailable;
 @end
 
 

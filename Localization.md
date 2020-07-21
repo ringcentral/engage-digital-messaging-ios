@@ -23,17 +23,7 @@ This will be used as an argument to NSLocalizedString.
 
 
 <p align="center">
-<img src="http://s12.postimg.cc/d3eymmfm5/title.png"/>
-</p>
-
-### dimeloSendButtonTitle
-Title of the chat send Button. 
-
-This will be used as an argument to NSLocalizedString.
-
-
-<p align="center">
-<img src="https://s26.postimg.cc/tnlucx82h/IMG_0010.png"/>
+<img src="https://i.postimg.cc/zfpQgn67/title.png"/>
 </p>
 
 ### dimeloChoosePhotoButtonTitle
@@ -113,7 +103,7 @@ This will be used as an argument to NSLocalizedString.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/Hx8hgWXP/mb.png"/>
+<img src="https://i.postimg.cc/rptJ85cz/mb.png"/>
 </p>
 
 ### dimeloAttachmentSizeLabelKiloByteUnit
@@ -123,5 +113,5 @@ This will be used as an argument to NSLocalizedString.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/FF8h31T1/kb.png"/>
+<img src="https://i.postimg.cc/pXXJmwxw/kb.png"/>
 </p>
