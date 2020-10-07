@@ -303,7 +303,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * relatively safe if userIdentifier is not well-known or cannot be easily guessed.
  *
  */
-@interface Dimelo : NSObject<UNUserNotificationCenterDelegate>
+@interface Dimelo : NSObject
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1152,7 +1152,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @param identifier   NSString this is the handleActionWithIdentifier identifier parameter (ACTION_SEND)
  * @param responseInfo   NSDictionary this is the handleActionWithIdentifier withResponseInfo parameter
  */
-- (void)handleRemoteNotificationWithIdentifier:(NSString *)identifier responseInfo:(NSDictionary *)responseInfo;
+- (void)handleRemoteNotificationWithIdentifier:(NSString *)identifier responseInfo:(NSDictionary *)responseInfo __attribute((deprecated("Please use (BOOL)handleRemoteNotificationWithIdentifier:(NSString *)identifier responseInfo:(NSDictionary *)responseInfo userInfo:(NSDictionary *)userInfo; instead")));
+- (BOOL)handleRemoteNotificationWithIdentifier:(NSString *)identifier responseInfo:(NSDictionary *)responseInfo userInfo:(NSDictionary *)userInfo;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name API to send a customer message
@@ -1174,6 +1175,9 @@ extern NSString* const DimeloChatDidDisappearNotification;
 + (UIColor *)colorFromHexString:(NSString *)hexString;
 - (UIViewController *)topViewController;
 +(BOOL)isSafeAreaAvailable;
+
+- (BOOL)consumeNotificationResponse:(UNNotificationResponse *)response;
+- (BOOL)presentRingCentralNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler;
 @end
 
 

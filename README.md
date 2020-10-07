@@ -414,41 +414,9 @@ The library will use it to configure the `Dimelo` shared instance.
 Push Notifications
 ------------------
 
-Engage Digital Messaging can receive push notifications from Engage Digital server.
-To make them work:
-1. You need to have properly configured and generated Apple APN cerficates ([see how to generate APNS certificate](GenerateAPNSCertificate.md)) and have them configured in your SMCC admin configuration interface.
+Please refer to the [Notifications.md](Notifications.md) file for guidance on how to integrate the Engage Digital Messaging SDK notifications into your application.
 
-2. Your app should register for remote notifications using `UIApplication` APIs.
-   This is not strictly necessary as Engage Digital Messaging will attempt to do that automatically
-   when user sends the first message. But if you are interested in sending notifications
-   even before user has used the chat (e.g. a "welcome" message),
-   then you should register for remote notifications earlier in the app's lifecycle.
-
-3. Set the `Dimelo.deviceToken` property when you receive the token in `-application:didRegisterForRemoteNotificationsWithDeviceToken:`.
-
-4. Set the `Dimelo.developmentAPNS` property to `YES` in your development builds
-   in order to receive development push notifications. Do not forget to set this
-   back to `NO` when using a distribution provisioning profil.
-
-5. Let Dimelo consume the notification inside `-application:didReceiveRemoteNotification:`
-   using `-[Dimelo consumeReceivedRemoteNotification:]`. If this method returns `YES`,
-   it means that Dimelo recognized the notification as its own and you should not
-   process the notification yourself. The chat will be updated automatically with a new message.
-
-6. You will receive interactive push notifications with direct reply by default and need to forward the instant reply to Dimelo by calling `-[Dimelo handleRemoteNotificationWithIdentifier:responseInfo:]`  from the  `-application:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:` callback. To disable this, set the  `Dimelo.interactiveNotification` property to  `NO`.
-
-If the notification was received as a result of a user action
-(e.g. user opened it from the lock screen), the chat will be displayed automatically.
-
-When the notification is received while your app is running, but the chat is not visible,
-Engage Digital Messaging will display a temporary notification bar on top of the screen (looking similar
-to a iOS notification bar when another application is notified).
-If the user taps that bar, a chat will open.
-
-You may control whether to display this bar or maybe show the notification differently
-using `-dimelo:shouldDisplayNotificationWithText:` delegate method.
-If you'd like to show your own notification bar, return `NO` from this method
-and use `text` argument to present the notification using your own UI.
+:warning: If you are upgrading from a previous version to 2.1.0+ you should know that the Engage Digital Messaging SDK doesn't automatically handle notifications anymore and now provides helper methods that need to be called in the host application.
 
 
 Badge Count
