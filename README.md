@@ -438,6 +438,8 @@ To access all the features of the Engage Digital Messaging SDK, some permissions
 |Privacy - Camera Usage Description|NSCameraUsageDescription|Used to allow the user to take pictures from its camera to send them as attachment|
 |Privacy - Location When In Use Usage Description|NSLocationWhenInUseUsageDescription|User to allow the user to send a location as attachment|
 
+:warning: Starting with iOS14 `NSPhotoLibraryUsageDescription` is not needed anymore as the Engage Digital Messaging SDK uses the new [`PHPickerViewController`](https://developer.apple.com/documentation/photokit/phpickerviewcontroller?language=objc) which does not require to prompt user for permission.
+
 If these permissions are not provided, the corresponding options will be hidden from the user.
 
 To support localization, add these keys (`NSPhotoLibraryUsageDescription`, `NSCameraUsageDescription` and `NSLocationWhenInUseUsageDescription`) to the `InfoPlist.strings` file.

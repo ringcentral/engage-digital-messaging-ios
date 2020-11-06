@@ -1,8 +1,12 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.1.1 (November 6th, 2020) ##
+- Improvement: use the new [`PHPickerViewController`](https://developer.apple.com/documentation/photokit/phpickerviewcontroller?language=objc) on device running on iOS14+. RD-15062
+- Fix: video player stuck mid-animation when going out of fullscreen mode. RD-15383
+
 ## Dimelo iOS SDK 2.1.0 (October 7th, 2020) ##
-- BREAKING CHANGE: remove disruptive `UNNotificationCenter` callbacks and replace them by helper methods to handle Engage Digital Messaging notifications
-- Improvement: move Push Notifications related documentation to `Notifications.md` and add guidance on how to integrate new notification helper methods
+- BREAKING CHANGE: remove disruptive `UNNotificationCenter` callbacks and replace them by helper methods to handle Engage Digital Messaging notifications. RD-15000
+- Improvement: move Push Notifications related documentation to `Notifications.md` and add guidance on how to integrate new notification helper methods. RD-15000
 
 ## Dimelo iOS SDK 2.0.0 (July 21th, 2020) ##
 - Feature: tapping the error icon alongside a message now allows to retry the message sending request
