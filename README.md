@@ -20,7 +20,7 @@ Please refer to [Engage Digital Messaging SDK iOS API Reference](https://rawcdn.
 Supported Versions
 ------------------
 
-The Engage Digital Messaging SDK is currently supporting **iOS 7.0 and above**.
+The Engage Digital Messaging SDK is currently supporting **iOS 8.0 and above**.
 
 Getting Started
 ---------------

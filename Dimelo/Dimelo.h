@@ -15,10 +15,20 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define DIMELO_TIME_TO_WAIT_TO_RESEND 0.2f
 #endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
 
-#define USER_MESSAGE_DEFAULT_BACKGROUND_COLOR [UIColor colorWithRed:0.145f green:0.546f blue:0.984f alpha:1.000f]
+#define RC_USER_MESSAGE_DEFAULT_BACKGROUND_COLOR [UIColor colorWithRed:68.0/255.0 green:129.0/255.0 blue:235.0/255.0 alpha:1.0] // #4481EB
+
+#define RC_GRAY_900 [UIColor colorWithRed:33.0/255.0 green:33.0/255.0 blue:33.0/255.0 alpha:1.0] // #212121
+#define RC_GRAY_800 [UIColor colorWithRed:117.0/255.0 green:117.0/255.0 blue:117.0/255.0 alpha:1.0] // #757575
+#define RC_GRAY_700 [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1.0] // #A1A1A1
+#define RC_GRAY_600 [UIColor colorWithRed:171.0/255.0 green:171.0/255.0 blue:171.0/255.0 alpha:1.0] // #ABABAB
+#define RC_GRAY_400 [UIColor colorWithRed:209.0/255.0 green:209.0/255.0 blue:209.0/255.0 alpha:1.0] // #D1D1D1
+#define RC_GRAY_200 [UIColor colorWithRed:231.0/255.0 green:231.0/255.0 blue:231.0/255.0 alpha:1.0] // #E7E7E7
+#define RC_GRAY_100 [UIColor colorWithRed:239.0/255.0 green:239.0/255.0 blue:240.0/255.0 alpha:1.0] // #EFEFF0
 
 #define DEFAULT_DATE_FORMATTER @"MMMM dd yyyy jj:mm"
 #define DEFAULT_DATE_FORMATTER_WITHOUT_YEAR @"MMMM dd jj:mm"
+
+#define RC_DEFAULT_DATE_FONT [UIFont systemFontOfSize:12.0 weight:UIFontWeightSemibold]
 
 static NSString* const DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
 
@@ -736,6 +746,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Foreground color for agent's message text.
  */
 @property (nonatomic) UIColor *agentMessageTextColor;
+
+/*!
+ * Text color for welcome's message.
+ */
+@property (nonatomic) UIColor *welcomeMessageTextColor;
 
 /*!
  * Foreground color for agent's structured message title text.

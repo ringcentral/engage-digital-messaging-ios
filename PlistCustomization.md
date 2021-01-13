@@ -65,6 +65,31 @@ Used to disable reception of the interactive push notification with direct reply
 <img src="https://s1.postimg.cc/63hyips04f/push.png"/>
 </p>
 
+## date Format
+
+### dateFormatter
+Date format for the date label (should be a NSDateFormatter).
+
+Programmatically: set Dimelo.dateFormatter property
+
+Plist customization name: None
+
+Note: This is an example on how to initialize `Customization.dateFormatter`:
+
+Using Objective C:
+```objectivec
+NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+dimelo.dateFormatter = dateFormatter;
+```
+
+Using Swift:
+
+```swift
+let dateFormatterGet = NSDateFormatter()
+dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm"
+dimelo.dateFormatter = dateFormatter
+```
 ## Color
 
 ### enableLightStatusBarStyle
@@ -154,6 +179,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/qMJFB6WG/agent-Message-Text-Color.png"/>
+</p>
+
+### welcomeMessageTextColor
+Text color for the welcome message.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/GhyY0f7h/welcome-message-text-color.png"/>
 </p>
 
 ### agentStructuredMessageUrlMarginTop

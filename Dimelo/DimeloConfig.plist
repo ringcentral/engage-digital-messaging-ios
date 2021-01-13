@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.1.1</string>
+	<string>2.2.0</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -24,6 +24,8 @@
 	<string>#FFFFFF</string>
 	<key>agentMessageTextColor</key>
 	<string>#000000</string>
+	<key>welcomeMessageTextColor</key>
+	<string>#A1A1A1</string>
 	<key>agentStructuredMessageTitleColor</key>
 	<string>#000000</string>
 	<key>agentStructuredMessageSubtitleColor</key>
