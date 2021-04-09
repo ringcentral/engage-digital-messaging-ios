@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.2.0</string>
+	<string>2.3.0</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -20,6 +20,30 @@
 	<string></string>
 	<key>navigationBarColor</key>
 	<string></string>
+	<key>badgeTextColor</key>
+	<string>#FFFFFF</string>
+	<key>createNewThreadImageColor</key>
+	<string>#FFFFFF</string>
+	<key>badgeBackgroundColor</key>
+	<string>#F0512A</string>
+	<key>threadsListSeparatorColor</key>
+	<string>#E7E7E7</string>
+	<key>lockedThreadImageTintColor</key>
+	<string>#A1A1A1</string>
+	<key>threadsListRefreshControlTintColor</key>
+	<string>#A1A1A1</string>
+	<key>createNewThreadBackgroundColor</key>
+	<string>#4481EB</string>
+	<key>createNewThreadTappedBackgroundColor</key>
+	<string>#3B71CF</string>
+	<key>threadsListBackgroundColorSelection</key>
+	<string>#D9D9D9</string>
+	<key>threadsListAgentNameTextColor</key>
+	<string>#A1A1A1</string>
+	<key>threadsListMessageTextColor</key>
+	<string>#000000</string>
+	<key>threadsListDateTextColor</key>
+	<string>#A1A1A1</string>
 	<key>userMessageTextColor</key>
 	<string>#FFFFFF</string>
 	<key>agentMessageTextColor</key>
@@ -40,6 +64,8 @@
 	<string>#ECF0F6</string>
 	<key>quickRepliesBackgroundColor</key>
 	<string></string>
+	<key>fragmentHeaderColor</key>
+	<string>#4481EB</string>
 	<key>quickRepliesBorderColor</key>
 	<string>#ECF0F6</string>
 	<key>quickRepliesTappedBorderColor</key>
@@ -62,6 +88,8 @@
 	<string>#258BFB</string>
 	<key>dateTextColor</key>
 	<string>#A1A1A1</string>
+	<key>closeTextColor</key>
+	<string>#A1A1A1</string>
 	<key>hourTimeTextColor</key>
 	<string>#A1A1A1</string>
 	<key>agentNameColor</key>
@@ -72,6 +100,41 @@
 	<string></string>
 	<key>inputBarBackgroundColor</key>
 	<string></string>
+	<key>badgeFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
+	<key>backToAllChatsFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>15</integer>
+	</dict>
+	<key>threadsListAgentNameFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
+	<key>threadsListMessageFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>14</integer>
+	</dict>
+	<key>threadsListDateFont - 2</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
 	<key>messageFont</key>
 	<dict>
 		<key>name</key>
@@ -87,6 +150,13 @@
 		<integer>17</integer>
 	</dict>
 	<key>dateFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
+	<key>closeFont</key>
 	<dict>
 		<key>name</key>
 		<string>.SFUIText-Semibold</string>
@@ -158,6 +228,10 @@
 	</dict>
 	<key>interactiveNotification</key>
 	<true/>
+	<key>enableNavBarFragment</key>
+	<true/>
+	<key>showDefaultCloseButton</key>
+	<false/>
 	<key>disableNotification</key>
 	<false/>
 	<key>enableLightStatusBarStyle</key>

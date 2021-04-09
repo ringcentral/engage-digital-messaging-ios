@@ -16,7 +16,8 @@ extern NSString* const DimeloHTTPErrorDomain;
 #endif /* DIMELO_TIME_TO_WAIT_TO_RESEND */
 
 #define RC_USER_MESSAGE_DEFAULT_BACKGROUND_COLOR [UIColor colorWithRed:68.0/255.0 green:129.0/255.0 blue:235.0/255.0 alpha:1.0] // #4481EB
-
+#define RC_CREATE_THREAD_BUTTON_HIGHLIGHTED_COLOR [UIColor colorWithRed:59.0/255.0 green:113.0/255.0 blue:207.0/255.0 alpha:1.0] // #3B71CF
+#define RC_BADGE_BACKGROUND_COLOR [UIColor colorWithRed:240.0/255.0 green:81.0/255.0 blue:42.0/255.0 alpha:1.0] // #F0512A
 #define RC_GRAY_900 [UIColor colorWithRed:33.0/255.0 green:33.0/255.0 blue:33.0/255.0 alpha:1.0] // #212121
 #define RC_GRAY_800 [UIColor colorWithRed:117.0/255.0 green:117.0/255.0 blue:117.0/255.0 alpha:1.0] // #757575
 #define RC_GRAY_700 [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1.0] // #A1A1A1
@@ -24,6 +25,7 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define RC_GRAY_400 [UIColor colorWithRed:209.0/255.0 green:209.0/255.0 blue:209.0/255.0 alpha:1.0] // #D1D1D1
 #define RC_GRAY_200 [UIColor colorWithRed:231.0/255.0 green:231.0/255.0 blue:231.0/255.0 alpha:1.0] // #E7E7E7
 #define RC_GRAY_100 [UIColor colorWithRed:239.0/255.0 green:239.0/255.0 blue:240.0/255.0 alpha:1.0] // #EFEFF0
+#define RC_LIST_THREADS_SELECTED_ITEM_BACKGROUND_COLOR [UIColor colorWithRed:217.0/255.0 green:217.0/255.0 blue:217.0/255.0 alpha:1.0] // #D9D9D9
 
 #define DEFAULT_DATE_FORMATTER @"MMMM dd yyyy jj:mm"
 #define DEFAULT_DATE_FORMATTER_WITHOUT_YEAR @"MMMM dd jj:mm"
@@ -99,6 +101,10 @@ extern NSString* const DimeloChatDidDisappearNotification;
  *
  * This method is required as it is the only way for `Dimelo` to know how to
  * display a chat view controller in response to remote notifications.
+ * Note: When the dimelo view is integrated as a fragment and to prevent input accessory view conflict, you should present it in full screen when it's opened from a push notification by calling:
+ * if (dimelo.embeddedAsFragment && dimelo.openedFromNotification) {
+ *    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+ * }
  *
  * @param dimelo An API instance.
  *
@@ -456,6 +462,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic, readonly) NSString *hostName;
 
 /*!
+ * Flag to check the opening of the dimelo view from the push notification.
+ * Default is `NO`.
+ */
+@property (nonatomic, readonly) BOOL openedFromNotification;
+
+/*!
  * Delegate object to present a chat view controller and react to various optional notifications.
  *
  * @see DimeloDelegate
@@ -559,7 +571,6 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * @see -[DimeloDelegate dimeloDisplayChatViewController:]
  */
 - (UIViewController *)chatViewController;
-
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -675,6 +686,65 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /// @name Basic Customization
 ////////////////////////////////////////////////////////////////////////////////
 
+/*!
+ * Color for the create new thread image.
+ */
+@property (nonatomic) UIColor *createNewThreadImageColor;
+
+/*!
+ * Text color for the badge label.
+ */
+@property (nonatomic) UIColor *badgeTextColor;
+
+/*!
+ * Background color for the badge label.
+ */
+@property (nonatomic) UIColor *badgeBackgroundColor;
+
+/*!
+ * Color for the threads list separator.
+ */
+@property (nonatomic) UIColor *threadsListSeparatorColor;
+
+/*!
+ * Tint color for the locked thread image in the threads list view.
+ */
+@property (nonatomic) UIColor *lockedThreadImageTintColor;
+
+/*!
+ * Tint color for the threads list refresh control.
+ */
+@property (nonatomic) UIColor *threadsListRefreshControlTintColor;
+
+/*!
+ * Background color for the create new thread button.
+ */
+@property (nonatomic) UIColor *createNewThreadBackgroundColor;
+
+/*!
+ * Background color for the tapped create new thread button.
+ */
+@property (nonatomic) UIColor *createNewThreadTappedBackgroundColor;
+
+/*!
+ * Background color for the threads list item selection.
+ */
+@property (nonatomic) UIColor *threadsListBackgroundColorSelection;
+
+/*!
+ * Text color for the threads list agent name.
+ */
+@property (nonatomic) UIColor *threadsListAgentNameTextColor;
+
+/*!
+ * Text color for the threads list message.
+ */
+@property (nonatomic) UIColor *threadsListMessageTextColor;
+
+/*!
+ * Text color for the threads list date.
+ */
+@property (nonatomic) UIColor *threadsListDateTextColor;
 
 /*!
  * Tint color for aux controls: Close button, Send button, cursor etc.
@@ -687,7 +757,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic) UIColor *cursorTintColor;
 
 /*!
- * Tint color for navigationBar Item Button:
+ * Tint color for Navigation Item Button embedded in a fragment or a view controller.
  */
 @property (nonatomic) UIColor *navigationBarItemTintColor;
 
@@ -728,9 +798,34 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic, readonly) UIView *backgroundView;
 
 /*!
+ * Font for the badge label.
+ */
+@property (nonatomic) UIFont *badgeFont;
+
+/*!
+ * Font for the backToAllChats label (in the header fragment).
+ */
+@property (nonatomic) UIFont *backToAllChatsFont;
+
+/*!
  * Font for user and agent messages.
  */
 @property (nonatomic) UIFont *messageFont;
+
+/*!
+ * Font for the threads list agent name.
+ */
+@property (nonatomic) UIFont *threadsListAgentNameFont;
+
+/*!
+ * Font for the threads list message.
+ */
+@property (nonatomic) UIFont *threadsListMessageFont;
+
+/*!
+ * Font for the threads list date.
+ */
+@property (nonatomic) UIFont *threadsListDateFont;
 
 /*!
  * Font for system messages.
@@ -751,6 +846,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Text color for welcome's message.
  */
 @property (nonatomic) UIColor *welcomeMessageTextColor;
+
+/*!
+ * Color for the fragment header.
+ */
+@property (nonatomic) UIColor *fragmentHeaderColor;
 
 /*!
  * Foreground color for agent's structured message title text.
@@ -1011,6 +1111,21 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic) UIEdgeInsets agentNameInsets;
 
 /*!
+ * UIImage for the create new thread button.
+ */
+@property (nonatomic) UIImage *createNewThreadImage;
+
+/*!
+ * UIImage for the back to all chats item (applied for the fragment and the view controller).
+ */
+@property (nonatomic) UIImage *backToAllChatsItemImage;
+
+/*!
+ * UIImage to indicate that the thread is locked in the threads list view.
+ */
+@property (nonatomic) UIImage *lockedThreadImage;
+
+/*!
  * Resizable (9-part) image to decorate user text bubble.
  *
  * @see userMessageBubbleImage
@@ -1147,6 +1262,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic) BOOL interactiveNotification;
 
 /*!
+ * Flag to set to embed or not the Dimelo view as a fragment.
+ * Default is `NO`.
+ */
+@property (nonatomic) BOOL embeddedAsFragment;
+
+/*!
  * Flag to set to disable reception of the push notification
  * Default is `NO`.
  */
@@ -1157,9 +1278,10 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic) BOOL showAgentAvatarImage;
 
 /*!
- * localize titles (doneButton, sendButton, cancelButton, photoButton, galleryButton, locationButton).
- */
-+ (NSString *)localizeString:(NSString *)key;
+* Flag to set to enable/disable threads
+* Default is `NO`.
+*/
+@property (nonatomic) BOOL enableThreads;
 
 /*!
  * Called when reply notification is called.
@@ -1181,15 +1303,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 - (void)sendMessage:(NSString *)messageText;
 
-/*!
-* return CFBundleDisplayName otherwise return CFBundleName
-*/
-+ (NSString *)getApplicationName;
-
 - (NSString *)getDimeloDefaultHostName;
-+ (UIColor *)colorFromHexString:(NSString *)hexString;
-- (UIViewController *)topViewController;
-+(BOOL)isSafeAreaAvailable;
 
 - (BOOL)consumeNotificationResponse:(UNNotificationResponse *)response;
 - (BOOL)presentRingCentralNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler;

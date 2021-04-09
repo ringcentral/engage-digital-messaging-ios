@@ -362,6 +362,13 @@ Dimelo provides an opaque `UIViewController` instance that you can display how y
 You can present chat manually (e.g. user taps a button to open "support"),
 or the chat may appear automatically (mediated by the delegate method `-dimeloDisplayChatViewController:`).
 
+*Note:* When the dimelo view is integrated as a fragment and to prevent input accessory view conflict, you should present it in full screen when it's opened from a push notification by calling:
+```objectivec
+if (dimelo.embeddedAsFragment && dimelo.openedFromNotification) {
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+}
+```
+
 The chat is displayed automatically in two cases:
 
 1. When the user launches or activates the app using a push notification.
@@ -371,6 +378,12 @@ The chat is displayed automatically in two cases:
 
 To display the chat manually and reuse the code in `-dimeloDisplayChatViewController:`, call `-[Dimelo displayChatView]`. When necessary, you can request another instance of a chat view controller (`-[Dimelo chatViewController]`) to show the chat in some other context.
 
+*Note:* When the dimelo view is integrated as a fragment and to prevent input accessory view conflict, you should present it in full screen when it's opened from a push notification by calling:
+```objectivec
+if (dimelo.embeddedAsFragment && dimelo.openedFromNotification) {
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+}
+```
 
 Customizing Engage Digital Messaging SDK Appearance
 ----------------------------------------

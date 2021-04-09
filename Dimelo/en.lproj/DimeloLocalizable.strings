@@ -7,6 +7,7 @@
 */
 "dimeloChatTitle" = "Chat";
 "dimeloSendButtonTitle" = "Send";
+"rcSendButtonAccessibilityLabel" = "Send";
 "dimeloChoosePhotoButtonTitle" = "Choose Photo";
 "dimeloLocationButtonTitle" ="Share location";
 "dimeloCancelButtonTitle" ="Cancel";
@@ -31,3 +32,7 @@
 "rcHintInputText" = "Send a message...";
 "rcToday" = "Today";
 "rcRetryButtonTitle" = "Resend";
+"rcThreadsTitle" = "Chats";
+"rcYou" = "You: ";
+"rcWaitingForAgentMessage" = "Waiting for agent";
+"rcBackToAllChats" = "Back to all chats";

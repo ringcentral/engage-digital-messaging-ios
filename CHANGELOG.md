@@ -1,5 +1,17 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.3.0 (April 9th, 2021) ##
+- Fix: fix the VoiceOver on the send button. RD-17295
+- Feature: add threading support. RD-16271:
+    - Add `enableThreads` flag to enable or disable the threading. RD-16274
+    - Add `embeddedAsFragment` flag to set to embed or not the Dimelo view as a fragment. RD-12753
+    - Add multiple customization keys ([listed in PlistCustomization.md](PlistCustomization.md)). RD-16262
+    - Set a context_data `identity_initiated_thread: true` when clicking on the "new conversation" button. RD-16235
+    - Hide the "new conversation" button based on the "Allow multiple conversations in parallel" ED configuration with a maximum of three parallel open threads. RD-16249
+- Fix: cannot reply via the notification when the application is in background or killed. RD-17032 RD-17127
+- Improvement: display the "Done" button by default to close the chat. RD-16466
+- Fix: fix attachment icon padding when safe area is available. RD-16689
+
 ## Dimelo iOS SDK 2.2.0 (January 13th, 2021) ##
 - BREAKING CHANGE: minimum iOS version supported is now **iOS 8.0**. RD-12776
 - Improvement: drop usage of `UIActionSheet` in favor of `UIAlertController`. RD-12776

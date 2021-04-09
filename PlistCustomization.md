@@ -92,6 +92,139 @@ dimelo.dateFormatter = dateFormatter
 ```
 ## Color
 
+### createNewThreadImageColor
+Color for the create new thread image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/2yH86cJk/create-New-Thread-Image-Color.png"/>
+</p>
+
+### badgeTextColor
+Text color for the badge label.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/1X5jL8g8/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/MZPPnKMY/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/3RbXxNS4/badge-Font.png"/>
+</p>
+
+### badgeBackgroundColor
+Background color for the badge label.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/1X5jL8g8/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/MZPPnKMY/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/3RbXxNS4/badge-Font.png"/>
+</p>
+
+### threadsListSeparatorColor
+Color for the threads list separator.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/5NFcBkCT/list-Threads-Separator-Color.png"/>
+</p>
+
+### lockedThreadImageTintColor
+Tint color for the locked thread image in the threads list view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/c1fmL0pX/closed-Thread-Image-Tint-Color.png"/>
+</p>
+
+### threadsListRefreshControlTintColor
+Tint color for the threads list refresh control.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/8CLPZzr8/list-Threads-Refresh-Control-Tint-Color.png"/>
+</p>
+
+### createNewThreadBackgroundColor
+Background color for the create new thread button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/13pfjXD0/create-New-Thread-Image.png"/>
+</p>
+
+### createNewThreadTappedBackgroundColor
+Background color for the tapped create new thread button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Jz31SFhy/create-New-Thread-Tapped-Background-Color.png"/>
+</p>
+
+### threadsListBackgroundColorSelection
+Background color for the threads list item selection.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/t4wYrcS6/list-Threads-Background-Color-Selection.png"/>
+</p>
+
+### threadsListAgentNameTextColor
+Text color for the threads list agent name.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/WzG1ffkN/list-Threads-Agent-Name-Font.png"/>
+</p>
+
+### threadsListMessageTextColor
+Text color for the threads list message.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/447t1J2P/list-Threads-Message-Font.png"/>
+</p>
+
+### threadsListDateTextColor
+Text color for the threads list date.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/8zBzb3Vt/list-Threads-Date-Font.png"/>
+</p>
+
+### fragmentHeaderColor
+Color for the fragment header.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/s2T0dpW5/fragment-Header-Color.png"/>
+</p>
+
 ### enableLightStatusBarStyle
 Text color for status bar text (white or black).
 
@@ -455,7 +588,7 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 </p>
 
 ### navigationBarItemTintColor
-Tint color for Navigation Item Button.
+Tint color for Navigation Item Button embedded in a fragment or a view controller.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
@@ -478,6 +611,64 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 Similar to `systemMessageTextColor`, but for system messages.
 
 ## Font
+
+### badgeFont
+Font for the badge label.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/1X5jL8g8/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/MZPPnKMY/badge-Font.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/3RbXxNS4/badge-Font.png"/>
+</p>
+
+### backToAllChatsFont
+Font for the backToAllChats label (in the header fragment).
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/gJMwH78f/rc-Back-To-All-Chats.png"/>
+</p>
+
+### threadsListAgentNameFont
+Font for the threads list agent name.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/WzG1ffkN/list-Threads-Agent-Name-Font.png"/>
+</p>
+
+### threadsListMessageFont
+Font for the threads list message.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/447t1J2P/list-Threads-Message-Font.png"/>
+</p>
+
+### threadsListDateFont
+Font for the threads list date.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/8zBzb3Vt/list-Threads-Date-Font.png"/>
+</p>
 
 ### navigationBarTitleFont
 Font for navigationBar's title.
@@ -763,6 +954,31 @@ In the screenshot, top=60, right=40, bottom=20, left=0.
 
 ## Images
 
+### createNewThreadImage
+UIImage for the create new thread button.
+
+<p align="center">
+   <img src="https://i.postimg.cc/13pfjXD0/create-New-Thread-Image.png"/>
+</p>
+
+### backToAllChatsItemImage
+UIImage for the create new thread button.
+
+<p align="center">
+   <img src="https://i.postimg.cc/jj3mxtJM/back-To-All-Chats-Item-Image.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/KjBHDTpW/back-To-All-Chats-Item-Image.png"/>
+</p>
+
+### lockedThreadImage
+UIImage to indicate that the thread is locked in the threads list view.
+
+<p align="center">
+   <img src="https://i.postimg.cc/WpZ9qMkm/closed-Thread-Image.png"/>
+</p>
+
 ### agentAttachmentBubbleImage
 Resizable (9-part) image to mask agent's attachment (alpha channel is used as a mask).
 By default, the same as `agentMessageBubbleImage`.
@@ -834,3 +1050,15 @@ E.g. `top=10`, `left=10`, `bottom=10`, `right=10`, and `imgName=myBubbleImage`
 </p>
 
 In the screenshot, top=18, left=19, bottom=18, right=36.
+
+## Boolean
+
+### enableThreads
+Flag to set to enable/disable threads.
+
+Must be a boolean, default is `NO`.
+
+### embeddedAsFragment
+Flag to set to embed or not the Dimelo view as a fragment.
+
+Must be a boolean, default is `NO`.

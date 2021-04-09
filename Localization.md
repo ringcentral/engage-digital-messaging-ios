@@ -16,6 +16,46 @@ Dimelo localization
 
 - add these keys to DimeloLocalizable.strings file if you want to change the default dimelo translation
 
+### rcThreadsTitle
+Title of the threads list window.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/QxhPTn0X/rc-Threads-Title.jpg"/>
+</p>
+
+### rcYou
+Prefix added to user message preview in the threads list.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/NMx8qbT4/rcYou.png"/>
+</p>
+
+### rcWaitingForAgentMessage
+"Waiting For Agent" title in the thread list when no agent has responded yet.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/gcSRVxKn/rc-Waiting-For-Agent-Message.png"/>
+</p>
+
+### rcBackToAllChats
+"Back button" title to return to the threads list when the sdk is embedded as a fragment.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/gJMwH78f/rc-Back-To-All-Chats.png"/>
+</p>
+
 ### dimeloChatTitle
 Title of the conversation window. 
 
