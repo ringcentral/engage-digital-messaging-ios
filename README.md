@@ -183,12 +183,16 @@ AppDelegate.m
 
 - (void) dimeloDidBeginNetworkActivity:(Dimelo*)dimelo
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    });
 }
 
 - (void) dimeloDidEndNetworkActivity:(Dimelo*)dimelo
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    });
 }
 
 
@@ -439,6 +443,15 @@ By default, `Dimelo` updates app's badge number automatically based on number of
 If your application has its own unread count, you might want to disable this behaviour by setting
 `updateAppBadgeNumber` property to `NO`. Then you can access the Dimelo-only unread count using `unreadCount` property.
 
+*Note:* If you use `fetchUnreadCountWithCompletionHandler`, all treatments that updates the UI must be done in *main thread*:
+
+```
+[[Dimelo sharedInstance] fetchUnreadCountWithCompletionHandler:^(NSInteger unreadCount, NSError *error) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+         // update UI
+    });
+}];
+```
 
 Required Permissions
 --------------------
@@ -479,6 +492,8 @@ wish to process events in `DimeloDelegate` object.
 Two particular events that might be interesting to you are `-dimeloDidBeginNetworkActivity:`, `-dimeloDidEndNetworkActivity:`. Engage Digital Messaging does not change the status bar network activity
 indicator to avoid conflicts with your app. If you would like to indicate it, you should
 override these methods and update the activity indicator accordingly.
+
+*Note:* If you have treatments that updates the UI in `dimeloUnreadCountDidChange`, `dimeloDidBeginNetworkActivity` or `dimeloDidEndNetworkActivity` you have to do it in *main thread*: `dispatch_async(dispatch_get_main_queue(), ^{})`
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 

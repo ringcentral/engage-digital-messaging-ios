@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.0 (August 31th, 2021) ##
+- BREAKING CHANGE: `fetchUnreadCountWithCompletionHandler`, `dimeloUnreadCountDidChange`, `dimeloDidBeginNetworkActivity` and `dimeloDidEndNetworkActivity` callbacks must be called in main thread when updating UI. RD-18723
+- Improvement: move `fetchUnreadCountWithCompletionHandler` and `dimeloUnreadCountDidChange` methods out of the main thread. RD-18723
+- Improvement: send the file extension with the filename when sending an attachment. RD-16648
+
 ## Dimelo iOS SDK 2.3.0 (April 9th, 2021) ##
 - Fix: fix the VoiceOver on the send button. RD-17295
 - Feature: add threading support. RD-16271:
