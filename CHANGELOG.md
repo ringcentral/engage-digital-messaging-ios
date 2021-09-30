@@ -1,6 +1,20 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.1 (September 30th, 2021) ##
+- BREAKING CHANGE: `navigationBarTintColor` will change the background color instead of the tint color of the navigation bar for iOS 13+. RD-19664
+- BREAKING CHANGE: provide the new format of packing frameworks (`Dimelo.xcframework`) for manual integration and abandon the use of `Dimelo.framework`. RD-18883
+    - No change required for CocoaPods integration (the XCFramework will be automatically included).
+- Fix: crash when using a custom `leftBarButtonItem` when the badge view should not be displayed. RD-19711
+- Fix: use `UIBarAppearance` APIs to customize the navigation bar introduced in iOS 13. RD-19664
+- Fix: apply the default background color to the navigation bar on iOS 15 for devices with the notch. RD-19664
+- Improvement: add the ability to zoom in/out when opening pictures. RD-19430
+- Fix: crash when internet connection is off (bug introduced in `v2.4.0`). RD-19670
+- Fix: hide input text when sending quick replies with `"disable_text_input": true` and threading is enabled. RD-18747
+- Fix: prevent template and carousel reply items from being used when thread is locked in multithread. RD-18411
+
 ## Dimelo iOS SDK 2.4.0 (August 31th, 2021) ##
+- Bug introduced: SDK crashes when Internet connection is off. Fixed in v2.4.1 RD-19670
+
 - BREAKING CHANGE: `fetchUnreadCountWithCompletionHandler`, `dimeloUnreadCountDidChange`, `dimeloDidBeginNetworkActivity` and `dimeloDidEndNetworkActivity` callbacks must be called in main thread when updating UI. RD-18723
 - Improvement: move `fetchUnreadCountWithCompletionHandler` and `dimeloUnreadCountDidChange` methods out of the main thread. RD-18723
 - Improvement: send the file extension with the filename when sending an attachment. RD-16648

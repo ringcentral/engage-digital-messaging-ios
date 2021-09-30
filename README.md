@@ -66,11 +66,11 @@ How To Install Manually
 
 1) Download contents from Github [Dimelo-iOS project](https://github.com/ringcentral/engage-digital-messaging-ios).
 
-2) Drop the `Dimelo.framework` subfolder in your project.
+2) Drop the `Dimelo.xcframework` subfolder in your project.
 
 3) Link your target with these frameworks:
 
- * Dimelo.framework
+ * Dimelo.xcframework
  * Accelerate.framework
  * MobileCoreServices.framework
  * SystemConfiguration.framework
@@ -426,6 +426,8 @@ Insets do not apply to attachment bubbles.
 
 You can also create a `DimeloConfig.plist` file and add it to your project.
 The library will use it to configure the `Dimelo` shared instance.
+
+:warning: Following some changes in iOS13+, we cannot use `barTintColor` to customize the navigation bar tint color anymore. See [this Apple developer thread](https://developer.apple.com/forums/thread/122100) for more information.
 
 
 Push Notifications

@@ -538,7 +538,7 @@ Background color for navigation bar (sets `backgroundColor` property).
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 ### navigationBarTintColor
-Bar tint color for navigation bar (sets `barTintColor` property).
+Bar tint color for navigation bar before iOS 13 otherwise it's the background color for navigation bar (sets `navigationBarTintColor` property).
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
