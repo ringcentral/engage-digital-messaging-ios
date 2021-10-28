@@ -1,6 +1,17 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.2 (October 28th, 2021) ##
+- Feature: url sent in a structured message (richlink, carousel or template) can now be displayed as an embedded WebView. RD-19248
+    - The WebView is opened in full height mode when `target` is equal to `current`
+- Feature: support the company message view in the threads list. RD-12758
+- Improvement: display agent name under the unreplied quick reply if the thread is closed. RD-19898
+- Fix: agent name flickers in threads list when the last message is a quick replies. RD-19900
+- Fix: prevent quick replies items from being used when thread is locked in multithread. RD-18409
+- Fix: image is on the bottom of the screen when opening in full screen on some devices (bug introduced in `v2.4.1`). RD-19843
+- Improvement: add a customizable informative text below the last message when the thread is closed. RD-16690
+
 ## Dimelo iOS SDK 2.4.1 (September 30th, 2021) ##
+- Bug introduced: image is on the bottom of the screen when opening in full screen on some devices. Fixed in `v2.4.2`. RD-19843
 - BREAKING CHANGE: `navigationBarTintColor` will change the background color instead of the tint color of the navigation bar for iOS 13+. RD-19664
 - BREAKING CHANGE: provide the new format of packing frameworks (`Dimelo.xcframework`) for manual integration and abandon the use of `Dimelo.framework`. RD-18883
     - No change required for CocoaPods integration (the XCFramework will be automatically included).
@@ -13,7 +24,7 @@
 - Fix: prevent template and carousel reply items from being used when thread is locked in multithread. RD-18411
 
 ## Dimelo iOS SDK 2.4.0 (August 31th, 2021) ##
-- Bug introduced: SDK crashes when Internet connection is off. Fixed in v2.4.1 RD-19670
+- Bug introduced: SDK crashes when Internet connection is off. Fixed in `v2.4.1`. RD-19670
 
 - BREAKING CHANGE: `fetchUnreadCountWithCompletionHandler`, `dimeloUnreadCountDidChange`, `dimeloDidBeginNetworkActivity` and `dimeloDidEndNetworkActivity` callbacks must be called in main thread when updating UI. RD-18723
 - Improvement: move `fetchUnreadCountWithCompletionHandler` and `dimeloUnreadCountDidChange` methods out of the main thread. RD-18723

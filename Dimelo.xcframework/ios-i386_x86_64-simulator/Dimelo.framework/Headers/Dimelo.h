@@ -32,6 +32,8 @@ extern NSString* const DimeloHTTPErrorDomain;
 
 #define RC_DEFAULT_DATE_FONT [UIFont systemFontOfSize:12.0 weight:UIFontWeightSemibold]
 
+#define RC_DEFAULT_CLOSE_FONT [UIFont systemFontOfSize:12.0 weight:UIFontWeightMedium]
+
 static NSString* const DIMELO_DEFAULT_HOSTNAME = @".messaging.dimelo.com";
 
 @class Dimelo;
@@ -45,6 +47,11 @@ extern NSString* const DimeloChatUnreadCountDidChangeNotification;
  * Posted when `-[Dimelo welcomeMessage]` property is changed.
  */
 extern NSString* const DimeloWelcomeMessageDidChangeNotification;
+
+/*!
+ * Posted when `-[Dimelo companyMessage]` property is changed.
+ */
+extern NSString* const RcCompanyMessageDidChangeNotification;
 
 /*!
  * Posted when the user sends a message.
@@ -687,6 +694,16 @@ extern NSString* const DimeloChatDidDisappearNotification;
 ////////////////////////////////////////////////////////////////////////////////
 
 /*!
+ * Color for the webView activity indicator.
+ */
+@property (nonatomic) UIColor* webViewActivityIndicatorColor;
+
+/*!
+ * Color for the webView close image.
+ */
+@property (nonatomic) UIColor* webViewCloseImageColor;
+
+/*!
  * Color for the create new thread image.
  */
 @property (nonatomic) UIColor *createNewThreadImageColor;
@@ -730,6 +747,31 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Background color for the threads list item selection.
  */
 @property (nonatomic) UIColor *threadsListBackgroundColorSelection;
+
+/*!
+ * Background color for the webView header.
+ */
+@property (nonatomic) UIColor* webViewHeaderBackgroundColor;
+
+/*!
+ * Color applied to the webView body background and the safe area zone background (on portrait and landscape mode).
+ */
+@property (nonatomic) UIColor* webViewBodyBackgroundColor;
+
+/*!
+ * Background color for the threads list company message.
+ */
+@property (nonatomic) UIColor* threadsListCompanyMessageBackgroundColor;
+
+/*!
+ * Text color for the threads list company message title.
+ */
+@property (nonatomic) UIColor* threadsListCompanyMessageTitleTextColor;
+
+/*!
+ * Text color for the threads list company message subtitle.
+ */
+@property (nonatomic) UIColor* threadsListCompanyMessageSubtitleTextColor;
 
 /*!
  * Text color for the threads list agent name.
@@ -798,6 +840,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic, readonly) UIView *backgroundView;
 
 /*!
+ * Font for the webView title.
+ */
+@property (nonatomic) UIFont* webViewTitleFont;
+
+/*!
  * Font for the badge label.
  */
 @property (nonatomic) UIFont *badgeFont;
@@ -811,6 +858,16 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Font for user and agent messages.
  */
 @property (nonatomic) UIFont *messageFont;
+
+/*!
+ * Font for the threads list company message title.
+ */
+@property (nonatomic) UIFont* threadsListCompanyMessageTitleFont;
+
+/*!
+ * Font for the threads list company message subtitle.
+ */
+@property (nonatomic) UIFont* threadsListCompanyMessageSubtitleFont;
 
 /*!
  * Font for the threads list agent name.
@@ -948,6 +1005,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @property (nonatomic) UIColor *systemMessageTextColor;
 
 /*!
+ * Text color for webView title.
+ */
+@property (nonatomic) UIColor* webViewTitleTextColor;
+
+/*!
  * Background color for user message bubbles.
  *
  * This color is applied when `userMessageBubbleImage` has template rendering mode (see UIImageRenderingMode).
@@ -991,6 +1053,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 @property (nonatomic) UIFont *dateFont;
 
+@property (nonatomic) UIFont* closedThreadMessageTextFont;
+
 /*!
  * Font for the hour label.
  */
@@ -1000,6 +1064,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * Text color for the date label.
  */
 @property (nonatomic) UIColor *dateTextColor;
+
+@property (nonatomic) UIColor* closedThreadMessageTextColor;
 
 /*!
  * Text color for the hour label.
@@ -1109,6 +1175,11 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * These insets should be in sync with `agentMessageBubbleImage`.
  */
 @property (nonatomic) UIEdgeInsets agentNameInsets;
+
+/*!
+ * UIImage for webView close button.
+ */
+@property (nonatomic) UIImage* webViewCloseImage;
 
 /*!
  * UIImage for the create new thread button.

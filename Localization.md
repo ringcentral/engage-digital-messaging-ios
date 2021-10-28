@@ -66,6 +66,16 @@ This will be used as an argument to NSLocalizedString.
 <img src="https://i.postimg.cc/zfpQgn67/title.png"/>
 </p>
 
+### rcClosedThreadMessage
+Content of the message that is displayed when the thread is closed.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/s26X9dnv/close-Text-Color.png"/>
+</p>
+
 ### dimeloChoosePhotoButtonTitle
 Title of the attachment photo button. 
 

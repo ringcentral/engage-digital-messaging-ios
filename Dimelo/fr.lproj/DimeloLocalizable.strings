@@ -36,3 +36,4 @@
 "rcYou" = "Vous : ";
 "rcWaitingForAgentMessage" = "En attente d'un agent";
 "rcBackToAllChats" = "Voir toutes les discussions";
+"rcClosedThreadMessage" = "La conversation est terminée";

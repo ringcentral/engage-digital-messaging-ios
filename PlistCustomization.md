@@ -92,6 +92,24 @@ dimelo.dateFormatter = dateFormatter
 ```
 ## Color
 
+### webViewActivityIndicatorColor
+Color applied to the activity indicator that is displayed in the webView when the page is loading.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/ZnzMVk7V/web-View-Activity-Indicator-Color.png"/>
+</p>
+
+### webViewCloseImageColor
+Color applied to the webView "close" image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/MG9NkMd2/web-View-Close-Image-Color.png"/>
+</p>
+
 ### createNewThreadImageColor
 Color for the create new thread image.
 
@@ -99,6 +117,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/2yH86cJk/create-New-Thread-Image-Color.png"/>
+</p>
+
+### webViewTitleTextColor
+Color applied to the webView title.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bwX6v401/web-View-Title-Text-Color.png"/>
 </p>
 
 ### badgeTextColor
@@ -189,6 +216,33 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/t4wYrcS6/list-Threads-Background-Color-Selection.png"/>
 </p>
 
+### threadsListCompanyMessageBackgroundColor
+Background color of the company message displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/C1R2163f/threads-List-Company-Message-Background-Color.png"/>
+</p>
+
+### threadsListCompanyMessageTitleTextColor
+Text color applied to the title of the company message that is displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/DyTCkZwG/threads-List-Company-Message-Title-Text-Color.png"/>
+</p>
+
+### threadsListCompanyMessageSubtitleTextColor
+Text color applied to the subtitle of the company message that is displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/SQ769GmX/threads-List-Company-Message-Subtitle-Text-Color.png"/>
+</p>
+
 ### threadsListAgentNameTextColor
 Text color for the threads list agent name.
 
@@ -223,6 +277,41 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/s2T0dpW5/fragment-Header-Color.png"/>
+</p>
+
+### closedThreadMessageTextColor
+Color applied to the message that is displayed when the thread is closed.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/s26X9dnv/close-Text-Color.png"/>
+</p>
+
+### webViewHeaderBackgroundColor
+Color applied to the webView header background.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/sfbFp69g/web-View-Header-Background-Color.png"/>
+</p>
+
+### webViewBodyBackgroundColor
+Color applied to the webView body background and the safe area zone background (on portrait and landscape mode).
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bNRTzdJf/web-View-Body-Background-Color.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/jSDB53T8/web-View-Body-Background-Color2.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/rsyPLQgN/web-View-Body-Background-Color3.png"/>
 </p>
 
 ### enableLightStatusBarStyle
@@ -612,6 +701,16 @@ Similar to `systemMessageTextColor`, but for system messages.
 
 ## Font
 
+### webViewTitleFont
+Font applied to the webView title.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Y9cgNw9x/web-View-Title-Font.png"/>
+</p>
+
 ### badgeFont
 Font for the badge label.
 Must contain a dictionary with `name` and `size` keys.
@@ -638,6 +737,26 @@ E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
    <img src="https://i.postimg.cc/gJMwH78f/rc-Back-To-All-Chats.png"/>
+</p>
+
+### threadsListCompanyMessageTitleFont
+Font used for the company message title that is displayed in the threads list.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/zvJR79qy/threads-List-Company-Message-Title-Font.png"/>
+</p>
+
+### threadsListCompanyMessageSubtitleFont
+Font used for the company message subtitle that is displayed in the threads list.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/76N55mSw/threads-List-Company-Message-Subtitle-Font.png"/>
 </p>
 
 ### threadsListAgentNameFont
@@ -668,6 +787,16 @@ E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
    <img src="https://i.postimg.cc/8zBzb3Vt/list-Threads-Date-Font.png"/>
+</p>
+
+### closedThreadMessageTextFont
+Font applied to the message that is displayed when the thread is closed.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/C5fVq9tT/close-Font.png"/>
 </p>
 
 ### navigationBarTitleFont
@@ -953,6 +1082,13 @@ E.g. `top=10`, `left=10`, `bottom=10` and `right=10`.
 In the screenshot, top=60, right=40, bottom=20, left=0.
 
 ## Images
+
+### webViewCloseImage
+UIImage used to represent the webView "close" button that is displayed in the header.
+
+<p align="center">
+   <img src="https://i.postimg.cc/tC1qbnDY/web-View-Close-Image.png"/>
+</p>
 
 ### createNewThreadImage
 UIImage for the create new thread button.

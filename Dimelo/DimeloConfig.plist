@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.4.1</string>
+	<string>2.4.2</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -22,6 +22,10 @@
 	<string></string>
 	<key>badgeTextColor</key>
 	<string>#FFFFFF</string>
+	<key>webViewActivityIndicatorColor</key>
+	<string>#212121</string>
+	<key>webViewCloseImageColor</key>
+	<string>#A1A1A1</string>
 	<key>createNewThreadImageColor</key>
 	<string>#FFFFFF</string>
 	<key>badgeBackgroundColor</key>
@@ -38,8 +42,18 @@
 	<string>#3B71CF</string>
 	<key>threadsListBackgroundColorSelection</key>
 	<string>#D9D9D9</string>
+	<key>webViewHeaderBackgroundColor</key>
+	<string>#FFFFFF</string>
+	<key>webViewBodyBackgroundColor</key>
+	<string>#FFFFFF</string>
+	<key>threadsListCompanyMessageBackgroundColor</key>
+	<string>#99EFEFF0</string>
 	<key>threadsListAgentNameTextColor</key>
 	<string>#A1A1A1</string>
+	<key>threadsListCompanyMessageTitleTextColor</key>
+	<string>#212121</string>
+	<key>threadsListCompanyMessageSubtitleTextColor</key>
+	<string>#212121</string>
 	<key>threadsListMessageTextColor</key>
 	<string>#000000</string>
 	<key>threadsListDateTextColor</key>
@@ -78,6 +92,8 @@
 	<string>#ECF0F6</string>
 	<key>systemMessageTextColor</key>
 	<string>#000000</string>
+	<key>webViewTitleTextColor</key>
+	<string>#212121</string>
 	<key>userMessageBackgroundColor</key>
 	<string>#258CFB</string>
 	<key>agentMessageBackgroundColor</key>
@@ -88,7 +104,7 @@
 	<string>#258BFB</string>
 	<key>dateTextColor</key>
 	<string>#A1A1A1</string>
-	<key>closeTextColor</key>
+	<key>closedThreadMessageTextColor</key>
 	<string>#A1A1A1</string>
 	<key>hourTimeTextColor</key>
 	<string>#A1A1A1</string>
@@ -100,6 +116,13 @@
 	<string></string>
 	<key>inputBarBackgroundColor</key>
 	<string></string>
+	<key>webViewTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>20</integer>
+	</dict>
 	<key>badgeFont</key>
 	<dict>
 		<key>name</key>
@@ -121,6 +144,20 @@
 		<key>size</key>
 		<integer>12</integer>
 	</dict>
+	<key>threadsListCompanyMessageTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Bold</string>
+		<key>size</key>
+		<integer>20</integer>
+	</dict>
+	<key>threadsListCompanyMessageSubtitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Medium</string>
+		<key>size</key>
+		<integer>14</integer>
+	</dict>
 	<key>threadsListMessageFont</key>
 	<dict>
 		<key>name</key>
@@ -128,7 +165,7 @@
 		<key>size</key>
 		<integer>14</integer>
 	</dict>
-	<key>threadsListDateFont - 2</key>
+	<key>threadsListDateFont</key>
 	<dict>
 		<key>name</key>
 		<string>HelveticaNeue</string>
@@ -156,7 +193,7 @@
 		<key>size</key>
 		<integer>12</integer>
 	</dict>
-	<key>closeFont</key>
+	<key>closedThreadMessageTextFont</key>
 	<dict>
 		<key>name</key>
 		<string>.SFUIText-Semibold</string>
