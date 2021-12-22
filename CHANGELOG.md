@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.3 (December 22th, 2021) ##
+- Improvement: open the chat view in a background thread instead of the main thread when tapping the push notification. RD-20528
+
 ## Dimelo iOS SDK 2.4.2 (October 28th, 2021) ##
 - Feature: url sent in a structured message (richlink, carousel or template) can now be displayed as an embedded WebView. RD-19248
     - The WebView is opened in full height mode when `target` is equal to `current`
