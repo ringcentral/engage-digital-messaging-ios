@@ -18,6 +18,8 @@ __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView :
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentButtonWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentButtonRightConstraint;
 @property (nonatomic) CGFloat keyboardHeight;
 - (void)updateChatInputAccessoryViewFrame;
 - (BOOL)updateFittingSize;

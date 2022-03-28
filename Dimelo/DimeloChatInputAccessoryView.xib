@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DimeloChatInputAccessoryView">
             <connections>
                 <outlet property="attachmentButton" destination="4dL-VD-3Vb" id="is3-kB-LPP"/>
+                <outlet property="attachmentButtonRightConstraint" destination="qWN-sM-sPy" id="7ZV-Ut-lsu"/>
+                <outlet property="attachmentButtonWidthConstraint" destination="5Bd-9l-Mnv" id="ec9-Ed-Qb9"/>
                 <outlet property="attachmentImageView" destination="KP7-AG-Cfn" id="5GO-wI-xm3"/>
                 <outlet property="bottomConstraint" destination="4UD-V3-WSZ" id="2B3-Tf-3tH"/>
                 <outlet property="leftConstraint" destination="FF6-nd-OIF" id="gAz-GZ-aTL"/>
@@ -26,10 +28,9 @@
             <rect key="frame" x="0.0" y="0.0" width="458" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7So-Pk-JJJ">
                     <rect key="frame" x="0.0" y="0.0" width="458" height="80"/>
                     <items/>
-                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </toolbar>
                 <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-MX-giu">
                     <rect key="frame" x="0.0" y="0.0" width="458" height="80"/>

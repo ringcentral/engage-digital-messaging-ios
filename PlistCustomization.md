@@ -594,7 +594,7 @@ Background color of the input bar.
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
-   <img src="https://i.postimg.cc/Ss74X2qf/input-Bar-Background-Color.png"/>
+   <img src="https://i.postimg.cc/9M8g3RtG/input-Bar-Background-Color.png"/>
 </p>
 
 ### inputBarTintColor

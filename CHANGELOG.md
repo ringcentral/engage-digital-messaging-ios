@@ -1,5 +1,14 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.4 (March 28th, 2022) ##
+- Improvement: add arm64 architecture support for simulator on Mac with Apple silicon. RD-21653
+- Fix: input accessory view disappears when attachments are disabled. RD-21118
+- Fix: some images were taking more than the screen size when opened on some devices. RD-20495
+- Fix: prevent old template or carousel reply items from being used when the text input is disabled by a quick reply message. RD-14504
+- Fix: the fragment header gets more opaque the more messages we send. RD-20035
+- Improvement: load SDK image assets asynchronously. RD-20830
+- Fix: `inputBarBackgroundColor` customization was not correctly applied. RD-20168
+
 ## Dimelo iOS SDK 2.4.3 (December 22th, 2021) ##
 - Improvement: open the chat view in a background thread instead of the main thread when tapping the push notification. RD-20528
 
