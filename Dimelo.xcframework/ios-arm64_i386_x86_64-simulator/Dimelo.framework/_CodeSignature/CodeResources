@@ -358,15 +358,15 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		1i6izMxVB+sdwJtSdb2UIxjnWjE=
+		ppjeyKlzN4VB4IRxmIqKpUHlMQE=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
-		/In/sLweSA1u1M3TFX+kKQYbbJw=
+		SdFfBpa3a2tGf4+/UT0n5kTpR7k=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kDyxzv3P5JbkMAzKt53l1J5BAO4=
+		rv1DU4oP37tHqV2fiJGI8t4vw7Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1378,22 +1378,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1i6izMxVB+sdwJtSdb2UIxjnWjE=
+			ppjeyKlzN4VB4IRxmIqKpUHlMQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			8g2zn07fQbMY+OywEdsY9cR/9R5d69Gyd7FyNjkgMis=
+			0hWHYHOJqD+/rIsBqqhqRxn7oI04CsP8tedeOzz4QnM=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/In/sLweSA1u1M3TFX+kKQYbbJw=
+			SdFfBpa3a2tGf4+/UT0n5kTpR7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			FXG0VUnnmaSYtfQ+7EyxQsobPj3aOQhNWfKTs80dR6o=
+			7xRvBnlwmVo3xsjZRcuKOkuic6VZJxz6cZSyPQeG6lM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -499,4 +499,24 @@ override these methods and update the activity indicator accordingly.
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
+Use the `-rcShouldDelegateUrlOpening:` event to control what should happen when a URL is going to be opened by the Engage Digital Messaging iOS SDK:
+- return `NO` to let the Engage Digital Messaging iOS SDK open the URL.
+- return `YES` to prevent the Engage Digital Messaging iOS SDK from opening the URL so that you can apply your own logic.
+
 Please refer to [API reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-ios/64b957d54ad0d9a9da65e214f01524cae7977140/Reference/html/index.html) documentation for more information.
+
+
+Manually opening a WebView
+--------------------------
+
+The Engage Digital Messaging iOS SDK exposes the `(void)openWebView:(NSURL *)url heightMode:(RcWebViewHeightMode)heightMode` method to allow you to manually open a WebView.
+
+This method takes 2 parameters:
+- The `url` parameter is a `NSURL` that represents the URL you want to open in the WebView.
+- The `heightMode` parameter is a `RcWebViewHeightMode` that represents the height of the WebView (based on the WebView's container size), its value can be:
+
+|Value|Container's height|
+|-----|------------------|
+|`RC_WEB_VIEW_FULL_MODE`|100%|
+|`RC_WEB_VIEW_TALL_MODE`|75%|
+|`RC_WEB_VIEW_COMPACT_MODE`|50%|

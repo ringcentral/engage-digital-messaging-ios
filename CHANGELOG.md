@@ -1,5 +1,15 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.5 (May 24th, 2022) ##
+- Feature: add the `openWebView:url heightMode:heightMode` method to allow to manually open a WebView within the chat. RD-21669
+- Feature: add a `rcShouldDelegateUrlOpening:url` event to `DimeloDelegate` to control whether the Engage Messaging SDK should open a URL or not. RD-21669
+- Fix: in some cases the WebView title wasn't displayed on iOS 15.0. RD-22109
+- Improvement: prevent from sending `messageContextInfo` if it cannot be serialized into json. RD-21579
+- Improvement: prevent from sending `authenticationInfo` if it cannot be serialized into json. RD-22075
+- Fix: prevent multiple WebView from opening when structured message button elements are clicked multiple times. RD-21900
+- Fix: customizations can't be applied to quick replies when using a copy of Dimelo instance. RD-21321
+- Fix: remove the 1000 characters restriction on text input accessory view. RD-13970
+
 ## Dimelo iOS SDK 2.4.4 (March 28th, 2022) ##
 - Improvement: add arm64 architecture support for simulator on Mac with Apple silicon. RD-21653
 - Fix: input accessory view disappears when attachments are disabled. RD-21118

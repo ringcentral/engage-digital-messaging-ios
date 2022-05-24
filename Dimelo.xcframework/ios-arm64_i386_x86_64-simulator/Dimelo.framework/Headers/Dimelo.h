@@ -121,6 +121,17 @@ extern NSString* const DimeloChatDidDisappearNotification;
 @optional
 
 /*!
+ * Called when a URL is going to be opened by the SDK.
+ *
+ * @param url   NSURL the URL that is going to be opened.
+ *
+ * @return `YES`: prevents the Engage Messaging SDK from opening the URL.
+ * @return `NO`: let the Engage Messaging SDK open the URL.
+ *
+ */
+- (BOOL)rcShouldDelegateUrlOpening:(NSURL *)url;
+
+/*!
  * Asks if a notification bar should be displayed.
  *
  * By default, a standard notification slides from the top. When the user taps it,
@@ -328,6 +339,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 @interface Dimelo : NSObject
 
+
+typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
+    RC_WEB_VIEW_FULL_MODE = 0,
+    RC_WEB_VIEW_TALL_MODE = 1,
+    RC_WEB_VIEW_COMPACT_MODE = 2
+};
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Attachments state (retrieval & disabling)
@@ -1378,6 +1395,14 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 - (BOOL)consumeNotificationResponse:(UNNotificationResponse *)response;
 - (BOOL)presentRingCentralNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler;
+
+/*!
+ * Called to open a webView
+ *
+ * @param url   NSURL this is the url to open
+ * @param heightMode   RcWebViewHeightMode this is the webview height (must be RcWebViewHeightMode enum value: RC_WEB_VIEW_FULL_MODE, RC_WEB_VIEW_COMPACT_MODE or RC_WEB_VIEW_TALL_MODE. Default is RC_WEB_VIEW_FULL_MODE)
+ */
+- (void)openWebView:(NSURL *)url heightMode:(RcWebViewHeightMode)heightMode;
 @end
 
 
