@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.4.6 (July 29th, 2022) ##
+- Fix: the welcome message should be always centered on the available space. RD-16383
+- Fix: text input was becoming visible after scrolling even when it was supposed to stay hidden because of the quick replies disabling its display. RD-19905
+- Fix: prevent customized images from being overridden by the SDK default images (bug introduced in `v2.4.4`). RD-23036
+
 ## Dimelo iOS SDK 2.4.5 (May 24th, 2022) ##
 - Feature: add the `openWebView:url heightMode:heightMode` method to allow to manually open a WebView within the chat. RD-21669
 - Feature: add a `rcShouldDelegateUrlOpening:url` event to `DimeloDelegate` to control whether the Engage Messaging SDK should open a URL or not. RD-21669
@@ -11,6 +16,7 @@
 - Fix: remove the 1000 characters restriction on text input accessory view. RD-13970
 
 ## Dimelo iOS SDK 2.4.4 (March 28th, 2022) ##
+- Bug introduced: customized images were overridden by the SDK default images. RD-23036
 - Improvement: add arm64 architecture support for simulator on Mac with Apple silicon. RD-21653
 - Fix: input accessory view disappears when attachments are disabled. RD-21118
 - Fix: some images were taking more than the screen size when opened on some devices. RD-20495
