@@ -18,6 +18,8 @@ extern NSString* const DimeloHTTPErrorDomain;
 #define RC_USER_MESSAGE_DEFAULT_BACKGROUND_COLOR [UIColor colorWithRed:68.0/255.0 green:129.0/255.0 blue:235.0/255.0 alpha:1.0] // #4481EB
 #define RC_CREATE_THREAD_BUTTON_HIGHLIGHTED_COLOR [UIColor colorWithRed:59.0/255.0 green:113.0/255.0 blue:207.0/255.0 alpha:1.0] // #3B71CF
 #define RC_BADGE_BACKGROUND_COLOR [UIColor colorWithRed:240.0/255.0 green:81.0/255.0 blue:42.0/255.0 alpha:1.0] // #F0512A
+#define RC_VIDEO_CALL_REQUEST_BUTTON_COLOR [UIColor colorWithRed:189.0/255.0 green:189.0/255.0 blue:189.0/255.0 alpha:1.0] // #BDBDBD
+#define RC_HIGHLIGHTED_VIDEO_CALL_REQUEST_BUTTON_COLOR [UIColor colorWithRed:103.0/255.0 green:103.0/255.0 blue:103.0/255.0 alpha:1.0] // #676767
 #define RC_GRAY_900 [UIColor colorWithRed:33.0/255.0 green:33.0/255.0 blue:33.0/255.0 alpha:1.0] // #212121
 #define RC_GRAY_800 [UIColor colorWithRed:117.0/255.0 green:117.0/255.0 blue:117.0/255.0 alpha:1.0] // #757575
 #define RC_GRAY_700 [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1.0] // #A1A1A1
@@ -52,6 +54,8 @@ extern NSString* const DimeloWelcomeMessageDidChangeNotification;
  * Posted when `-[Dimelo companyMessage]` property is changed.
  */
 extern NSString* const RcCompanyMessageDidChangeNotification;
+
+extern NSString* const RcVideoCallRequestDidChangeNotification;
 
 /*!
  * Posted when the user sends a message.
@@ -726,6 +730,16 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *createNewThreadImageColor;
 
 /*!
+ * Color applied to the video call request button.
+ */
+@property (nonatomic) UIColor *videoCallRequestButtonColor;
+
+/*!
+ * Highlighted Color applied to the video call request button.
+ */
+@property (nonatomic) UIColor *videoCallRequestButtonHighlightedColor;
+
+/*!
  * Text color for the badge label.
  */
 @property (nonatomic) UIColor *badgeTextColor;
@@ -1072,6 +1086,8 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 
 @property (nonatomic) UIFont* closedThreadMessageTextFont;
 
+@property (nonatomic) UIFont *videoCallRequestedStatusMessageTextFont;
+
 /*!
  * Font for the hour label.
  */
@@ -1083,6 +1099,8 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *dateTextColor;
 
 @property (nonatomic) UIColor* closedThreadMessageTextColor;
+
+@property (nonatomic) UIColor *videoCallRequestedStatusMessageTextColor;
 
 /*!
  * Text color for the hour label.
@@ -1207,6 +1225,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * UIImage for the back to all chats item (applied for the fragment and the view controller).
  */
 @property (nonatomic) UIImage *backToAllChatsItemImage;
+
+/*!
+ * UIImage used to represent the button to request a video call.
+ */
+@property (nonatomic) UIImage *videoCallRequestButtonImage;
 
 /*!
  * UIImage to indicate that the thread is locked in the threads list view.

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.4.6</string>
+	<string>2.5.0</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -28,6 +28,10 @@
 	<string>#A1A1A1</string>
 	<key>createNewThreadImageColor</key>
 	<string>#FFFFFF</string>
+	<key>videoCallRequestButtonColor</key>
+	<string>#BDBDBD</string>
+	<key>videoCallRequestButtonHighlightedColor</key>
+	<string>#676767</string>
 	<key>badgeBackgroundColor</key>
 	<string>#F0512A</string>
 	<key>threadsListSeparatorColor</key>
@@ -105,6 +109,8 @@
 	<key>dateTextColor</key>
 	<string>#A1A1A1</string>
 	<key>closedThreadMessageTextColor</key>
+	<string>#A1A1A1</string>
+	<key>videoCallRequestedStatusMessageTextColor</key>
 	<string>#A1A1A1</string>
 	<key>hourTimeTextColor</key>
 	<string>#A1A1A1</string>
@@ -194,6 +200,13 @@
 		<integer>12</integer>
 	</dict>
 	<key>closedThreadMessageTextFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUIText-Semibold</string>
+		<key>size</key>
+		<integer>12</integer>
+	</dict>
+	<key>videoCallRequestedStatusMessageTextFont</key>
 	<dict>
 		<key>name</key>
 		<string>.SFUIText-Semibold</string>

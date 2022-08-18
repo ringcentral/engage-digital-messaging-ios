@@ -5,6 +5,7 @@
 
 // This is a private declaration only to assist linking with DimeloChatInputAccessoryView.xib outlets.
 __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView : UIView<UITextViewDelegate>
+@property (nonatomic) IBOutlet UIButton *sendVideoCallRequestButton;
 @property (nonatomic) IBOutlet UIButton *attachmentButton;
 @property (nonatomic) IBOutlet DMXTextViewPlaceholder *textView;
 @property (nonatomic) IBOutlet UIButton *sendButton;
@@ -20,6 +21,8 @@ __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView :
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentButtonWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentButtonRightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sendVideoCallRequestButtonWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentButtonTextViewMarginConstraint;
 @property (nonatomic) CGFloat keyboardHeight;
 - (void)updateChatInputAccessoryViewFrame;
 - (BOOL)updateFittingSize;

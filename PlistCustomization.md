@@ -119,6 +119,24 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/2yH86cJk/create-New-Thread-Image-Color.png"/>
 </p>
 
+### videoCallRequestButtonColor
+Color applied to the video call request button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/FK76cgPW/video-Image.png"/>
+</p>
+
+### videoCallRequestButtonHighlightedColor
+Color applied to the video call request button when highlighted.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/vmHfqbCD/video-Image-Highlighted-Color.png"/>
+</p>
+
 ### webViewTitleTextColor
 Color applied to the webView title.
 
@@ -286,6 +304,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/s26X9dnv/close-Text-Color.png"/>
+</p>
+
+### videoCallRequestedStatusMessageTextColor
+Color applied to the status message text when a video call is requested.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/TP8FXW2p/started-Video-Message-Text-Color.png"/>
 </p>
 
 ### webViewHeaderBackgroundColor
@@ -799,6 +826,16 @@ E.g. `name=HelveticaNeue-Regular` and `size=15`.
    <img src="https://i.postimg.cc/C5fVq9tT/close-Font.png"/>
 </p>
 
+### videoCallRequestedStatusMessageTextFont
+Font applied to the status message when a video call is requested.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/2S3LfV9R/started-Video-Message-Text-Font.png"/>
+</p>
+
 ### navigationBarTitleFont
 Font for navigationBar's title.
 Must contain a dictionary with `name` and `size` keys.
@@ -1106,6 +1143,13 @@ UIImage for the create new thread button.
 
 <p align="center">
    <img src="https://i.postimg.cc/KjBHDTpW/back-To-All-Chats-Item-Image.png"/>
+</p>
+
+### videoCallRequestButtonImage
+UIImage used to represent the button to request a video call.
+
+<p align="center">
+   <img src="https://i.postimg.cc/FK76cgPW/video-Image.png"/>
 </p>
 
 ### lockedThreadImage

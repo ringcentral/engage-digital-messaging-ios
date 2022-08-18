@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DimeloChatInputAccessoryView">
             <connections>
                 <outlet property="attachmentButton" destination="4dL-VD-3Vb" id="is3-kB-LPP"/>
-                <outlet property="attachmentButtonRightConstraint" destination="qWN-sM-sPy" id="7ZV-Ut-lsu"/>
+                <outlet property="attachmentButtonRightConstraint" destination="rKK-Eu-Qoo" id="WnO-nV-mBd"/>
+                <outlet property="attachmentButtonTextViewMarginConstraint" destination="idn-z3-z3U" id="VHB-9R-IPQ"/>
                 <outlet property="attachmentButtonWidthConstraint" destination="5Bd-9l-Mnv" id="ec9-Ed-Qb9"/>
                 <outlet property="attachmentImageView" destination="KP7-AG-Cfn" id="5GO-wI-xm3"/>
                 <outlet property="bottomConstraint" destination="4UD-V3-WSZ" id="2B3-Tf-3tH"/>
@@ -18,6 +19,8 @@
                 <outlet property="mainView" destination="nIi-MX-giu" id="is7-HE-bhm"/>
                 <outlet property="rightConstraint" destination="LUY-Kw-Let" id="uJq-kZ-tLP"/>
                 <outlet property="sendButton" destination="fUA-PB-aVf" id="h1C-Z3-rGy"/>
+                <outlet property="sendVideoCallRequestButton" destination="PKF-lw-Q8G" id="zYD-g4-UcZ"/>
+                <outlet property="sendVideoCallRequestButtonWidthConstraint" destination="ahL-Kd-KfP" id="riH-ZT-b0h"/>
                 <outlet property="textView" destination="GNg-UA-tda" id="swI-XG-MuK"/>
                 <outlet property="textViewHeightConstraint" destination="hpv-3c-NZX" id="obT-Zw-bYI"/>
                 <outlet property="toolbar" destination="7So-Pk-JJJ" id="Ghs-nw-xcV"/>
@@ -43,7 +46,7 @@
                                 <constraint firstAttribute="width" constant="96" id="yuM-NL-178"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-PB-aVf">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-PB-aVf">
                             <rect key="frame" x="412" y="22" width="36" height="36"/>
                             <accessibility key="accessibilityConfiguration" identifier="send_button"/>
                             <constraints>
@@ -58,20 +61,6 @@
                                 <action selector="send:" destination="-1" eventType="touchUpInside" id="rHM-AU-SmN"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-UA-tda" customClass="DMXTextViewPlaceholder">
-                            <rect key="frame" x="54" y="20" width="350" height="40"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <accessibility key="accessibilityConfiguration" identifier="text_field"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="hpv-3c-NZX"/>
-                            </constraints>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="gQp-sU-Uzq"/>
-                            </connections>
-                        </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-VD-3Vb" userLabel="Attachment Button">
                             <rect key="frame" x="10" y="22" width="36" height="36"/>
                             <accessibility key="accessibilityConfiguration" identifier="select_attachment"/>
@@ -87,18 +76,49 @@
                                 <action selector="addAttachment:" destination="-1" eventType="touchUpInside" id="mYq-sR-edx"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-lw-Q8G" userLabel="Attachment Button">
+                            <rect key="frame" x="50" y="22" width="36" height="36"/>
+                            <accessibility key="accessibilityConfiguration" identifier="select_attachment"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="ahL-Kd-KfP"/>
+                                <constraint firstAttribute="height" constant="36" id="y7f-oM-fnC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sendVideoCallRequestButtonAction:" destination="-1" eventType="touchUpInside" id="Ba9-57-RsY"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-UA-tda" customClass="DMXTextViewPlaceholder">
+                            <rect key="frame" x="94" y="20" width="310" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" identifier="text_field"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="hpv-3c-NZX"/>
+                            </constraints>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="gQp-sU-Uzq"/>
+                            </connections>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="fUA-PB-aVf" firstAttribute="leading" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="8" id="1bf-sG-w8U"/>
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" id="GUK-Ne-Adc"/>
-                        <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" constant="20" id="Iu9-Ep-ioT"/>
+                        <constraint firstItem="GNg-UA-tda" firstAttribute="top" secondItem="nIi-MX-giu" secondAttribute="top" priority="750" constant="20" id="Iu9-Ep-ioT"/>
                         <constraint firstAttribute="trailing" secondItem="fUA-PB-aVf" secondAttribute="trailing" constant="10" id="LUY-Kw-Let"/>
                         <constraint firstItem="fUA-PB-aVf" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="-2" id="TRk-YP-bAm"/>
+                        <constraint firstItem="PKF-lw-Q8G" firstAttribute="centerY" secondItem="4dL-VD-3Vb" secondAttribute="centerY" id="drD-tX-9KC"/>
                         <constraint firstItem="KP7-AG-Cfn" firstAttribute="trailing" secondItem="GNg-UA-tda" secondAttribute="trailing" constant="5" id="epx-61-RWK"/>
                         <constraint firstItem="4dL-VD-3Vb" firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="-2" id="hZH-34-Sx5"/>
-                        <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" constant="8" id="qWN-sM-sPy"/>
-                        <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" constant="20" id="whH-8i-o17"/>
+                        <constraint firstItem="GNg-UA-tda" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" constant="8" id="idn-z3-z3U"/>
+                        <constraint firstItem="PKF-lw-Q8G" firstAttribute="leading" secondItem="4dL-VD-3Vb" secondAttribute="trailing" constant="4" id="rKK-Eu-Qoo"/>
+                        <constraint firstAttribute="bottom" secondItem="GNg-UA-tda" secondAttribute="bottom" priority="750" constant="20" id="whH-8i-o17"/>
                     </constraints>
                 </view>
             </subviews>
@@ -116,7 +136,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-370" y="109"/>
+            <point key="canvasLocation" x="-371.19999999999999" y="108.84557721139431"/>
         </view>
     </objects>
 </document>

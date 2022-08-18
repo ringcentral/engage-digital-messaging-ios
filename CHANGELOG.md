@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.5.0 (August 18th, 2022) ##
+- Feature: add support for Switch to Video. RD-22178
+- Fix: the input text placeholder wasn't correctly displayed on iOS 16.0. RD-23151
+- Improvement: do not display "View previous messages" when there are no previous messages. RD-17043
+
 ## Dimelo iOS SDK 2.4.6 (July 29th, 2022) ##
 - Fix: the welcome message should be always centered on the available space. RD-16383
 - Fix: text input was becoming visible after scrolling even when it was supposed to stay hidden because of the quick replies disabling its display. RD-19905

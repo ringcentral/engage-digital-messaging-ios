@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/DimeloLocalizable.strings</key>
 		<data>
-		/ps28qW5aIn91aiqjyVCpegjyrk=
+		zsxLrr/GLec25Uae1mjNKzMqrWc=
 		</data>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
 		<data>
@@ -236,6 +236,18 @@
 		<data>
 		5VRwcZURn8NJK6O5fHByHqS6U+c=
 		</data>
+		<key>Dimelo.bundle/RcVideoCallRequest.png</key>
+		<data>
+		e4MT1FAQUo4kFmnd52Gffcgy1co=
+		</data>
+		<key>Dimelo.bundle/RcVideoCallRequest@2x.png</key>
+		<data>
+		3kKeXoEJ8JlHeSfaXn5sEarrEas=
+		</data>
+		<key>Dimelo.bundle/RcVideoCallRequest@3x.png</key>
+		<data>
+		xYHOZHSfalWg5dV+FKOxGRhgvoE=
+		</data>
 		<key>Dimelo.bundle/audio_icon.png</key>
 		<data>
 		b8Hi7ejB7PdIwQ0peZehPreBGl0=
@@ -346,11 +358,11 @@
 		</data>
 		<key>DimeloChatInputAccessoryView.h</key>
 		<data>
-		93aniuy2WpFstFwPIQVs4XA6kUA=
+		PUMBFtZkMLV+p+Mf+T+0GQxWbSk=
 		</data>
 		<key>DimeloChatInputAccessoryView.nib</key>
 		<data>
-		9B/fT9u60SmqHa7eDJ3Lo+xJG/g=
+		M2S0OPALCtXqdtY5PM4+DQ6pTio=
 		</data>
 		<key>DimeloChatNotificationContentView.nib</key>
 		<data>
@@ -358,11 +370,11 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		jQDCUekA4nx7A9gvV1Y6zwRERqE=
+		jbf0jtkV4Yk8RpZ4a8lQhYxSWeQ=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
-		SdFfBpa3a2tGf4+/UT0n5kTpR7k=
+		hXFZHMj6yfIOtROd8ftOtVy2R48=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -380,7 +392,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cSA7fouEV9N+6E6s7vwoHMHuQTQ=
+			H2Fh9SgrCGGmZeutgYwqfgPvzI8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -389,7 +401,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/ps28qW5aIn91aiqjyVCpegjyrk=
+			zsxLrr/GLec25Uae1mjNKzMqrWc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -398,7 +410,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b3vrr6oGgOXR8F8cMVzJceh/6uY=
+			dC1dZAQbAQusDWI0v4qsJlMiRUg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -410,11 +422,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/ps28qW5aIn91aiqjyVCpegjyrk=
+			zsxLrr/GLec25Uae1mjNKzMqrWc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QXrKzeHcgQ0qNoG/3kfezm9z/B/d4rIkZnAesLyXjwo=
+			hZVBavoeiyKAH6+SIUpN3IiTDOEfYtzlNC19ybrKQDY=
 			</data>
 		</dict>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
@@ -1044,6 +1056,39 @@
 			SXnSSFMknFBIfe8j917qJCj89YlMwIdoYtS0p9kCKn4=
 			</data>
 		</dict>
+		<key>Dimelo.bundle/RcVideoCallRequest.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e4MT1FAQUo4kFmnd52Gffcgy1co=
+			</data>
+			<key>hash2</key>
+			<data>
+			fW5eSLidtZgfIM/NjOSlcL0mCT9o7Fc9oFaKOUs0kFw=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcVideoCallRequest@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3kKeXoEJ8JlHeSfaXn5sEarrEas=
+			</data>
+			<key>hash2</key>
+			<data>
+			IWpFsRsO1RRQwR/uHPmLMoxynjY05vFydyPZS1R5VT8=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcVideoCallRequest@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xYHOZHSfalWg5dV+FKOxGRhgvoE=
+			</data>
+			<key>hash2</key>
+			<data>
+			GOQ9z6yaascFO9K1nGPOHZDNU7USQVBiU/BZ27QAxkg=
+			</data>
+		</dict>
 		<key>Dimelo.bundle/audio_icon.png</key>
 		<dict>
 			<key>hash</key>
@@ -1345,22 +1390,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			93aniuy2WpFstFwPIQVs4XA6kUA=
+			PUMBFtZkMLV+p+Mf+T+0GQxWbSk=
 			</data>
 			<key>hash2</key>
 			<data>
-			hT7ioxKcWusUsdfybYc48XbU5IWosgcR+w1NhREoObA=
+			u2fSYfOYQ7NiTkJA98eXmfFpQjjJpTw+SG3AmFg3qN8=
 			</data>
 		</dict>
 		<key>DimeloChatInputAccessoryView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9B/fT9u60SmqHa7eDJ3Lo+xJG/g=
+			M2S0OPALCtXqdtY5PM4+DQ6pTio=
 			</data>
 			<key>hash2</key>
 			<data>
-			Serw2vplVwgriQMLpuLNKq5mXYJghPbu4vdFRfy33QM=
+			lllKYkf96mfGj6DL4g7tI4pnLCYvIUhIyPN8IcncNfg=
 			</data>
 		</dict>
 		<key>DimeloChatNotificationContentView.nib</key>
@@ -1378,22 +1423,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jQDCUekA4nx7A9gvV1Y6zwRERqE=
+			jbf0jtkV4Yk8RpZ4a8lQhYxSWeQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			opjL7ozeXU6UzVW5R+HwF4pXkQAReZGSaQLhe5t8Wm4=
+			wCruR+lpkFezZi5BhF5/l7NNnvJs8aEjatGEmaahdyc=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SdFfBpa3a2tGf4+/UT0n5kTpR7k=
+			hXFZHMj6yfIOtROd8ftOtVy2R48=
 			</data>
 			<key>hash2</key>
 			<data>
-			7xRvBnlwmVo3xsjZRcuKOkuic6VZJxz6cZSyPQeG6lM=
+			D11/eXUapovCdQ2u445yK/5kufLGdiDCSMZKJRSoGxE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1422,11 +1467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cSA7fouEV9N+6E6s7vwoHMHuQTQ=
+			H2Fh9SgrCGGmZeutgYwqfgPvzI8=
 			</data>
 			<key>hash2</key>
 			<data>
-			1ckebDPnmloJUwGq/aMR1cjK6xy2hARWMeJz4GSW5dQ=
+			9JDdMS17xCFPwpVGpiogfFvrq1PP6fZEoXd6J9v72p8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1435,11 +1480,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/ps28qW5aIn91aiqjyVCpegjyrk=
+			zsxLrr/GLec25Uae1mjNKzMqrWc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QXrKzeHcgQ0qNoG/3kfezm9z/B/d4rIkZnAesLyXjwo=
+			hZVBavoeiyKAH6+SIUpN3IiTDOEfYtzlNC19ybrKQDY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1448,11 +1493,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b3vrr6oGgOXR8F8cMVzJceh/6uY=
+			dC1dZAQbAQusDWI0v4qsJlMiRUg=
 			</data>
 			<key>hash2</key>
 			<data>
-			BMBQbO6f2u5Xuk0660/8Ix+p8v2C6l+Q+OYBIk0OFaI=
+			j214GbfAhRz9a/7p5l4V87HiwIXeVS7vOXB5qmhn4o4=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -37,3 +37,4 @@
 "rcWaitingForAgentMessage" = "En attente d'un agent";
 "rcBackToAllChats" = "Voir toutes les discussions";
 "rcClosedThreadMessage" = "La conversation est terminée";
+"rcVideoCallRequestedStatusMessage" = "Vous serez bientôt connecté à un appel vidéo";

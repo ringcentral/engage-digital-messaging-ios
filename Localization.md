@@ -16,6 +16,16 @@ Dimelo localization
 
 - add these keys to DimeloLocalizable.strings file if you want to change the default dimelo translation
 
+### rcVideoCallRequestedStatusMessage
+Text displayed in the status message when a video call is requested.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/hGZyfFmV/rc-Started-Video-Message-Chat.png"/>
+</p>
+
 ### rcThreadsTitle
 Title of the threads list window.
 
