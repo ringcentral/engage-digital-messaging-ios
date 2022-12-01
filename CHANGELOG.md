@@ -1,5 +1,13 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.5.1 (December 1st, 2022) ##
+- Fix: carousel structured messages weren't fully displayed on some devices with smaller screen. RD-24413
+- Improvement: change the "conversation has ended" text color to `#A1A1A1`. RD-23012
+- Fix: the text input was still displayed when the gallery was opened on iOS 15. RD-24171
+- Improvement: increase the default "Switch to Video" icon size. RD-23293
+- Fix: message customizations couldn't be applied when using a copy of the SDK instance. RD-22068
+- Fix: messages under the "back to all chats" blue header disappears instead of still being visible. RD-20034
+
 ## Dimelo iOS SDK 2.5.0 (August 18th, 2022) ##
 - Feature: add support for Switch to Video. RD-22178
 - Fix: the input text placeholder wasn't correctly displayed on iOS 16.0. RD-23151
