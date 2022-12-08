@@ -288,6 +288,34 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/8zBzb3Vt/list-Threads-Date-Font.png"/>
 </p>
 
+### attachmentActionSheetItemsTextColor
+Text color for each attachment action sheet item button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/GmksQ8D3/attachment-Action-Sheet-Items-Text-Color.png"/>
+</p>
+
+### attachmentActionSheetCancelButtonTextColor
+Text color for the attachment action sheet cancel button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/TwZD0rtw/cancel-Attachment-Action-Sheet-Text-Color.png"/>
+</p>
+
+
+### attachmentActionSheetItemsIconColor
+Color for each attachment action sheet item icon.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/nh7qPSyJ/attachment-Action-Sheet-Items-Icon-Color.png"/>
+</p>
+
 ### fragmentHeaderColor
 Color for the fragment header.
 
@@ -1120,6 +1148,34 @@ In the screenshot, top=60, right=40, bottom=20, left=0.
 
 ## Images
 
+### attachmentActionSheetCameraIcon
+UIImage for the attachment action sheet camera icon.
+
+<p align="center">
+   <img src="https://i.postimg.cc/KcQtmrfb/camera-Attachment-Action-Sheet-Icon.png"/>
+</p>
+
+### attachmentActionSheetGalleryIcon
+UIImage for the attachment action sheet gallery icon.
+
+<p align="center">
+   <img src="https://i.postimg.cc/mD9R8wrH/gallery-Attachment-Action-Sheet-Icon.png"/>
+</p>
+
+### attachmentActionSheetDocumentIcon
+UIImage for the attachment action sheet document icon.
+
+<p align="center">
+   <img src="https://i.postimg.cc/PxQVXp37/document-Attachment-Action-Sheet-Icon.png"/>
+</p>
+
+### attachmentActionSheetLocationIcon
+UIImage for the attachment action sheet location icon.
+
+<p align="center">
+   <img src="https://i.postimg.cc/X7RfPNxB/location-Attachment-Action-Sheet-Icon.png"/>
+</p>
+
 ### webViewCloseImage
 UIImage used to represent the webView "close" button that is displayed in the header.
 
@@ -1237,6 +1293,11 @@ In the screenshot, top=18, left=19, bottom=18, right=36.
 Flag to set to enable/disable threads.
 
 Must be a boolean, default is `NO`.
+
+### displayAttachmentActionSheetIcons
+* Flag to set to display/hide attachment action sheet icons
+
+Must be a boolean, default is `YES`.
 
 ### embeddedAsFragment
 Flag to set to embed or not the Dimelo view as a fragment.

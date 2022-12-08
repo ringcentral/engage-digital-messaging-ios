@@ -8,11 +8,12 @@
 "dimeloChatTitle" = "Chat";
 "dimeloSendButtonTitle" = "Senden";
 "rcSendButtonAccessibilityLabel" = "Senden";
-"dimeloChoosePhotoButtonTitle" = "Foto auswählen";
-"dimeloLocationButtonTitle" ="Standort teilen";
+"dimeloChoosePhotoButtonTitle" = "Foto- und Videomediathek";
+"rcChooseDocumentButtonTitle" = "Dokument";
+"dimeloLocationButtonTitle" = "Standort";
 "dimeloCancelButtonTitle" ="Abbrechen";
 "dimeloLoadMoreMessagesButtonTitle" = "Vorherige Beiträge anzeigen";
-"dimeloTakePhotoButtonTitle" = "Foto aufnehmen";
+"dimeloTakePhotoButtonTitle" = "Kamera";
 "dimeloFailedLocatePosition" = "Ihre Position konnte nicht gefunden werden";
 "dimeloSettings" = "Einstellungen";
 "dimeloAuthorizeLocation" = "Bitte rufen Sie \"Einstellungen\" auf und autorisieren %@ Sie den Zugriff auf Ihren Standort";

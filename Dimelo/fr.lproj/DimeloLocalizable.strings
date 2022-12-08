@@ -8,11 +8,12 @@
 "dimeloChatTitle" = "Chat";
 "dimeloSendButtonTitle" = "Envoyer";
 "rcSendButtonAccessibilityLabel" = "Envoyer";
-"dimeloChoosePhotoButtonTitle" = "Choisir une photo";
-"dimeloLocationButtonTitle" ="Partager une position";
+"dimeloChoosePhotoButtonTitle" = "Bibliothèque Photo et Vidéo";
+"rcChooseDocumentButtonTitle" = "Document";
+"dimeloLocationButtonTitle" = "Localisation";
 "dimeloCancelButtonTitle" ="Annuler";
 "dimeloLoadMoreMessagesButtonTitle" = "Voir les messages précédents";
-"dimeloTakePhotoButtonTitle" = "Prendre une photo";
+"dimeloTakePhotoButtonTitle" = "Caméra";
 "dimeloFailedLocatePosition" = "Impossible de localiser votre position";
 "dimeloSettings" = "Paramètres";
 "dimeloAuthorizeLocation" = "Allez dans l'application Paramètres et autorisez %@ à accéder à votre position";

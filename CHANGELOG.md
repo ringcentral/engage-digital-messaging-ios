@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.0 (December 8th, 2022) ##
+- Feature: add support for videos in the gallery selection. RD-23867
+- Feature: add support for documents in the attachment action sheet. RD-23868
+- Design: revamp the attachment action sheet. RD-23869
+
 ## Dimelo iOS SDK 2.5.1 (December 1st, 2022) ##
 - Fix: carousel structured messages weren't fully displayed on some devices with smaller screen. RD-24413
 - Improvement: change the "conversation has ended" text color to `#A1A1A1`. RD-23012

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/DimeloLocalizable.strings</key>
 		<data>
-		zsxLrr/GLec25Uae1mjNKzMqrWc=
+		x30oT1ayJZzUqhrynETwp1rUnkc=
 		</data>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
 		<data>
@@ -200,6 +200,18 @@
 		<data>
 		dnVZRx1GSpqmaF9TiKvTgHU0/YI=
 		</data>
+		<key>Dimelo.bundle/RcCamera.png</key>
+		<data>
+		U2/J9MkmEntNWaoS/lQ51LsOCyg=
+		</data>
+		<key>Dimelo.bundle/RcCamera@2x.png</key>
+		<data>
+		T2fL9xFMehyLC1XxGDXFMYVDGnY=
+		</data>
+		<key>Dimelo.bundle/RcCamera@3x.png</key>
+		<data>
+		hxtVk3GrBLKtQf+EyF092dg8MOc=
+		</data>
 		<key>Dimelo.bundle/RcCloseWebView.png</key>
 		<data>
 		OoiSkDvZWqyfylCy+JT/Dpw5k4E=
@@ -211,6 +223,42 @@
 		<key>Dimelo.bundle/RcCloseWebView@3x.png</key>
 		<data>
 		wsdF9P++AdhAwv78fl0ZosuM1Qc=
+		</data>
+		<key>Dimelo.bundle/RcDocument.png</key>
+		<data>
+		tZjdJeXOBOABGGNlumpIvoauOIY=
+		</data>
+		<key>Dimelo.bundle/RcDocument@2x.png</key>
+		<data>
+		iXfYvDUoPeNZitkf6hWYu7BKbWs=
+		</data>
+		<key>Dimelo.bundle/RcDocument@3x.png</key>
+		<data>
+		1ine51eDIfUnio8Z8uZZBVd+9S0=
+		</data>
+		<key>Dimelo.bundle/RcGallery.png</key>
+		<data>
+		zHw1N9OlvKS51GvMv+hF7mrbHXc=
+		</data>
+		<key>Dimelo.bundle/RcGallery@2x.png</key>
+		<data>
+		r1NDic6k73bSzandFGj236VVpuQ=
+		</data>
+		<key>Dimelo.bundle/RcGallery@3x.png</key>
+		<data>
+		my36jky+PlP54/UsSdcM/DI5SeI=
+		</data>
+		<key>Dimelo.bundle/RcLocation.png</key>
+		<data>
+		SpD9LdaKfVd7chKsuTPkybqhzY0=
+		</data>
+		<key>Dimelo.bundle/RcLocation@2x.png</key>
+		<data>
+		DUxY1STbfeQeJ4fy9WaSHCZy+R8=
+		</data>
+		<key>Dimelo.bundle/RcLocation@3x.png</key>
+		<data>
+		/j4Wd5rAoQM4KiIcg697A0r2iFo=
 		</data>
 		<key>Dimelo.bundle/RcStartNewThread.png</key>
 		<data>
@@ -370,15 +418,15 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		L4JEbbm2+9yY0+oHLPPys5v97Zk=
+		utK9A2WKohHQwhTVqnPogT7wHd0=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
-		hXFZHMj6yfIOtROd8ftOtVy2R48=
+		CAtFu9JaPaaJFHvSs62WiT5lpSQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bHWvBlFrIxeUUT+XPamccoeo2+I=
+		l93QK15boy3NOnuNhjHOEFWY+ac=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -392,7 +440,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H2Fh9SgrCGGmZeutgYwqfgPvzI8=
+			7UweehIoqrkUZNkc2gzu8kFGenM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -401,7 +449,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zsxLrr/GLec25Uae1mjNKzMqrWc=
+			x30oT1ayJZzUqhrynETwp1rUnkc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -410,7 +458,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dC1dZAQbAQusDWI0v4qsJlMiRUg=
+			RKUdc9RpuWOUjBwaWZUQw4wvAEY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -422,11 +470,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zsxLrr/GLec25Uae1mjNKzMqrWc=
+			x30oT1ayJZzUqhrynETwp1rUnkc=
 			</data>
 			<key>hash2</key>
 			<data>
-			hZVBavoeiyKAH6+SIUpN3IiTDOEfYtzlNC19ybrKQDY=
+			vcMfb7XTItdmJj0H/U2pLSae0wIKNL3oHDcTTPCtLIs=
 			</data>
 		</dict>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
@@ -957,6 +1005,39 @@
 			V6J4SdYtKyAat9ERKWLA/3pnxAfTuLRGyBFjugdZgdM=
 			</data>
 		</dict>
+		<key>Dimelo.bundle/RcCamera.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			U2/J9MkmEntNWaoS/lQ51LsOCyg=
+			</data>
+			<key>hash2</key>
+			<data>
+			U8uK0kkiab9JECP6DQN7PmpDcRSK99nxz2hT8nNTiZQ=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcCamera@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			T2fL9xFMehyLC1XxGDXFMYVDGnY=
+			</data>
+			<key>hash2</key>
+			<data>
+			3gJexKkSxG6Ezl004jbBXkOz5pr0QfkQt5Y/GlvQGdE=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcCamera@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hxtVk3GrBLKtQf+EyF092dg8MOc=
+			</data>
+			<key>hash2</key>
+			<data>
+			MpOdWM+GXrCSBoSIjwGG8jXS26swEPGUP2D/yTWwpI4=
+			</data>
+		</dict>
 		<key>Dimelo.bundle/RcCloseWebView.png</key>
 		<dict>
 			<key>hash</key>
@@ -988,6 +1069,105 @@
 			<key>hash2</key>
 			<data>
 			xuV9XYs+zEXgDPMNwYs5kpitQsegAsRUKErAd7v16EU=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcDocument.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tZjdJeXOBOABGGNlumpIvoauOIY=
+			</data>
+			<key>hash2</key>
+			<data>
+			CN4HbntVJNiOiupZFLDDZ78E58kCtqFeyvZFvNaqCbg=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcDocument@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iXfYvDUoPeNZitkf6hWYu7BKbWs=
+			</data>
+			<key>hash2</key>
+			<data>
+			qFtqtIOk9jktsCmt+k2FhVdAzyMEIQ2vrHMIqw8OqK8=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcDocument@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1ine51eDIfUnio8Z8uZZBVd+9S0=
+			</data>
+			<key>hash2</key>
+			<data>
+			mycmR2bw3hIYDLmXF+1UPGgwjR4/KfPAOMZJPz0nb84=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcGallery.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zHw1N9OlvKS51GvMv+hF7mrbHXc=
+			</data>
+			<key>hash2</key>
+			<data>
+			7x9QOH5O/JO6AcjZPSCw1H10oXCBrFhrxRfn05Y3K0k=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcGallery@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r1NDic6k73bSzandFGj236VVpuQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			IIWSWwba4Iv/Sg/pmxecMtXrr7Sk7Ks1IFTfynNXSHM=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcGallery@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			my36jky+PlP54/UsSdcM/DI5SeI=
+			</data>
+			<key>hash2</key>
+			<data>
+			U8JAsmUQqecV7C2EvACIBigF4herzEjVnKo4KDIXDkM=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcLocation.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SpD9LdaKfVd7chKsuTPkybqhzY0=
+			</data>
+			<key>hash2</key>
+			<data>
+			vyH3bBHsh/TdgWOZFxGTetcQ8PqVyxbDWJMy/6+iBdI=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcLocation@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DUxY1STbfeQeJ4fy9WaSHCZy+R8=
+			</data>
+			<key>hash2</key>
+			<data>
+			7h/DM8bYpH/EyQB9/xisOYmt+uMgfbSa2CvvYCOS0u0=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/RcLocation@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/j4Wd5rAoQM4KiIcg697A0r2iFo=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzVZ5M6OZgVABk6deq/TNUeMdjdHGT4fz9tWRGUuqPs=
 			</data>
 		</dict>
 		<key>Dimelo.bundle/RcStartNewThread.png</key>
@@ -1423,22 +1603,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L4JEbbm2+9yY0+oHLPPys5v97Zk=
+			utK9A2WKohHQwhTVqnPogT7wHd0=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/BeUvXC7eNzPLOytwiAdZfJze1TNatExhZNaXnUiho=
+			nlLJcAlZ1+ixk6VwfC75WYb0BUFdfRM19yTdybkatqo=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hXFZHMj6yfIOtROd8ftOtVy2R48=
+			CAtFu9JaPaaJFHvSs62WiT5lpSQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			D11/eXUapovCdQ2u445yK/5kufLGdiDCSMZKJRSoGxE=
+			KIWdK61RHcUj6IljXM+jOahfZiL6YROorfz3g/Di5Jw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1467,11 +1647,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H2Fh9SgrCGGmZeutgYwqfgPvzI8=
+			7UweehIoqrkUZNkc2gzu8kFGenM=
 			</data>
 			<key>hash2</key>
 			<data>
-			9JDdMS17xCFPwpVGpiogfFvrq1PP6fZEoXd6J9v72p8=
+			jjCed+QU7Y9tqwjo7OUjs8y7pthY2EQ3Hx3qOLMfoUs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1480,11 +1660,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zsxLrr/GLec25Uae1mjNKzMqrWc=
+			x30oT1ayJZzUqhrynETwp1rUnkc=
 			</data>
 			<key>hash2</key>
 			<data>
-			hZVBavoeiyKAH6+SIUpN3IiTDOEfYtzlNC19ybrKQDY=
+			vcMfb7XTItdmJj0H/U2pLSae0wIKNL3oHDcTTPCtLIs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1493,11 +1673,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dC1dZAQbAQusDWI0v4qsJlMiRUg=
+			RKUdc9RpuWOUjBwaWZUQw4wvAEY=
 			</data>
 			<key>hash2</key>
 			<data>
-			j214GbfAhRz9a/7p5l4V87HiwIXeVS7vOXB5qmhn4o4=
+			zxxYqpJVif4gZx1t/k41bC/SsCApAFqgt6DXbALnDew=
 			</data>
 			<key>optional</key>
 			<true/>

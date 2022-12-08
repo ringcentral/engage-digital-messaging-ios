@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.5.1</string>
+	<string>2.6.0</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -22,6 +22,10 @@
 	<string></string>
 	<key>badgeTextColor</key>
 	<string>#FFFFFF</string>
+	<key>attachmentActionSheetItemsTextColor</key>
+	<string>#4481EB</string>
+	<key>attachmentActionSheetCancelButtonTextColor</key>
+	<string>#4481EB</string>
 	<key>webViewActivityIndicatorColor</key>
 	<string>#212121</string>
 	<key>webViewCloseImageColor</key>
@@ -62,6 +66,8 @@
 	<string>#000000</string>
 	<key>threadsListDateTextColor</key>
 	<string>#A1A1A1</string>
+	<key>attachmentActionSheetItemsIconColor</key>
+	<string>#4481EB</string>
 	<key>userMessageTextColor</key>
 	<string>#FFFFFF</string>
 	<key>agentMessageTextColor</key>
@@ -287,6 +293,8 @@
 	<key>enableLightStatusBarStyle</key>
 	<false/>
 	<key>showAgentAvatarImage</key>
+	<true/>
+	<key>displayAttachmentActionSheetIcons</key>
 	<true/>
 </dict>
 </plist>

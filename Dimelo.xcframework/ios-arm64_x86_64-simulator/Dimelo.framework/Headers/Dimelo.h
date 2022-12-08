@@ -359,6 +359,9 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  *
  */
 + (void)disableLibraryAttachment;
++ (void)disablePhotoLibraryAttachment;
++ (void)disableVideoLibraryAttachment;
++ (void)disableDocumentAttachment;
 + (void)disableCameraAttachment;
 + (void)disableLocationAttachment;
 + (void)disableAttachments;
@@ -368,6 +371,9 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  *
  */
 + (bool)isLibraryAttachmentEnabled;
++ (bool)isPhotoLibraryAttachmentEnabled;
++ (bool)isVideoLibraryAttachmentEnabled;
++ (bool)isDocumentAttachmentEnabled;
 + (bool)isCameraAttachmentEnabled;
 + (bool)isLocationAttachmentEnabled;
 + (bool)isAttachmentsEnabled;
@@ -820,6 +826,16 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *threadsListDateTextColor;
 
 /*!
+ * Text color for each attachment action sheet item button.
+ */
+@property (nonatomic) UIColor *attachmentActionSheetItemsTextColor;
+
+/*!
+ * Text color for the attachment action sheet cancel button.
+ */
+@property (nonatomic) UIColor *attachmentActionSheetCancelButtonTextColor;
+
+/*!
  * Tint color for aux controls: Close button, Send button, cursor etc.
  */
 @property (nonatomic) UIColor *tintColor;
@@ -848,6 +864,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Background color for navigation bar (sets `backgroundColor` property).
  */
 @property (nonatomic) UIColor *navigationBarColor;
+
+/*!
+ * Icon color for each attachment action sheet icon.
+ */
+@property (nonatomic) UIColor *attachmentActionSheetItemsIconColor;
 
 /*!
  * Title for the chat.
@@ -1217,6 +1238,26 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIImage* webViewCloseImage;
 
 /*!
+ * UIImage for camera attachment action sheet Icon.
+ */
+@property (nonatomic) UIImage *attachmentActionSheetCameraIcon;
+
+/*!
+ * UIImage for gallery attachment action sheet Icon.
+ */
+@property (nonatomic) UIImage *attachmentActionSheetGalleryIcon;
+
+/*!
+ * UIImage for document attachment action sheet Icon.
+ */
+@property (nonatomic) UIImage *attachmentActionSheetDocumentIcon;
+
+/*!
+ * UIImage for location attachment action sheet Icon.
+ */
+@property (nonatomic) UIImage *attachmentActionSheetLocationIcon;
+
+/*!
  * UIImage for the create new thread button.
  */
 @property (nonatomic) UIImage *createNewThreadImage;
@@ -1335,6 +1376,12 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIEdgeInsets agentAttachmentTitleInsets;
 
 /*!
+*  Insets for file name and size label (inside the user message bubble).
+*
+*/
+@property (nonatomic) UIEdgeInsets userAttachmentTitleInsets;
+
+/*!
  * Bar tint color of the input bar.
  */
 @property (nonatomic) UIColor *inputBarTintColor;
@@ -1393,6 +1440,12 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 * Default is `NO`.
 */
 @property (nonatomic) BOOL enableThreads;
+
+/*!
+* Flag to set to display/hide attachment action sheet icons
+* Default is `YES`.
+*/
+@property (nonatomic) BOOL displayAttachmentActionSheetIcons;
 
 /*!
  * Called when reply notification is called.
