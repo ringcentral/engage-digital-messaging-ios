@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.1 (January 13th, 2023) ##
+- Feature: support auto open of richlink survey webview link. RD-24457
+- Fix: system structured messages weren't displayed correctly. RD-24706
+
 ## Dimelo iOS SDK 2.6.0 (December 8th, 2022) ##
 - Feature: add support for videos in the gallery selection. RD-23867
 - Feature: add support for documents in the attachment action sheet. RD-23868
