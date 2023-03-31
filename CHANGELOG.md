@@ -1,5 +1,11 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.2 (March 31th, 2023) ##
+- Fix: some messages could disappear if internet connection was stopped while the message was being sent. RD-20315
+- Fix: some messages were disappearing after successfully retrying to send a message after an error occured. RD-17208
+- Fix: prevent the chat from automatically scrolling to the bottom after clicking the "View previous messages" button. RD-23414
+- Improvement: hide the text input when the retry action sheet is displayed. RD-25229
+
 ## Dimelo iOS SDK 2.6.1 (January 13th, 2023) ##
 - Feature: support auto open of richlink survey webview link. RD-24457
 - Fix: system structured messages weren't displayed correctly. RD-24706

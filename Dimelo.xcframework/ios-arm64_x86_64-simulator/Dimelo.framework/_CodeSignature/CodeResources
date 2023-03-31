@@ -418,7 +418,7 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		7H66r4X6ub+XP/ZKtCu21OeOBTQ=
+		EEKrFuKKz9XKzUFK+cpJFHvWR/8=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
@@ -426,7 +426,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GWh1UrMvnqPBympDgDSNdrp9g50=
+		jiCUbhI1OwO6CM6DykOaYMdVe6Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1603,11 +1603,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7H66r4X6ub+XP/ZKtCu21OeOBTQ=
+			EEKrFuKKz9XKzUFK+cpJFHvWR/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			se63M4zHivIEOqKDSzj6b0McNhWePmSJlRCUem+/F2g=
+			AP/7sX8wjCewSNw+x6Cdvfl3IgHDiuDK8g1PRVsK560=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
