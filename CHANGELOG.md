@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.3 (October 5th, 2023) ##
+- Feature: add support for message deletion. RD-27116
+- Minor: bump `Minimum Deployment Target` to **iOS 11.0** (was **iOS 8.0**). RD-27130
+
 ## Dimelo iOS SDK 2.6.2 (March 31th, 2023) ##
 - Fix: some messages could disappear if internet connection was stopped while the message was being sent. RD-20315
 - Fix: some messages were disappearing after successfully retrying to send a message after an error occured. RD-17208

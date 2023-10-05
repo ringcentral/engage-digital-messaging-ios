@@ -1,4 +1,4 @@
-/* 
+/*
   DimeloLocalizable.strings
   Dimelo
 
@@ -39,3 +39,9 @@
 "rcBackToAllChats" = "Alle Chats anzeigen";
 "rcClosedThreadMessage" = "Die Konversation ist beendet";
 "rcVideoCallRequestedStatusMessage" = "You will be connected to a video call shortly";
+"rcDeleteMessageButtonTitle" = "Für alle löschen";
+"rcDeleteMessageConfirmationDialogTitle" = "Für alle löschen";
+"rcDeleteMessageConfirmationDialogDescription" = "Sind Sie sicher, dass Sie diese Nachricht für alle löschen möchten ?";
+"rcDeleteMessageConfirmationDialogDeleteButtonTitle" = "Löschen";
+"rcCopyMessageButtonTitle" = "Kopieren";
+"rcDeletedMessageReplacementText" = "Sie haben diese Nachricht für alle gelöscht.";

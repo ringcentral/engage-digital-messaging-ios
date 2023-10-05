@@ -39,3 +39,9 @@
 "rcBackToAllChats" = "Voir toutes les discussions";
 "rcClosedThreadMessage" = "La conversation est terminée";
 "rcVideoCallRequestedStatusMessage" = "Vous serez bientôt connecté à un appel vidéo";
+"rcDeleteMessageButtonTitle" = "Supprimer pour tout le monde";
+"rcDeleteMessageConfirmationDialogTitle" = "Supprimer pour tout le monde";
+"rcDeleteMessageConfirmationDialogDescription" = "Êtes-vous sûr de vouloir supprimer ce message pour tout le monde ?";
+"rcDeleteMessageConfirmationDialogDeleteButtonTitle" = "Supprimer";
+"rcCopyMessageButtonTitle" = "Copier";
+"rcDeletedMessageReplacementText" = "Vous avez supprimé ce message pour tout le monde.";

@@ -67,7 +67,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ### dimeloChatTitle
-Title of the conversation window. 
+Title of the conversation window.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -87,7 +87,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ### dimeloChoosePhotoButtonTitle
-Title of the attachment photo button. 
+Title of the attachment photo button.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -97,7 +97,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ### dimeloLocationButtonTitle
-Title of the attachment location button. 
+Title of the attachment location button.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -107,7 +107,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ###  dimeloTakePhotoButtonTitle
-Title of the Take Photo button. 
+Title of the Take Photo button.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -117,7 +117,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ### dimeloCancelButtonTitle
-Title of the Cancel button. 
+Title of the Cancel button.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -127,7 +127,7 @@ This will be used as an argument to NSLocalizedString.
 </p>
 
 ### dimeloLoadMoreMessagesButtonTitle
-Title of the Load more messages button. 
+Title of the Load more messages button.
 
 This will be used as an argument to NSLocalizedString.
 
@@ -174,4 +174,64 @@ This will be used as an argument to NSLocalizedString.
 
 <p align="center">
 <img src="https://i.postimg.cc/pXXJmwxw/kb.png"/>
+</p>
+
+### rcDeleteMessageButtonTitle
+"Delete for everyone" button title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/MHV0tyb3/rc-Delete-For-Everyone.png"/>
+</p>
+
+### rcDeleteMessageConfirmationDialogTitle
+Message deletion confirmation dialog title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/cC2jtM1D/rc-Delete-For-Everyone-Alert-Title.png"/>
+</p>
+
+### rcDeleteMessageConfirmationDialogDescription
+Message deletion confirmation dialog description.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/WbDcptpW/rc-Delete-For-Everyone-Alert-Description.jpg"/>
+</p>
+
+### rcDeleteMessageConfirmationDialogDeleteButtonTitle
+Message deletion confirmation dialog delete button title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/nc5ZqBwf/rc-Delete-For-Everyone-Alert-Delete-Button.png"/>
+</p>
+
+### rcCopyMessageButtonTitle
+"Copy" button title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/kXwRC14F/rc-Delete-For-Everyone-Alert-Copy-Button.png"/>
+</p>
+
+### rcDeletedMessageReplacementText
+Text to display to replace a deleted message's body.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/3RVVk5BM/rc-You-Deleted-This-Message-For-Everyone.png"/>
 </p>

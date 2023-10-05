@@ -747,12 +747,31 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 Similar to `systemMessageBackgroundColor`, but for system messages.
 
+### userDeletedMessageBackgroundColor
+Background color for deleted user message bubbles.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+### userSelectedMessageBackgroundColor
+Background color for selected user message cell for iOS12 and lower.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+<img src="https://i.postimg.cc/MGBqLxrQ/user-Deleted-Message-Selected-Background-Color.png"/>
+</p>
+
 ### userMessageTextColor
 Foreground color for user's message text.
 
 Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 Similar to `systemMessageTextColor`, but for system messages.
+
+### userDeletedMessageTextColor
+Foreground color for user's deleted message text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 ## Font
 
@@ -764,6 +783,16 @@ E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
    <img src="https://i.postimg.cc/Y9cgNw9x/web-View-Title-Font.png"/>
+</p>
+
+### userDeletedMessageFont
+Font applied to the user deleted message text.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/9MnLF6h6/user-Deleted-Message-Font.png"/>
 </p>
 
 ### badgeFont

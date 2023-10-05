@@ -1,6 +1,6 @@
 framework module Dimelo {
   umbrella header "Dimelo.h"
-
   export *
+
   module * { export * }
 }

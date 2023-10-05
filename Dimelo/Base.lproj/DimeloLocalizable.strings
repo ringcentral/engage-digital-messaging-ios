@@ -39,3 +39,9 @@
 "rcBackToAllChats" = "Back to all chats";
 "rcClosedThreadMessage" = "The conversation has ended";
 "rcVideoCallRequestedStatusMessage" = "You will be connected to a video call shortly";
+"rcDeleteMessageButtonTitle" = "Delete for everyone";
+"rcDeleteMessageConfirmationDialogTitle" = "Delete message for everyone";
+"rcDeleteMessageConfirmationDialogDescription" = "Are you sure you would like to delete this message for everyone?";
+"rcDeleteMessageConfirmationDialogDeleteButtonTitle" = "Delete";
+"rcCopyMessageButtonTitle" = "Copy";
+"rcDeletedMessageReplacementText" = "You deleted this message for everyone.";

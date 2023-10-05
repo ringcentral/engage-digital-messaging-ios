@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.6.2</string>
+	<string>2.6.3</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -70,6 +70,8 @@
 	<string>#4481EB</string>
 	<key>userMessageTextColor</key>
 	<string>#FFFFFF</string>
+	<key>userDeletedMessageTextColor</key>
+	<string>#1FFFFFFF</string>
 	<key>agentMessageTextColor</key>
 	<string>#000000</string>
 	<key>welcomeMessageTextColor</key>
@@ -106,6 +108,10 @@
 	<string>#212121</string>
 	<key>userMessageBackgroundColor</key>
 	<string>#258CFB</string>
+	<key>userDeletedMessageBackgroundColor</key>
+	<string>#1F258CFB</string>
+	<key>userSelectedMessageBackgroundColor</key>
+	<string>#1F258CFB</string>
 	<key>agentMessageBackgroundColor</key>
 	<string>#ECF0F6</string>
 	<key>systemMessageBackgroundColor</key>
@@ -134,6 +140,13 @@
 		<string>.SFUIText-Semibold</string>
 		<key>size</key>
 		<integer>20</integer>
+	</dict>
+	<key>userDeletedMessageFont</key>
+	<dict>
+		<key>name</key>
+		<string>.SFUI-RegularItalic</string>
+		<key>size</key>
+		<integer>17</integer>
 	</dict>
 	<key>badgeFont</key>
 	<dict>

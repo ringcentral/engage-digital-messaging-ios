@@ -896,6 +896,8 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  */
 @property (nonatomic) UIFont* webViewTitleFont;
 
+@property (nonatomic) UIFont *userDeletedMessageFont;
+
 /*!
  * Font for the badge label.
  */
@@ -945,6 +947,8 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Foreground color for user's message text.
  */
 @property (nonatomic) UIColor *userMessageTextColor;
+
+@property (nonatomic) UIColor *userDeletedMessageTextColor;
 
 /*!
  * Foreground color for agent's message text.
@@ -1068,6 +1072,10 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Default image is configured this way.
  */
 @property (nonatomic) UIColor *userMessageBackgroundColor;
+
+@property (nonatomic) UIColor *userDeletedMessageBackgroundColor;
+
+@property (nonatomic) UIColor *userSelectedMessageBackgroundColor;
 
 /*!
  * Background color for agent message bubbles.
