@@ -27,7 +27,7 @@ Getting Started
 
 Follow these three mandatory steps to integrate Engage Digital Messaging in your application:
 
-1. [Install the Dimelo library either via CocoaPods or manually](#install-the-dimelo-library-either-via-cocoapods-or-manually).
+1. [Install the Dimelo library either via Swift Package Manager, CocoaPods or manually](#install-the-dimelo-library-either-via-swift-package-manager-cocoapods-or-manually).
 2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
 3. [Display the Mobile Messaging in your application](#displaying-engage-digital-messaging-conversation-screen).
 4. Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` when using a distribution provisioning profil.
@@ -44,8 +44,16 @@ Read on how to customize the appearance and the behavior of the Mobile Messaging
 You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-messaging-ios-demo).
 
 
-Install the Dimelo library either via CocoaPods or manually
------------------------------------------------------------
+Install the Dimelo library either via Swift Package Manager, CocoaPods or manually
+----------------------------------------------------------------------------------
+
+How To Install With Swift Package Manager
+-----------------------------------------
+
+1) Navigate to your Xcode project, select `File` > `Swift Packages` > `Add Package Dependency`
+2) Enter Package URL: https://github.com/ringcentral/engage-digital-messaging-ios.git
+3) Select `Exact Version` with `last_release_version` and click `Add Package`
+
 
 How To Install With CocoaPods
 -----------------------------

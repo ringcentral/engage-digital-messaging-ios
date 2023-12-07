@@ -1,5 +1,12 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.4 (December 7th, 2023) ##
+- Fix: prevent empty thread from being displayed in threads list. RD-28218
+- Improvement: publish Engage Messaging SDK on Swift Package Manager (SPM). RD-28233
+- Fix: in some cases scroll through messages quickly was causing the keyboard to be hidden. RD-28453
+- Improvement: last message wasn't completely displayed when opening the chat or closing the context menu. RD-27762
+- Fix: agent message containing a single character wasn't aligned with the other messages. RD-17489
+
 ## Dimelo iOS SDK 2.6.3 (October 5th, 2023) ##
 - Feature: add support for message deletion. RD-27116
 - Minor: bump `Minimum Deployment Target` to **iOS 11.0** (was **iOS 8.0**). RD-27130
