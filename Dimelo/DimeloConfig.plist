@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.6.4</string>
+	<string>2.6.5</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -32,6 +32,8 @@
 	<string>#A1A1A1</string>
 	<key>createNewThreadImageColor</key>
 	<string>#FFFFFF</string>
+	<key>scrollToTheEndImageColor</key>
+	<string>#4481EB</string>
 	<key>videoCallRequestButtonColor</key>
 	<string>#BDBDBD</string>
 	<key>videoCallRequestButtonHighlightedColor</key>
@@ -46,8 +48,12 @@
 	<string>#A1A1A1</string>
 	<key>createNewThreadBackgroundColor</key>
 	<string>#4481EB</string>
+	<key>scrollToBottomBackgroundColor</key>
+	<string>#FFFFFF</string>
 	<key>createNewThreadTappedBackgroundColor</key>
 	<string>#3B71CF</string>
+	<key>scrollToTheEndTappedBackgroundColor</key>
+	<string>#FFFFFF</string>
 	<key>threadsListBackgroundColorSelection</key>
 	<string>#D9D9D9</string>
 	<key>webViewHeaderBackgroundColor</key>

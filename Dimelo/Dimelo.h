@@ -736,6 +736,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *createNewThreadImageColor;
 
 /*!
+ * Color applied to the button to scroll to the bottom of the conversation image.
+ */
+@property (nonatomic) UIColor *scrollToBottomImageColor;
+
+/*!
  * Color applied to the video call request button.
  */
 @property (nonatomic) UIColor *videoCallRequestButtonColor;
@@ -776,9 +781,19 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *createNewThreadBackgroundColor;
 
 /*!
+ * Background color applied to the button to scroll to the bottom of the conversation.
+ */
+@property (nonatomic) UIColor *scrollToBottomBackgroundColor;
+
+/*!
  * Background color for the tapped create new thread button.
  */
 @property (nonatomic) UIColor *createNewThreadTappedBackgroundColor;
+
+/*!
+ * Background color applied to the button to scroll to the bottom of the conversation when it's tapped.
+ */
+@property (nonatomic) UIColor *scrollToBottomTappedBackgroundColor;
 
 /*!
  * Background color for the threads list item selection.
@@ -1271,6 +1286,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIImage *createNewThreadImage;
 
 /*!
+ * UIImage for the button to scroll to the bottom of the conversation
+ */
+@property (nonatomic) UIImage *scrollToBottomImage;
+
+/*!
  * UIImage for the back to all chats item (applied for the fragment and the view controller).
  */
 @property (nonatomic) UIImage *backToAllChatsItemImage;
@@ -1432,6 +1452,12 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Default is `NO`.
  */
 @property (nonatomic) BOOL embeddedAsFragment;
+
+/*!
+ * Flag to enable/disable the button to scroll to the bottom of the conversation.
+ * Default is `NO`.
+ */
+@property (nonatomic) BOOL showScrollToBottomButton;
 
 /*!
  * Flag to set to disable reception of the push notification

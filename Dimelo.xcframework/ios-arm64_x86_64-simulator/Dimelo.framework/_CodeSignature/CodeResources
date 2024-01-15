@@ -368,6 +368,18 @@
 		<data>
 		64gVFX/qaBdOhuKYk6c0stJlAFU=
 		</data>
+		<key>Dimelo.bundle/rcScrollToTheEnd.png</key>
+		<data>
+		M+pDMrNlrv1mnPnRPvIv3mfdHgU=
+		</data>
+		<key>Dimelo.bundle/rcScrollToTheEnd@2x.png</key>
+		<data>
+		NGCdjX/XWNJKKHEOPECug0IjWmc=
+		</data>
+		<key>Dimelo.bundle/rcScrollToTheEnd@3x.png</key>
+		<data>
+		Og8kEDEeYUOvb32Nl11KMMJWkWU=
+		</data>
 		<key>Dimelo.bundle/spreadsheet_icon.png</key>
 		<data>
 		V9UJYxSwSKHg+UxGAXvfnfl3exs=
@@ -418,15 +430,15 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		IilruR9YqyhWH3Wid7fFTilzj0c=
+		0kP0rCsF7REG+UOA5X7QdgY6Ng4=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
-		Dy7icJyPlC/REFdNVkipqDf6K3A=
+		Nmqipli87TtbuGpdclrC40V3a4Q=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qGgFYZlTTKL+ImSdB0eENYRQ99g=
+		VHfsz7/WOKhRFdhQiLuGh6U/4v0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1103,6 +1115,27 @@
 			I4tFyZF+GSBumznQH6ii4i75RhVTqt61sExcQkK4Gfk=
 			</data>
 		</dict>
+		<key>Dimelo.bundle/rcScrollToTheEnd.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p8a7iX6KgNoiIpls/jDGyue2IeKKbCs3iNUItVaNcgo=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/rcScrollToTheEnd@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UGb033iWPY4vYznfemXipy2TPHMXu38bhbWJ6VOckac=
+			</data>
+		</dict>
+		<key>Dimelo.bundle/rcScrollToTheEnd@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kS+wvdmpzBOva733wh/QU0Nkl/gSiqy6o5liuPkZUt4=
+			</data>
+		</dict>
 		<key>Dimelo.bundle/spreadsheet_icon.png</key>
 		<dict>
 			<key>hash2</key>
@@ -1191,14 +1224,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OQzKJHwqpcdcj84WImGWNo+DIWL66hkNDc36sBwJq9s=
+			GmSPYWMGD1CT+9WUXCT7bsbdutIn5xGrMhiWYIUWYJQ=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ffxx8wg902fajA+vsc+AfZmyhe1uxghpt1k7z6R4sPE=
+			UlqqwsiKw8/6EkkUMJUGY2Lb0OMFsR5qYacqL7r4F2o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

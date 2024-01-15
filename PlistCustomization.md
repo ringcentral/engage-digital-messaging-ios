@@ -119,6 +119,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/2yH86cJk/create-New-Thread-Image-Color.png"/>
 </p>
 
+### scrollToBottomImageColor
+Color applied to the button to scroll to the bottom of the conversation image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/PJHsNFJw/scroll-To-The-End-Image-Color.png"/>
+</p>
+
 ### videoCallRequestButtonColor
 Color applied to the video call request button.
 
@@ -216,6 +225,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/13pfjXD0/create-New-Thread-Image.png"/>
 </p>
 
+### scrollToBottomBackgroundColor
+Background color applied to the button to scroll to the bottom of the conversation.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/rmLY9RT6/scroll-To-The-End-Background-Color.png"/>
+</p>
+
 ### createNewThreadTappedBackgroundColor
 Background color for the tapped create new thread button.
 
@@ -223,6 +241,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/Jz31SFhy/create-New-Thread-Tapped-Background-Color.png"/>
+</p>
+
+### scrollToBottomTappedBackgroundColor
+Background color applied to the button to scroll to the bottom of the conversation when it's tapped.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/YS8mdJKp/scroll-To-The-End-Tapped-Background-Color.png"/>
 </p>
 
 ### threadsListBackgroundColorSelection
@@ -1219,6 +1246,13 @@ UIImage for the create new thread button.
    <img src="https://i.postimg.cc/13pfjXD0/create-New-Thread-Image.png"/>
 </p>
 
+### scrollToBottomImage
+UIImage for the button to scroll to the bottom of the conversation.
+
+<p align="center">
+   <img src="https://i.postimg.cc/d12QWCTG/scroll-To-The-End-Image.png"/>
+</p>
+
 ### backToAllChatsItemImage
 UIImage for the create new thread button.
 
@@ -1330,5 +1364,10 @@ Must be a boolean, default is `YES`.
 
 ### embeddedAsFragment
 Flag to set to embed or not the Dimelo view as a fragment.
+
+Must be a boolean, default is `NO`.
+
+### showScrollToBottomButton
+Flag to enable/disable the button to scroll to the bottom of the conversation.
 
 Must be a boolean, default is `NO`.

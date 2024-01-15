@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.5 (January 15th, 2024) ##
+- Improvement: use push notifications to update messages when in threads list. RD-17418
+- Feature: add a button to scroll to the bottom of the conversation (disabled by default). RD-27767
+
 ## Dimelo iOS SDK 2.6.4 (December 7th, 2023) ##
 - Fix: prevent empty thread from being displayed in threads list. RD-28218
 - Improvement: publish Engage Messaging SDK on Swift Package Manager (SPM). RD-28233
