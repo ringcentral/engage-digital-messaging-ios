@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/DimeloLocalizable.strings</key>
 		<data>
-		gbaHWjF4FmEEGPSYOoXcgLYKnWI=
+		XMXncqVvwDQFcGMSMvzwXymHoiI=
 		</data>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
 		<data>
@@ -430,7 +430,7 @@
 		</data>
 		<key>DimeloConfig.plist</key>
 		<data>
-		0kP0rCsF7REG+UOA5X7QdgY6Ng4=
+		Xu2dcirIqcZDVPhXcbf0eQzJrTc=
 		</data>
 		<key>Headers/Dimelo.h</key>
 		<data>
@@ -438,7 +438,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VHfsz7/WOKhRFdhQiLuGh6U/4v0=
+		mSMJ/E5ylOnJ2Mz6Hpca3s28/NU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -452,7 +452,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Wyn+N/iMG8EvNNHxKGZnEYo4hKE=
+			XYY7uGW2tA3OeFI6Gvdyt1xpqrk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -461,7 +461,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gbaHWjF4FmEEGPSYOoXcgLYKnWI=
+			XMXncqVvwDQFcGMSMvzwXymHoiI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -470,7 +470,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FmSURbdfamB/77YH7ApIYf0YgGY=
+			5kVN0L8EkhqkyL96wKtqFXHien4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -482,7 +482,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kXzBwD+L8yNoPS26QTz8sb9uUi5iwXRusts9K33ZgdI=
+			YGRAT9DLdXOo0KnoRcd0c88gvE3tjMRrK53EVSmIY58=
 			</data>
 		</dict>
 		<key>Dimelo.bundle/DimeloAgentAttachmentBubble.png</key>
@@ -1224,7 +1224,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GmSPYWMGD1CT+9WUXCT7bsbdutIn5xGrMhiWYIUWYJQ=
+			FSE/dCuTutLCRtzXdhJfHCw72DSWhTAquQe3jJq7+ds=
 			</data>
 		</dict>
 		<key>Headers/Dimelo.h</key>
@@ -1252,7 +1252,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ScRgoz3TUfYXl44CJzo+dH/ROLqH99bw92gCLj6Jr3o=
+			RPXtjEu+i3o/mdcmQ3pgxedOm+Avhvq6TPEVT/XnWOs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1261,7 +1261,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kXzBwD+L8yNoPS26QTz8sb9uUi5iwXRusts9K33ZgdI=
+			YGRAT9DLdXOo0KnoRcd0c88gvE3tjMRrK53EVSmIY58=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1270,7 +1270,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oPoH1Z6D2YPAa4TJDLTyM8euvcvNTV9LL7O33SIfi90=
+			cJjKxiVjobzB1HfmA6jV31BGfcEihggLTRZ20l+DO1Y=
 			</data>
 			<key>optional</key>
 			<true/>

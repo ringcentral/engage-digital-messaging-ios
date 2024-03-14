@@ -45,3 +45,5 @@
 "rcDeleteMessageConfirmationDialogDeleteButtonTitle" = "Supprimer";
 "rcCopyMessageButtonTitle" = "Copier";
 "rcDeletedMessageReplacementText" = "Vous avez supprimé ce message pour tout le monde.";
+"rcThumbsUpButtonTitle" = "J'aime";
+"rcThumbsDownButtonTitle" = "Je n'aime pas";

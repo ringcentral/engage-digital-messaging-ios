@@ -235,3 +235,23 @@ This will be used as an argument to NSLocalizedString.
 <p align="center">
 <img src="https://i.postimg.cc/3RVVk5BM/rc-You-Deleted-This-Message-For-Everyone.png"/>
 </p>
+
+### rcThumbsUpButtonTitle
+"Thumbs up" button title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/021xZ2PV/rc-Thumbs-Up-Button-Title.png"/>
+</p>
+
+### rcThumbsDownButtonTitle
+"Thumbs down" button title.
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/7ZcKMby6/rc-Thumbs-Down-Button-Title.png"/>
+</p>
