@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.6.7 (June 11th, 2024) ##
+- Improvement: threads non-synchronized with the server because of errors are retained and correctly displayed. RD-17134
+- Fix: using `UIWindowScene` on device running on iOS13+ causes a crash when opening the context menu. RD-30030
+
 ## Dimelo iOS SDK 2.6.6 (March 14th, 2024) ##
 - Fix: link in welcome message was not clickable. RD-29202
 - Fix: opening the keyboard was partially hiding the last message in the conversation. RD-28216
