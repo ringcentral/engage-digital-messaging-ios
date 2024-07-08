@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.0 (July 8th, 2024) ##
+- Feature: allow to initialize the SDK using the Engage Messaging channel's token. RD-28849
+*  add `initializeWithToken: token hostName: hostName jwtKeyId: jwtKeyId jwtSecret: jwtSecret delegate: delegate` (for adhoc JWT signing).
+*  add `initializeWithToken: token hostName: hostName delegate: delegate`  (for remote JWT signing).
+
 ## Dimelo iOS SDK 2.6.7 (June 11th, 2024) ##
 - Improvement: threads non-synchronized with the server because of errors are retained and correctly displayed. RD-17134
 - Fix: using `UIWindowScene` on device running on iOS13+ causes a crash when opening the context menu. RD-30030

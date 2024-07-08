@@ -62,7 +62,7 @@ How To Install With CocoaPods
 
 2) Add "Dimelo-iOS" to your Podfile like so:
 
-    pod 'Dimelo-iOS', :git => 'https://github.com/ringcentral/engage-digital-messaging-ios.git'
+    `pod 'Dimelo-iOS', :git => 'https://github.com/ringcentral/engage-digital-messaging-ios.git'`
 
 3) Run `pod install` to update your project.
 
@@ -98,9 +98,9 @@ Sample Code
 The following code is a minimal configuration of Dimelo chat. It presents
 the chat, handles push notifications and displays network activity in status bar.
 
-DimeloConfig.plist
+`DimeloConfig.plist`
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -113,9 +113,9 @@ DimeloConfig.plist
 
 
 
-AppDelegate.m
+`AppDelegate.m`
 
-```
+```objectivec
 #import "AppDelegate.h"
 #import "Dimelo.h"
 
@@ -228,142 +228,237 @@ If your app rely on a uniq imutable technical identifier to identify user use `u
 
 Use `userName` to provide to agent a human name for the user.
 
-We support two kinds of authentication modes: with **built-in secret** and with a **server-side secret**.
+We support two kinds of authentication modes: with **adhoc JWT signing** (less security) and with a **remote JWT signing** (recommended).
 
-#### 1. Setup with a built-in secret
+#### 1. Adhoc JWT signing
 
-This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
+<details>
+  <summary>Using an API secret (deprecated in version <code>2.7.0</code>)</summary>
 
-Here's how to create the Dimelo instance and initialize it using a built-in secret:
+  This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
-- Using Objective-C:
-```objectivec
-Dimelo dimelo = [Dimelo sharedInstance];
-[dimelo initWithApiSecret: SOURCE_API_SECRET domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
-/*
-  SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  Here's how to create the Dimelo instance and initialize it using a built-in secret:
 
-- Using Swift:
-```swift
-let dimelo: Dimelo = Dimelo.sharedInstance()
-dimelo.initialize(withApiSecret: SOURCE_API_SECRET, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
-/*
-  SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initWithApiSecret: SOURCE_API_SECRET domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
+  /*
+    SOURCE_API_SECRET can be found in your source configuration
+    DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
 
-*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a built-in secret:
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withApiSecret: SOURCE_API_SECRET, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
+  /*
+    SOURCE_API_SECRET can be found in your source configuration
+    DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
 
-- Using Objective-C:
-```objectivec
-Dimelo dimelo = [Dimelo sharedInstance];
-[dimelo initializeWithApiSecretAndHostName: SOURCE_API_SECRET hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
-/*
-  SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  *Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a built-in secret:
 
-- Using Swift:
-```swift
-let dimelo: Dimelo = Dimelo.sharedInstance()
-dimelo.initialize(withApiSecretAndHostName: SOURCE_API_SECRET, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
-/*
-  SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initializeWithApiSecretAndHostName: SOURCE_API_SECRET hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
+  /*
+    SOURCE_API_SECRET can be found in your source configuration
+    DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
 
-Then it will create and sign JWT automatically when needed (as if it was provided by the server).
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withApiSecretAndHostName: SOURCE_API_SECRET, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
+  /*
+    SOURCE_API_SECRET can be found in your source configuration
+    DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
 
-You simply set necessary user-identifying information and JWT will be computed on the fly.
-You do not need any cooperation with your server in this setup.
+  Then it will create and sign JWT automatically when needed (as if it was provided by the server).
 
-The security issue here is that built-in secret is rather easy to extract from the app's binary build.
-Anyone could then sign JWTs with arbitrary user identifying info to access other users'
-chats and impersonate them. To mitigate that risk make sure to use this mode
-only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
+  You simply set necessary user-identifying information and JWT will be computed on the fly.
+  You do not need any cooperation with your server in this setup.
 
-#### 2. Setup with a server-side secret (better security but more complicated)
+  The security issue here is that built-in secret is rather easy to extract from the app's binary build.
+  Anyone could then sign JWTs with arbitrary user identifying info to access other users'
+  chats and impersonate them. To mitigate that risk make sure to use this mode
+  only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
+</details>
 
-This is a more secure mode. Engage Digital will provide you with two keys: a public API key and a secret key.
-The public one will be used to configure `Dimelo` instance and identify your app.
-The secret key will be stored on your server and used to sign JWT token on your server.
+<details open>
+  <summary>Using a token (added in version <code>2.7.0</code>)</summary>
 
-Here's how create the Dimelo instance and initialize it using a server-side secret:
+  Here's how to create the Dimelo instance and initialize it with a token, a JWT key ID and a JWT secret:
 
-- Using Objective-C:
-```objectivec
-Dimelo dimelo = [Dimelo sharedInstance];
-[dimelo initWithApiKey: SOURCE_API_KEY domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
-/*
-  SOURCE_API_KEY can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initializeWithToken: token hostname: hostname jwtKeyId: jwtKeyId jwtSecret: jwtSecret delegate: delegate];
+  ```
 
-- Using Swift:
-```swift
-let dimelo: Dimelo = Dimelo.sharedInstance()
-dimelo.initialize(withApiKey: SOURCE_API_KEY, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
-/*
-  SOURCE_API_KEY can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withtoken: token, hostname: hostname, jwtKeyId: jwtKeyId, jwtSecret: jwtSecret, delegate: delegate)
+  ```
 
-*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a server-side secret:
+  |Parameter  |Description |
+  | --------- | ---------- |
+  |`token`    |can be found in your Engage Messaging channel administration page|
+  |`hostname` |can be found in your Engage Messaging channel administration page|
+  |`jwtKeyId` |can be found in your Engage Messaging community administration page|
+  |`jwtSecret`|can be found in your Engage Messaging community administration page|
+  |`delegate` |optional parameter that will be covered later in this document|
 
-- Using Objective-C:
-```objectivec
-Dimelo dimelo = [Dimelo sharedInstance];
-[dimelo initializeWithApiKeyAndHostName: SOURCE_API_KEY hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
-/*
-  SOURCE_API_KEY can be found in your source configuration
-  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  Then it will create and sign JWT automatically when needed (as if it was provided by the server).
 
-- Using Swift:
-```swift
-let dimelo: Dimelo = Dimelo.sharedInstance()
-dimelo.initialize(withApiKeyAndHostName: SOURCE_API_KEY, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
-/*
-  SOURCE_API_KEY can be found in your source configuration
-  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
-  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
-*/
-```
+  You simply set necessary user-identifying information and JWT will be computed on the fly.
+  You do not need any cooperation with your server in this setup.
 
-Once this is done you will have to set `jwt` property manually with a value received from your server.
-This way your server will prevent one user from impersonating another.
+  > [!WARNING]
+  > The security issue here is that built-in secret is rather easy to extract from the app's binary build.
+  > Anyone could then sign JWTs with arbitrary user identifying info to access other users'
+  > chats and impersonate them. To mitigate that risk make sure to use this mode
+  > only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
+</details>
 
-1. Set authentication-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
-2. Get a dictionary for JWT using `[Dimelo  jwtDictionary]`. This will also contain public API key, `installationIdentifier` etc.
-3. Send this dictionary to your server.
-4. Check the authenticity of the JWT dictionary on the server and compute a valid signed JWT token.
-Use a corresponding secret API key to make a HMAC-SHA256 signature.
-*Note:* use raw binary value of the secret key (decoded from hex) to make a
-signature. Using hex string as-is will yield incorrect signature.
-5. Send the signed JWT string back to your app.
-6. In the app, set the `Dimelo.jwt` property with a received string.
+#### 2. Remote JWT signing
 
-/!\ `[Dimelo setUserIdentifier];`, `[Dimelo setAuthenticationInfo];` and `[Dimelo setUserName];` must only be called **BEFORE** `[Dimelo setJwt];` otherwise your JWT will be emptied and your request will end up in a 404 error.
+<details>
+  <summary>Using the public API key (deprecated in version <code>2.7.0</code>)</summary>
 
-You have to do this authentication only once per user identifier,
-but before you try to use Engage Digital Messaging. Your application should prevent
-user from opening a Mobile Messaging until you receive a JWT token.
+  This is a more secure mode. Engage Digital will provide you with two keys: a public API key and a secret key.
+  The public one will be used to configure `Dimelo` instance and identify your app.
+  The secret key will be stored on your server and used to sign JWT token on your server.
+
+  Here's how create the Dimelo instance and initialize it using a server-side secret:
+
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initWithApiKey: SOURCE_API_KEY domainName: DIMELO_DOMAIN_NAME delegate: DIMELO_LISTENER];
+  /*
+    SOURCE_API_KEY can be found in your source configuration
+    DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
+
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withApiKey: SOURCE_API_KEY, domainName: DIMELO_DOMAIN_NAME, delegate: DIMELO_LISTENER)
+  /*
+    SOURCE_API_KEY can be found in your source configuration
+    DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
+
+  *Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a server-side secret:
+
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initializeWithApiKeyAndHostName: SOURCE_API_KEY hostName: DIMELO_HOST_NAME delegate: DIMELO_LISTENER];
+  /*
+    SOURCE_API_KEY can be found in your source configuration
+    DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
+
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withApiKeyAndHostName: SOURCE_API_KEY, hostName: DIMELO_HOST_NAME, delegate: DIMELO_LISTENER)
+  /*
+    SOURCE_API_KEY can be found in your source configuration
+    DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
+    DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+  */
+  ```
+
+  Once this is done you will have to set `jwt` property manually with a value received from your server.
+  This way your server will prevent one user from impersonating another.
+
+  1. Set authentication-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
+  2. Get a dictionary for JWT using `[Dimelo  jwtDictionary]`. This will also contain public API key, `installationIdentifier` etc.
+  3. Send this dictionary to your server.
+  4. Check the authenticity of the JWT dictionary on the server and compute a valid signed JWT token.
+  Use a corresponding secret API key to make a HMAC-SHA256 signature.
+  *Note:* use raw binary value of the secret key (decoded from hex) to make a
+  signature. Using hex string as-is will yield incorrect signature.
+  5. Send the signed JWT string back to your app.
+  6. In the app, set the `Dimelo.jwt` property with a received string.
+
+  /!\ `[Dimelo setUserIdentifier];`, `[Dimelo setAuthenticationInfo];` and `[Dimelo setUserName];` must only be called **BEFORE** `[Dimelo setJwt];` otherwise your JWT will be emptied and your request will end up in a 404 error.
+
+  You have to do this authentication only once per user identifier,
+  but before you try to use Engage Digital Messaging. Your application should prevent
+  user from opening a Mobile Messaging until you receive a JWT token.
+</details>
+
+<details open>
+  <summary>Using a token (added in version <code>2.7.0</code>)</summary>
+
+  This is a more secure mode.
+
+  Here's how create the Dimelo instance and initialize it using a server-side signed JWT:
+
+  - Using Objective-C:
+  ```objectivec
+  Dimelo dimelo = [Dimelo sharedInstance];
+  [dimelo initializeWithToken: token hostname: hostname delegate: delegate];
+  ```
+
+  - Using Swift:
+  ```swift
+  let dimelo: Dimelo = Dimelo.sharedInstance()
+  dimelo.initialize(withToken: token, hostname: hostname, delegate: delegate)
+  ```
+
+  |Parameter  |Description |
+  | --------- | ---------- |
+  |`token`    |can be found in your Engage Messaging channel admin page|
+  |`hostname` |can be found in your Engage Messaging channel admin page|
+  |`delegate` |optional parameter that will be covered later in this document|
+
+  Once this is done you will have to set `jwt` property manually with a value received from your server.
+  This way your server will prevent one user from impersonating another.
+
+  1. Set user-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
+  2. Get the JWT payload by calling `[Dimelo jwtDictionary]`.
+  It will return a `NSDictionary` that contains the user-related properties set in the previous step as well as the `token` and an `installationId` (both of these are really important and should not be omitted).
+  3. Send this dictionary to your server.
+  4. Check the authenticity of the JWT payload on the server and compute a signed JWT.
+  You will find your JWT secret and JWT key ID (required for the JWT signature) in:
+      - Your Engage Messaging channel admin page (for RingCX users).
+      - Your Engage Messaging commnity profile admin page (for Engage Digital users).
+
+      :warning: The JWT **must** be signed using the JWT secret and **must** include the JWT key ID as the `kid` in the JWT header.
+
+      :information_source: Please note that we currently only support HS256 and RS256 algorithms.
+  5. Send the signed JWT string back to your app.
+  6. In the app, set the `Dimelo.jwt` property with a received string.
+
+  /!\ `[Dimelo setUserIdentifier];`, `[Dimelo setAuthenticationInfo];` and `[Dimelo setUserName];` must only be called **BEFORE** `[Dimelo setJwt];` otherwise your JWT will be emptied and your request will end up in a 404 error.
+
+  You have to do this authentication only once per user identifier,
+  but before you try to use Engage Digital Messaging. Your application should prevent
+  user from opening a Mobile Messaging until you receive a JWT token.
+</details>
 
 
 Displaying Engage Digital Messaging conversation screen

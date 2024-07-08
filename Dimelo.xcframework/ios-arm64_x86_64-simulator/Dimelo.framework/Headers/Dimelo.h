@@ -409,7 +409,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiKey:domainName:delegate: instead.");
+- (id)initWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiKey:domainName:delegate: instead.") __attribute__((deprecated("initWithApiKey:apiKey domainName:domainName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 /*!
  * Initializes a new API client with a api API key, custom hostName and a delegate.
@@ -422,7 +422,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initializeWithApiKeyAndHostName:(NSString *)apiKey hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiKeyAndHostName:(NSString *)apiKey hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate  __attribute__((deprecated("initializeWithApiKeyAndHostName:apiKey hostName:hostName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 /*!
  * Initializes a new API client with a public API key, custom domainName and a delegate for Swift call.
@@ -439,7 +439,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initializeWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate __attribute__((deprecated("initializeWithApiKey:apiKey domainName:domainName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 
 /*!
@@ -454,7 +454,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiSecret:domainName:delegate: instead.");
+- (id)initWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate NS_SWIFT_UNAVAILABLE("Use initializeWithApiSecret:domainName:delegate: instead.")  __attribute__((deprecated("initWithApiSecret:apiSecret domainName:domainName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 /*!
  * Initializes a new API client with a secret API key, custom hostName and a delegate.
@@ -468,7 +468,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initializeWithApiSecretAndHostName:(NSString *)apiSecret hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiSecretAndHostName:(NSString *)apiSecret hostName:(NSString *)hostName delegate:(id<DimeloDelegate>)delegate __attribute__((deprecated("initializeWithApiSecretAndHostName:apiSecret hostName:hostName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 /*!
  * Initializes a new API client with a secret API key, custom domainName and a delegate for Swift call.
@@ -482,7 +482,7 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
-- (id)initializeWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate;
+- (id)initializeWithApiSecret:(NSString *)apiSecret domainName:(NSString *)domainName delegate:(id<DimeloDelegate>)delegate __attribute__((deprecated("initializeWithApiSecret:apiSecret domainName:domainName delegate:delegate is deprecated, please use initializeWithToken:token hostname:hostname jwtKeyId:jwtKeyId jwtSecret:jwtSecret delegate:delegate or initializeWithToken:token hostname:hostname delegate:delegate")));
 
 /*!
  * Per-application API secret key, typically specific to your app.
@@ -491,6 +491,28 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  */
 
 - (void)setApiSecret:(NSString *)apiSecret __attribute__((deprecated("setApiSecret:apiSecret is deprecated, please use initWithApiSecret:apiSecret domainName:domainName delegate:delegate")));
+
+/*!
+ * Initializes a new instance with a token, hostname, JWT key ID, JWT secret key and a delegate.
+ *
+ * @param token an Engage Messaging token specific to your app.
+ * @param hostname an Engage Messaging hostname specific to your app.
+ * @param jwtKeyId an Engage Messaging JWT key ID specific to your app.
+ * @param jwtSecret your JWT secret key (should be defined in your RingCX/Engage Digital configuration).
+ * @param delegate an instance conforming to the `DimeloDelegate` protocol.
+ *
+ */
+- (id)initializeWithToken:(NSString *)token hostname:(NSString *)hostname jwtKeyId:(NSString *)jwtKeyId jwtSecret:(NSString *)jwtSecret delegate:(id<DimeloDelegate>)delegate;
+
+/*!
+ * Initializes a new instance with a token, hostname and a delegate.
+ *
+ * @param token an Engage Messaging token specific to your app.
+ * @param hostname an Engage Messaging hostname specific to your app.
+ * @param delegate an instance conforming to the `DimeloDelegate` protocol.
+ *
+ */
+- (id)initializeWithToken:(NSString *)token hostname:(NSString *)hostname delegate:(id<DimeloDelegate>)delegate;
 
 @property (nonatomic, readonly) NSString *domainName;
 @property (nonatomic, readonly) NSString *hostName;
@@ -544,6 +566,12 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Optional name of the person to be sent to Dimelo.
  */
 @property (nonatomic, copy) NSString *userName;
+
+@property (nonatomic, copy) NSString *token;
+
+@property (nonatomic, copy) NSString *jwtKeyId;
+
+@property (nonatomic, copy) NSString *jwtSecret;
 
 /*!
  * Complete serialized JWT token.
