@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.1 (July 10th, 2024) ##
+- Fix: receiving a notification while the threads list is displayed with a company message was causing a crash. RD-30308
+
 ## Dimelo iOS SDK 2.7.0 (July 8th, 2024) ##
 - Feature: allow to initialize the SDK using the Engage Messaging channel's token. RD-28849
 *  add `initializeWithToken: token hostName: hostName jwtKeyId: jwtKeyId jwtSecret: jwtSecret delegate: delegate` (for adhoc JWT signing).
