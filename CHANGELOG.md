@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.2 (July 29th, 2024) ##
+- Fix: crash caused by usage of `UIGraphicsBeginImageContextWithOptions ` in iOS 17+ (replaced with `UIGraphicsImageRenderer`). RD-29249
+
 ## Dimelo iOS SDK 2.7.1 (July 10th, 2024) ##
 - Fix: receiving a notification while the threads list is displayed with a company message was causing a crash. RD-30308
 
