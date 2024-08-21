@@ -1,5 +1,15 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.3 (August 21th, 2024) ##
+- Feature: extend support for identity fields. RD-29583:
+    - Add the `setCompany` method. RD-29794
+    - Add the `setEmail` method. RD-29796
+    - Add the `setFirstname` method. RD-29797
+    - Add the `setLastname` method. RD-29798
+    - Add the `setHomePhone` method. RD-30547
+    - Add the `setMobilePhone` method. RD-30549
+- Improvement: add `defaultLocale` setter to change the application language. RD-29789
+
 ## Dimelo iOS SDK 2.7.2 (July 29th, 2024) ##
 - Fix: crash caused by usage of `UIGraphicsBeginImageContextWithOptions ` in iOS 17+ (replaced with `UIGraphicsImageRenderer`). RD-29249
 

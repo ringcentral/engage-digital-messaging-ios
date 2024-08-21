@@ -53,6 +53,28 @@ Language pList field allows you to override the system current language and defi
 
 language can be any value supported by the Accept-Language HTTP Header.
 
+### defaultLocale
+Used to set the application language.
+
+Programmatically: set `Dimelo.defaultLocale` property
+
+Plist customization name: None
+
+Note: This is an example on how to initialize `Customization.defaultLocale`:
+
+Using Objective C:
+```objectivec
+NSLocale *defaultLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+dimelo.defaultLocale = defaultLocale;
+```
+
+Using Swift:
+
+```swift
+let defaultLocale = Locale(localeIdentifier: "en_US")
+dimelo.defaultLocale = defaultLocale
+```
+
 ## Notification
 
 ### disableNotification

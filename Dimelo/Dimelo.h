@@ -567,6 +567,36 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  */
 @property (nonatomic, copy) NSString *userName;
 
+/*!
+ * Company name to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *company;
+
+/*!
+ * Email to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *email;
+
+/*!
+ * Firstname to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *firstname;
+
+/*!
+ * Lastname to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *lastname;
+
+/*!
+ * Home Phone to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *homePhone;
+
+/*!
+ * Mobile Phone to be sent to RingCX.
+ */
+@property (nonatomic, copy) NSString *mobilePhone;
+
 @property (nonatomic, copy) NSString *token;
 
 @property (nonatomic, copy) NSString *jwtKeyId;
@@ -603,6 +633,10 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  */
 @property (nonatomic, copy) NSDictionary *messageContextInfo;
 
+/*!
+* Used to set the application language.
+*/
+@property (nonatomic) NSLocale *defaultLocale;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Displaying Chat View
