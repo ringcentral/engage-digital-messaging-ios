@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.4 (September 25th, 2024) ##
+- Improvement: add RTL support for structured messages. RD-30722
+
 ## Dimelo iOS SDK 2.7.3 (August 21th, 2024) ##
 - Feature: extend support for identity fields. RD-29583:
     - Add the `setCompany` method. RD-29794
