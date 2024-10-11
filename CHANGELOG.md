@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.5 (October 11th, 2024) ##
+- Improvement: read messages in the chat with voice-over from bottom to top. RD-30747
+
 ## Dimelo iOS SDK 2.7.4 (September 25th, 2024) ##
 - Improvement: add RTL support for structured messages. RD-30722
 
