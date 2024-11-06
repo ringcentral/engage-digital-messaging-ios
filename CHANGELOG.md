@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.6 (November 6th, 2024) ##
+- Improvement: support hyperlink on iOS 18. RD-31580
+- Improvement: carousel messages now keep their horizontal scroll position. RD-13222
+
 ## Dimelo iOS SDK 2.7.5 (October 11th, 2024) ##
 - Improvement: read messages in the chat with voice-over from bottom to top. RD-30747
 
