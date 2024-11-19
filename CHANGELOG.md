@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.7.7 (November 19th, 2024) ##
+- Fix: localized strings weren't correctly applied when integrated through CocoaPods. RD-31824
+- Feature: allow to disable the text input via API. RD-30697
+
 ## Dimelo iOS SDK 2.7.6 (November 6th, 2024) ##
 - Improvement: support hyperlink on iOS 18. RD-31580
 - Improvement: carousel messages now keep their horizontal scroll position. RD-13222
