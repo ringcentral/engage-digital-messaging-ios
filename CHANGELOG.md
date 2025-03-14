@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.0 (March 14th, 2025) ##
+- Feature: add support for messaging pre-chat forms. RD-31557
+
 ## Dimelo iOS SDK 2.7.8 (January 27th, 2025) ##
 - Fix: bitcode issues with Xcode 16 (Invalid Executable Errors When Uploading iOS Builds). RD-32486
 - Fix: in some cases clicking on an empty chat was causing an out of bounds error. RD-32418
