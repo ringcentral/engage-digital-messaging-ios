@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.1 (April 18th, 2025) ##
+- Feature: allow chatbot to use a different avatar than the channel. RD-32237
+
 ## Dimelo iOS SDK 2.8.0 (March 14th, 2025) ##
 - Feature: add support for messaging pre-chat forms. RD-31557
 
