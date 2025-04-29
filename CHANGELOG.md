@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.2 (April 29th, 2025) ##
+- Fix: pre-chat form configuration lag can prevent the user from entering the chat. RD-33256
+- Fix: prevent edition of the conversation ended informative text. RD-33230
+
 ## Dimelo iOS SDK 2.8.1 (April 18th, 2025) ##
 - Feature: allow chatbot to use a different avatar than the channel. RD-32237
 
