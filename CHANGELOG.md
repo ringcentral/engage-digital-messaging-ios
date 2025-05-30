@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.3 (May 30th, 2025) ##
+- Improvement: replace Trebuchet bold font with System bold. RD-33272
+
 ## Dimelo iOS SDK 2.8.2 (April 29th, 2025) ##
 - Fix: pre-chat form configuration lag can prevent the user from entering the chat. RD-33256
 - Fix: prevent edition of the conversation ended informative text. RD-33230
