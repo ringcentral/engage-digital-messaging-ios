@@ -47,3 +47,7 @@
 "rcDeletedMessageReplacementText" = "Vous avez supprimé ce message pour tout le monde.";
 "rcThumbsUpButtonTitle" = "J'aime";
 "rcThumbsDownButtonTitle" = "Je n'aime pas";
+"rcTellUsMore" = "En dire plus";
+"rcFeedbackSuccessfullySent" = "Vos commentaires ont été envoyés avec succès";
+"rcSubmit" = "Envoyer";
+"rcProvideAdditionalFeedback" = "Veuillez fournir des commentaires supplémentaires";

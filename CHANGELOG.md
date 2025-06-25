@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.4 (June 25th, 2025) ##
+- Feature: display thumbs up/down choice and allow user to send feedback when rating a message. RD-34094
+
 ## Dimelo iOS SDK 2.8.3 (May 30th, 2025) ##
 - Improvement: replace Trebuchet bold font with System bold. RD-33272
 

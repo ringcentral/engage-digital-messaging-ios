@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,11 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phn-Vd-AhK" userLabel="Background">
+                <view tag="444" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phn-Vd-AhK" userLabel="Background">
                     <rect key="frame" x="0.0" y="-200" width="320" height="264"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tys-9U-UOd">
+                <button opaque="NO" tag="555" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tys-9U-UOd">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                     <accessibility key="accessibilityConfiguration" identifier="tap_push"/>
                     <state key="normal">
@@ -39,24 +37,54 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" tag="888" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rc_close_feedback_toast.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbs-vA-IMd">
+                    <rect key="frame" x="280" y="17" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8eb-ZC-jPW"/>
+                        <constraint firstAttribute="width" constant="30" id="jFf-Df-tbC"/>
+                    </constraints>
+                </imageView>
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="666" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAB-Y2-rUI">
+                    <rect key="frame" x="280" y="17" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="GIF-no-oE5"/>
+                        <constraint firstAttribute="height" constant="30" id="HMG-mr-X9i"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="closeNotificationWindow:" destination="-1" eventType="touchUpInside" id="K5V-Ld-7Uz"/>
+                    </connections>
+                </button>
             </subviews>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tys-9U-UOd" secondAttribute="bottom" id="1Wo-zW-3xG"/>
                 <constraint firstItem="Phn-Vd-AhK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-200" id="1cF-lE-3pW"/>
                 <constraint firstItem="zUm-ot-5PR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="2RX-OH-iOb"/>
+                <constraint firstItem="jbs-vA-IMd" firstAttribute="centerX" secondItem="nAB-Y2-rUI" secondAttribute="centerX" id="9A2-1g-Exd"/>
                 <constraint firstAttribute="trailing" secondItem="zUm-ot-5PR" secondAttribute="trailing" constant="40" id="BPG-fV-6KY"/>
                 <constraint firstAttribute="trailing" secondItem="Phn-Vd-AhK" secondAttribute="trailing" id="Dhw-LF-eLz"/>
+                <constraint firstItem="jbs-vA-IMd" firstAttribute="centerY" secondItem="nAB-Y2-rUI" secondAttribute="centerY" id="Iil-gm-6OH"/>
                 <constraint firstAttribute="bottom" secondItem="zUm-ot-5PR" secondAttribute="bottom" constant="7" id="KcP-gH-pLA"/>
                 <constraint firstItem="zUm-ot-5PR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Nti-Bo-fHq"/>
+                <constraint firstItem="nAB-Y2-rUI" firstAttribute="centerY" secondItem="zUm-ot-5PR" secondAttribute="centerY" id="SAs-Is-2a2"/>
+                <constraint firstItem="nAB-Y2-rUI" firstAttribute="leading" secondItem="zUm-ot-5PR" secondAttribute="trailing" id="Tbq-dG-P2P"/>
                 <constraint firstAttribute="bottom" secondItem="Phn-Vd-AhK" secondAttribute="bottom" id="UEg-6Y-386"/>
                 <constraint firstItem="Phn-Vd-AhK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VsY-57-ct5"/>
+                <constraint firstAttribute="trailing" secondItem="nAB-Y2-rUI" secondAttribute="trailing" constant="10" id="cI5-UL-j0s"/>
                 <constraint firstAttribute="trailing" secondItem="tys-9U-UOd" secondAttribute="trailing" id="cfD-6y-nki"/>
                 <constraint firstItem="tys-9U-UOd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hkR-gT-Vyh"/>
                 <constraint firstItem="tys-9U-UOd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="j35-ux-aFI"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="0.0"/>
         </view>
     </objects>
+    <resources>
+        <image name="rc_close_feedback_toast.png" width="21" height="21"/>
+    </resources>
 </document>
