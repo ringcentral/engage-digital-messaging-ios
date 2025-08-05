@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.6 (August 5th, 2025) ##
+- Fix: feedback in thumbs up/down is not visible when dark theme is enabled. RD-36702
+
 ## Dimelo iOS SDK 2.8.5 (July 3rd, 2025) ##
 - Fix: rating a bot message with a thumbs up was mistakenly showing a thumbs down after providing the feedback. RD-36015
 
