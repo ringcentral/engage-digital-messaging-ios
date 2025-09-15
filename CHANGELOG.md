@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.8 (September 15th, 2025) ##
+- Feature: show a typing animation when conversation is handled by a bot. RD-32158
+
 ## Dimelo iOS SDK 2.8.7 (August 12th, 2025) ##
 Improvement: add visual clue to show that thumbs up/down button has been pressed. RD-36720
 

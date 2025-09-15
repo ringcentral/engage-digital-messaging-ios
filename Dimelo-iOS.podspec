@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'Dimelo-iOS'
-  s.version  = '2.8.7'
+  s.version  = '2.8.8'
   s.license  = { :type => 'Proprietary', :file => 'LICENSE' }
   s.summary  = 'Dimelo Mobile Messaging SDK for iOS'
   s.homepage = 'https://github.com/ringcentral/engage-digital-messaging-ios'
   s.author   = { 'Dimelo' => 'support@dimelo.com' }
-  s.source   = { :git => 'https://github.com/ringcentral/engage-digital-messaging-ios.git', :tag => 'v2.8.7' }
+  s.source   = { :git => 'https://github.com/ringcentral/engage-digital-messaging-ios.git', :tag => 'v2.8.8' }
 
   s.resources           = ["Dimelo/*.bundle", "Dimelo/*.xib"]
   s.platform            = :ios, '7.1'
