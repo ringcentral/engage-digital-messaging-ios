@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>sdkVersion</key>
-	<string>2.8.8</string>
+	<string>2.8.9</string>
 	<key>navigationBarTitleColor</key>
 	<string></string>
 	<key>title</key>
@@ -85,6 +85,8 @@
 	<key>agentStructuredMessageTitleColor</key>
 	<string>#000000</string>
 	<key>agentStructuredMessageSubtitleColor</key>
+	<string>#757575</string>
+	<key>videoMessageTextColor</key>
 	<string>#757575</string>
 	<key>agentStructuredMessageUrlColor</key>
 	<string>#A1A1A1</string>
@@ -267,6 +269,13 @@
 		<integer>17</integer>
 	</dict>
 	<key>agentStructuredMessageSubTitleFont</key>
+	<dict>
+		<key>name</key>
+		<string>HelveticaNeue</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
+	<key>videoMessageTextFont</key>
 	<dict>
 		<key>name</key>
 		<string>HelveticaNeue</string>

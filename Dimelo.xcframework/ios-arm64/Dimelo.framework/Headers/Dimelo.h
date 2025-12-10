@@ -1108,6 +1108,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *agentStructuredMessageSubtitleColor;
 
 /*!
+ * Foreground color for video message text.
+ */
+@property (nonatomic) UIColor *videoMessageTextColor;
+
+/*!
  * Foreground color for agent's structured message url text.
  */
 @property (nonatomic) UIColor *agentStructuredMessageUrlColor;
@@ -1168,6 +1173,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
 @property (nonatomic) UIColor *agentStructuredMessageBodyBackgroundColor;
 
 /*!
+ * Background color for video message view.
+ */
+@property (nonatomic) UIColor *videoMessageBackgroundColor;
+
+/*!
  * Background color for template agent structured message.
  */
 @property (nonatomic) UIColor *agentTemplateWithImageBodyBackgroundColor;
@@ -1176,6 +1186,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Border color for agent structured message bubbles.
  */
 @property (nonatomic) UIColor *agentTemplateBorderColor;
+
+/*!
+ * Border color for video message bubbles.
+ */
+@property (nonatomic) UIColor *videoMessageBorderColor;
 
 /*!
  * Background color for system message bubbles.
@@ -1242,6 +1257,11 @@ typedef NS_ENUM(NSInteger, RcWebViewHeightMode) {
  * Font for agent's structured message subtitle.
  */
 @property (nonatomic) UIFont *agentStructuredMessageSubTitleFont;
+
+/*!
+ * Font for video message text.
+ */
+@property (nonatomic) UIFont *videoMessageTextFont;
 
 /*!
  * Font for agent's structured message url.

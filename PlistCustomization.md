@@ -462,6 +462,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
    <img src="https://i.postimg.cc/przP2h7v/agent-Time-Color.png"/>
 </p>
 
+### videoMessageBorderColor
+Border color for video message bubbles.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/ryfKZXjJ/video-Message-Border-Color.png"/>
+</p>
+
 ### agentTemplateBorderColor
 Border color for agent structured message bubbles.
 
@@ -487,6 +496,15 @@ Color must be in hex format, e.g. `007AFF` or `#007AFF`.
 
 <p align="center">
    <img src="https://i.postimg.cc/76THQJ5s/agent-Structured-Message-Body-Background-Color.png"/>
+</p>
+
+### videoMessageBackgroundColor
+Background color for video message view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/HLbTqC26/video-Message-Background-Color.png"/>
 </p>
 
 ### agentMessageBackgroundColor
@@ -528,6 +546,15 @@ Margin top for structured message subtitle label.
 
 <p align="center">
    <img src="https://i.postimg.cc/CKx9cRv3/agent-Structured-Message-Subtitle-Margin-Top.png"/>
+</p>
+
+### videoMessageTextColor
+Foreground color for video message text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/pV63J6QP/video-Message-Text-Color.png"/>
 </p>
 
 ### agentStructuredMessageTitleColor
@@ -1007,6 +1034,16 @@ E.g. `name=HelveticaNeue-Regular` and `size=15`.
 
 <p align="center">
    <img src="https://i.postimg.cc/bv6jQ7h9/agent-Structured-Message-Title-Font.png"/>
+</p>
+
+### videoMessageTextFont
+Font for video message text.
+Must contain a dictionary with `name` and `size` keys.
+These values will be used as arguments to `+[UIFont fontWithName:size:]`.
+E.g. `name=HelveticaNeue-Regular` and `size=15`.
+
+<p align="center">
+   <img src="https://i.postimg.cc/85jg1Qdm/video-Message-Text-Font.png"/>
 </p>
 
 ### agentStructuredMessageSubTitleFont

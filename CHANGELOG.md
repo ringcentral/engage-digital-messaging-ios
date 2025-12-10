@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.9 (December 10th, 2025) ##
+- Feature: allow to play YouTube/Vimeo video link directly from Messaging. RD-37873 RD-37874
+
 ## Dimelo iOS SDK 2.8.8 (September 15th, 2025) ##
 - Feature: show a typing animation when conversation is handled by a bot. RD-32158
 
