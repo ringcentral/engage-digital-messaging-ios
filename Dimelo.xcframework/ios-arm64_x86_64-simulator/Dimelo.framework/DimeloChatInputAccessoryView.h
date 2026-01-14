@@ -13,6 +13,7 @@ __attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView :
 @property (nonatomic) IBOutlet UIToolbar *toolbar;
 @property (nonatomic) UITabBar *tabBar;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UIButton *videoCallButton;
 - (IBAction)send:(id)sender;
 - (IBAction)addAttachment:(id)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstraint;

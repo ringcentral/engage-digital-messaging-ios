@@ -51,3 +51,11 @@
 "rcFeedbackSuccessfullySent" = "Your feedback was successfully sent";
 "rcSubmit" = "Submit";
 "rcProvideAdditionalFeedback" = "Please provide additional feedback";
+"rcAttachmentButtonAccessibilityLabel" = "Upload an attachment";
+"rcVideoCallRequestedButtonAccessibilityLabel" = "Request a video call";
+"rcCreateNewThreadButtonAccessibilityLabel" = "Create a new discussion";
+"rcScrollToBottomButtonAccessibilityLabel" = "Scroll to bottom";
+"rcBackAccessibilityLabel" = "Back to threads list";
+"rcAvatarImageViewAccessibilityLabel" = "Avatar";
+"rcImageViewAttachmentAccessibilityLabel" = "Attachment";
+"rcLocationViewAccessibilityLabel" = "Share the location";

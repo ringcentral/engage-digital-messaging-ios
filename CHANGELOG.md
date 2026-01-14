@@ -1,5 +1,9 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.10 (January 14th, 2026) ##
+- Improvement: better support for accessibility. RD-38313
+- Fix: the back button and unread count badge were not displayed correctly on iOS26. RD-38655
+
 ## Dimelo iOS SDK 2.8.9 (December 10th, 2025) ##
 - Feature: allow to play YouTube/Vimeo video link directly from Messaging. RD-37873 RD-37874
 

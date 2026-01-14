@@ -51,3 +51,11 @@
 "rcFeedbackSuccessfullySent" = "Vos commentaires ont été envoyés avec succès";
 "rcSubmit" = "Envoyer";
 "rcProvideAdditionalFeedback" = "Veuillez fournir des commentaires supplémentaires";
+"rcAttachmentButtonAccessibilityLabel" = "Envoyer une pièce jointe";
+"rcVideoCallRequestedButtonAccessibilityLabel" = "Demande d'appel vidéo";
+"rcCreateNewThreadButtonAccessibilityLabel" = "Créer une nouvelle discussion";
+"rcScrollToBottomButtonAccessibilityLabel" = "Défilez vers le bas";
+"rcBackAccessibilityLabel" = "Retour à la liste des discussions";
+"rcAvatarImageViewAccessibilityLabel" = "Avatar";
+"rcImageViewAttachmentAccessibilityLabel" = "Piece jointe";
+"rcLocationViewAccessibilityLabel" = "Partager sa localisation";

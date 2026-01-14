@@ -255,3 +255,83 @@ This will be used as an argument to NSLocalizedString.
 <p align="center">
 <img src="https://i.postimg.cc/7ZcKMby6/rc-Thumbs-Down-Button-Title.png"/>
 </p>
+
+### rcAttachmentButtonAccessibilityLabel
+"Attachment" button accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/Y0dsd6BJ/rc-Attachment-Button-Accessibility-Label.png"/>
+</p>
+
+### rcVideoCallRequestedButtonAccessibilityLabel
+"Video call requested" button accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/bJzg4Zg8/rc-Video-Call-Requested-Button-Accessibility-Label.png"/>
+</p>
+
+### rcCreateNewThreadButtonAccessibilityLabel
+"Create new thread" button accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/vT4rdf6p/rc-Create-New-Thread-Button-Accessibility-Label.png"/>
+</p>
+
+### rcScrollToBottomButtonAccessibilityLabel
+"Scroll to bottom" button accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/R0PG5MD0/rc-Scroll-To-Bottom-Button-Accessibility-Label.png"/>
+</p>
+
+### rcBackAccessibilityLabel
+"Back to threads list" button accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/ZKh8QB5c/rc-Back-Accessibility-Label.png"/>
+</p>
+
+### rcAvatarImageViewAccessibilityLabel
+"Avatar" image view accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/jjzKZFgX/rc-Avatar-Image-View-Accessibility-Label.png"/>
+</p>
+
+### rcImageViewAttachmentAccessibilityLabel
+"Attachment" image view accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/BbRVWqtN/rc-Image-View-Attachment-Accessibility-Label.png"/>
+</p>
+
+### rcLocationViewAccessibilityLabel
+"Location" view accessibility label used with voice over (accessibility).
+
+This will be used as an argument to NSLocalizedString.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/hhFpyp3C/rc-Location-View-Accessibility-Label.png"/>
+</p>
