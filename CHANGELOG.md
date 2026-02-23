@@ -1,5 +1,10 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.11 (February 23th, 2026) ##
+- Improvement: make the "Back to all chats" header opaque. RD-36804
+- Improvement: in some cases, the conversation title was displaying "Discussions" instead of "Waiting for agent". RD-39807
+- Improvement: better handle messages created while internet connection is down. RD-17171
+
 ## Dimelo iOS SDK 2.8.10 (January 14th, 2026) ##
 - Improvement: better support for accessibility. RD-38313
 - Fix: the back button and unread count badge were not displayed correctly on iOS26. RD-38655
