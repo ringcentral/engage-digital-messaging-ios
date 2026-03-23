@@ -1,5 +1,12 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.8.12 (March 23th, 2026) ##
+- Improvement: text input was wrongly displayed while being in a closed thread. RD-40209
+- Improvement: in some cases the "View previous messages" button was displayed even though there was no additional message to load. RD-39976
+- Improvement: in some cases clicking on the "View previous messages" button in a closed thread was causing the chat to automatically scroll to the bottom of the conversation. RD-39928
+- Fix: message cell is truncated when the context menu is displayed after a un long press on iOS 26. RD-38833
+- Fix: the input view becomes visible again after some delay when the context menu appears on iOS 26. RD-38890
+
 ## Dimelo iOS SDK 2.8.11 (February 23th, 2026) ##
 - Improvement: make the "Back to all chats" header opaque. RD-36804
 - Improvement: in some cases, the conversation title was displaying "Discussions" instead of "Waiting for agent". RD-39807
