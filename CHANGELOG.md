@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.9.0 (April 17th, 2026) ##
+- Feature: add support for HTML messages. RD-38803
+
 ## Dimelo iOS SDK 2.8.12 (March 23th, 2026) ##
 - Improvement: text input was wrongly displayed while being in a closed thread. RD-40209
 - Improvement: in some cases the "View previous messages" button was displayed even though there was no additional message to load. RD-39976
