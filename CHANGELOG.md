@@ -1,5 +1,8 @@
 ## Dimelo iOS SDK master ##
 
+## Dimelo iOS SDK 2.9.1 (June 30th, 2026) ##
+- Improvement: after rotating the screen carousel messages are losing their current position and don't use the entire screen width. RD-39927
+
 ## Dimelo iOS SDK 2.9.0 (April 17th, 2026) ##
 - Feature: add support for HTML messages. RD-38803
 
